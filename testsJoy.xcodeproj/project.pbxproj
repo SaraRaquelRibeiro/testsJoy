@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D2693B2281194AD00826898 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2693B1281194AD00826898 /* SplashScreen.swift */; };
+		0D7FFE662812D53800FFFDB2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7FFE652812D53800FFFDB2 /* Colors.swift */; };
+		0D7FFE682812D89100FFFDB2 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7FFE672812D89100FFFDB2 /* Onboarding.swift */; };
 		0DE0A5942811925E0080FE70 /* testsJoyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE0A5932811925E0080FE70 /* testsJoyApp.swift */; };
 		0DE0A5962811925E0080FE70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE0A5952811925E0080FE70 /* ContentView.swift */; };
 		0DE0A598281192600080FE70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE0A597281192600080FE70 /* Assets.xcassets */; };
@@ -14,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D2693B1281194AD00826898 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		0D7FFE652812D53800FFFDB2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		0D7FFE672812D89100FFFDB2 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		0DE0A5902811925E0080FE70 /* testsJoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testsJoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE0A5932811925E0080FE70 /* testsJoyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testsJoyApp.swift; sourceTree = "<group>"; };
 		0DE0A5952811925E0080FE70 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +38,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D7FFE642812D50D00FFFDB2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0D7FFE652812D53800FFFDB2 /* Colors.swift */,
+				0D7FFE672812D89100FFFDB2 /* Onboarding.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		0DE0A5872811925E0080FE70 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +68,8 @@
 			children = (
 				0DE0A5932811925E0080FE70 /* testsJoyApp.swift */,
 				0DE0A5952811925E0080FE70 /* ContentView.swift */,
+				0D2693B1281194AD00826898 /* SplashScreen.swift */,
+				0D7FFE642812D50D00FFFDB2 /* Helpers */,
 				0DE0A597281192600080FE70 /* Assets.xcassets */,
 				0DE0A599281192600080FE70 /* Preview Content */,
 			);
@@ -137,6 +154,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D2693B2281194AD00826898 /* SplashScreen.swift in Sources */,
+				0D7FFE662812D53800FFFDB2 /* Colors.swift in Sources */,
+				0D7FFE682812D89100FFFDB2 /* Onboarding.swift in Sources */,
 				0DE0A5962811925E0080FE70 /* ContentView.swift in Sources */,
 				0DE0A5942811925E0080FE70 /* testsJoyApp.swift in Sources */,
 			);
