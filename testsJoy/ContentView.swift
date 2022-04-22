@@ -48,8 +48,9 @@ struct PageView: View {
                 .padding()
             
             Text(title)
-                .font(.system(size: 42))
+                //.font(.system(size: 35))
                 .foregroundColor(.white)
+                .font(.custom("", size: 35))
             
             Text(subtitle)
                 .font(.system(size: 30))

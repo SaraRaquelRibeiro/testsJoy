@@ -20,6 +20,34 @@
 		0D2693B1281194AD00826898 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		0D7FFE652812D53800FFFDB2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		0D7FFE672812D89100FFFDB2 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		0D7FFE6B2812F8E900FFFDB2 /* Euclid Circular A Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Euclid Circular A Bold.ttf"; path = "../../../../../../../Downloads/euclid-circular-a-cufonfonts/Euclid Circular A Bold.ttf"; sourceTree = "<group>"; };
+		0D7FFE6C2812F8E900FFFDB2 /* Euclid Circular A SemiBold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Euclid Circular A SemiBold Italic.ttf"; path = "../../../../../../../Downloads/euclid-circular-a-cufonfonts/Euclid Circular A SemiBold Italic.ttf"; sourceTree = "<group>"; };
+		0D7FFE6D2812F8E900FFFDB2 /* Euclid Circular A Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Euclid Circular A Italic.ttf"; path = "../../../../../../../Downloads/euclid-circular-a-cufonfonts/Euclid Circular A Italic.ttf"; sourceTree = "<group>"; };
+		0D7FFE6E2812F8E900FFFDB2 /* Euclid Circular A Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Euclid Circular A Medium.ttf"; path = "../../../../../../../Downloads/euclid-circular-a-cufonfonts/Euclid Circular A Medium.ttf"; sourceTree = "<group>"; };
+		0D7FFE6F2812F8E900FFFDB2 /* Euclid Circular A Bold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Euclid Circular A Bold Italic.ttf"; path = "../../../../../../../Downloads/euclid-circular-a-cufonfonts/Euclid Circular A Bold Italic.ttf"; sourceTree = "<group>"; };
+		0D7FFE702812F8E900FFFDB2 /* Euclid Circular A SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Euclid Circular A SemiBold.ttf"; path = "../../../../../../../Downloads/euclid-circular-a-cufonfonts/Euclid Circular A SemiBold.ttf"; sourceTree = "<group>"; };
+		0D7FFE712812F8E900FFFDB2 /* Euclid Circular A Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Euclid Circular A Regular.ttf"; path = "../../../../../../../Downloads/euclid-circular-a-cufonfonts/Euclid Circular A Regular.ttf"; sourceTree = "<group>"; };
+		0D7FFE722812F8E900FFFDB2 /* Euclid Circular A Medium Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Euclid Circular A Medium Italic.ttf"; path = "../../../../../../../Downloads/euclid-circular-a-cufonfonts/Euclid Circular A Medium Italic.ttf"; sourceTree = "<group>"; };
+		0D7FFE732812F8E900FFFDB2 /* Euclid Circular A Light Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Euclid Circular A Light Italic.ttf"; path = "../../../../../../../Downloads/euclid-circular-a-cufonfonts/Euclid Circular A Light Italic.ttf"; sourceTree = "<group>"; };
+		0D7FFE742812F8E900FFFDB2 /* Euclid Circular A Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Euclid Circular A Light.ttf"; path = "../../../../../../../Downloads/euclid-circular-a-cufonfonts/Euclid Circular A Light.ttf"; sourceTree = "<group>"; };
+		0D7FFE752812F90200FFFDB2 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ThinItalic.ttf"; path = "../../../../../../../Downloads/Poppins/Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
+		0D7FFE762812F90200FFFDB2 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-BlackItalic.ttf"; path = "../../../../../../../Downloads/Poppins/Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
+		0D7FFE772812F90200FFFDB2 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraLight.ttf"; path = "../../../../../../../Downloads/Poppins/Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		0D7FFE782812F90200FFFDB2 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "../../../../../../../Downloads/Poppins/Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		0D7FFE792812F90200FFFDB2 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Black.ttf"; path = "../../../../../../../Downloads/Poppins/Poppins-Black.ttf"; sourceTree = "<group>"; };
+		0D7FFE7A2812F90200FFFDB2 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-LightItalic.ttf"; path = "../../../../../../../Downloads/Poppins/Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
+		0D7FFE7B2812F90200FFFDB2 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Light.ttf"; path = "../../../../../../../Downloads/Poppins/Poppins-Light.ttf"; sourceTree = "<group>"; };
+		0D7FFE7C2812F90200FFFDB2 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraLightItalic.ttf"; path = "../../../../../../../Downloads/Poppins/Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		0D7FFE7D2812F90200FFFDB2 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-MediumItalic.ttf"; path = "../../../../../../../Downloads/Poppins/Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		0D7FFE7E2812F90200FFFDB2 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Italic.ttf"; path = "../../../../../../../Downloads/Poppins/Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		0D7FFE7F2812F90200FFFDB2 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBoldItalic.ttf"; path = "../../../../../../../Downloads/Poppins/Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		0D7FFE802812F90200FFFDB2 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-BoldItalic.ttf"; path = "../../../../../../../Downloads/Poppins/Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
+		0D7FFE812812F90200FFFDB2 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBold.ttf"; path = "../../../../../../../Downloads/Poppins/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		0D7FFE822812F90200FFFDB2 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Medium.ttf"; path = "../../../../../../../Downloads/Poppins/Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		0D7FFE832812F90200FFFDB2 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Thin.ttf"; path = "../../../../../../../Downloads/Poppins/Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		0D7FFE842812F90200FFFDB2 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Bold.ttf"; path = "../../../../../../../Downloads/Poppins/Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		0D7FFE852812F90200FFFDB2 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraBoldItalic.ttf"; path = "../../../../../../../Downloads/Poppins/Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		0D7FFE862812F90200FFFDB2 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraBold.ttf"; path = "../../../../../../../Downloads/Poppins/Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
 		0DE0A5902811925E0080FE70 /* testsJoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testsJoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE0A5932811925E0080FE70 /* testsJoyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testsJoyApp.swift; sourceTree = "<group>"; };
 		0DE0A5952811925E0080FE70 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,6 +75,49 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		0D7FFE692812F85500FFFDB2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0D7FFE6A2812F86900FFFDB2 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0D7FFE6A2812F86900FFFDB2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0D7FFE792812F90200FFFDB2 /* Poppins-Black.ttf */,
+				0D7FFE762812F90200FFFDB2 /* Poppins-BlackItalic.ttf */,
+				0D7FFE842812F90200FFFDB2 /* Poppins-Bold.ttf */,
+				0D7FFE802812F90200FFFDB2 /* Poppins-BoldItalic.ttf */,
+				0D7FFE862812F90200FFFDB2 /* Poppins-ExtraBold.ttf */,
+				0D7FFE852812F90200FFFDB2 /* Poppins-ExtraBoldItalic.ttf */,
+				0D7FFE772812F90200FFFDB2 /* Poppins-ExtraLight.ttf */,
+				0D7FFE7C2812F90200FFFDB2 /* Poppins-ExtraLightItalic.ttf */,
+				0D7FFE7E2812F90200FFFDB2 /* Poppins-Italic.ttf */,
+				0D7FFE7B2812F90200FFFDB2 /* Poppins-Light.ttf */,
+				0D7FFE7A2812F90200FFFDB2 /* Poppins-LightItalic.ttf */,
+				0D7FFE822812F90200FFFDB2 /* Poppins-Medium.ttf */,
+				0D7FFE7D2812F90200FFFDB2 /* Poppins-MediumItalic.ttf */,
+				0D7FFE782812F90200FFFDB2 /* Poppins-Regular.ttf */,
+				0D7FFE812812F90200FFFDB2 /* Poppins-SemiBold.ttf */,
+				0D7FFE7F2812F90200FFFDB2 /* Poppins-SemiBoldItalic.ttf */,
+				0D7FFE832812F90200FFFDB2 /* Poppins-Thin.ttf */,
+				0D7FFE752812F90200FFFDB2 /* Poppins-ThinItalic.ttf */,
+				0D7FFE6F2812F8E900FFFDB2 /* Euclid Circular A Bold Italic.ttf */,
+				0D7FFE6B2812F8E900FFFDB2 /* Euclid Circular A Bold.ttf */,
+				0D7FFE6D2812F8E900FFFDB2 /* Euclid Circular A Italic.ttf */,
+				0D7FFE732812F8E900FFFDB2 /* Euclid Circular A Light Italic.ttf */,
+				0D7FFE742812F8E900FFFDB2 /* Euclid Circular A Light.ttf */,
+				0D7FFE722812F8E900FFFDB2 /* Euclid Circular A Medium Italic.ttf */,
+				0D7FFE6E2812F8E900FFFDB2 /* Euclid Circular A Medium.ttf */,
+				0D7FFE712812F8E900FFFDB2 /* Euclid Circular A Regular.ttf */,
+				0D7FFE6C2812F8E900FFFDB2 /* Euclid Circular A SemiBold Italic.ttf */,
+				0D7FFE702812F8E900FFFDB2 /* Euclid Circular A SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		0DE0A5872811925E0080FE70 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +140,7 @@
 				0DE0A5932811925E0080FE70 /* testsJoyApp.swift */,
 				0DE0A5952811925E0080FE70 /* ContentView.swift */,
 				0D2693B1281194AD00826898 /* SplashScreen.swift */,
+				0D7FFE692812F85500FFFDB2 /* Resources */,
 				0D7FFE642812D50D00FFFDB2 /* Helpers */,
 				0DE0A597281192600080FE70 /* Assets.xcassets */,
 				0DE0A599281192600080FE70 /* Preview Content */,

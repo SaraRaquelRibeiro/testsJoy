@@ -49,7 +49,10 @@ struct OnboardingView: View {
         }
         //p fazer swipe nos onboardings
         .tabViewStyle(PageTabViewStyle())
-        .background(LinearGradient(gradient: Gradient(colors:[Color.red, Color.blue]),
+        .background(LinearGradient(gradient: Gradient(colors:[
+            Color.orangeGradient1,
+            Color.orangeGradient2
+        ]),
                                    startPoint: .topLeading,
                                    endPoint: .bottomTrailing)
                         .ignoresSafeArea(.all, edges: .all))
