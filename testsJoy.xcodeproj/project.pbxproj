@@ -15,6 +15,10 @@
 		0DDAA6DA2822B49700BC110A /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DDAA6D52822B49700BC110A /* Poppins-Regular.ttf */; };
 		0DDAA6DB2822B49700BC110A /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DDAA6D62822B49700BC110A /* Poppins-SemiBold.ttf */; };
 		0DDAA6DC2822B49700BC110A /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DDAA6D72822B49700BC110A /* Poppins-Medium.ttf */; };
+		0DDAA6DE2822D1DC00BC110A /* GetStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA6DD2822D1DB00BC110A /* GetStartedView.swift */; };
+		0DDAA6E12822DB3800BC110A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0DDAA6E02822DB3800BC110A /* Kingfisher */; };
+		0DDAA6E72822E0D100BC110A /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA6E62822E0D100BC110A /* Blur.swift */; };
+		0DDAA6E92822ECCB00BC110A /* GradientGetStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA6E82822ECCA00BC110A /* GradientGetStartedView.swift */; };
 		0DE0A5942811925E0080FE70 /* testsJoyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE0A5932811925E0080FE70 /* testsJoyApp.swift */; };
 		0DE0A5962811925E0080FE70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE0A5952811925E0080FE70 /* ContentView.swift */; };
 		0DE0A598281192600080FE70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE0A597281192600080FE70 /* Assets.xcassets */; };
@@ -31,6 +35,9 @@
 		0DDAA6D52822B49700BC110A /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "../../../../../../Downloads/Poppins-Font-2/Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		0DDAA6D62822B49700BC110A /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBold.ttf"; path = "../../../../../../Downloads/Poppins-Font-2/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		0DDAA6D72822B49700BC110A /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Medium.ttf"; path = "../../../../../../Downloads/Poppins-Font-2/Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		0DDAA6DD2822D1DB00BC110A /* GetStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedView.swift; sourceTree = "<group>"; };
+		0DDAA6E62822E0D100BC110A /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
+		0DDAA6E82822ECCA00BC110A /* GradientGetStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientGetStartedView.swift; sourceTree = "<group>"; };
 		0DE0A5902811925E0080FE70 /* testsJoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testsJoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE0A5932811925E0080FE70 /* testsJoyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testsJoyApp.swift; sourceTree = "<group>"; };
 		0DE0A5952811925E0080FE70 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DDAA6E12822DB3800BC110A /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +62,8 @@
 			children = (
 				0D7FFE652812D53800FFFDB2 /* Colors.swift */,
 				0D7FFE672812D89100FFFDB2 /* Onboarding.swift */,
+				0DDAA6E62822E0D100BC110A /* Blur.swift */,
+				0DDAA6E82822ECCA00BC110A /* GradientGetStartedView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -93,6 +103,7 @@
 				0DE0A5932811925E0080FE70 /* testsJoyApp.swift */,
 				0DE0A5952811925E0080FE70 /* ContentView.swift */,
 				0D2693B1281194AD00826898 /* SplashScreen.swift */,
+				0DDAA6DD2822D1DB00BC110A /* GetStartedView.swift */,
 				0D7FFE692812F85500FFFDB2 /* Resources */,
 				0D7FFE642812D50D00FFFDB2 /* Helpers */,
 				0DE0A597281192600080FE70 /* Assets.xcassets */,
@@ -125,6 +136,9 @@
 			dependencies = (
 			);
 			name = testsJoy;
+			packageProductDependencies = (
+				0DDAA6E02822DB3800BC110A /* Kingfisher */,
+			);
 			productName = testsJoy;
 			productReference = 0DE0A5902811925E0080FE70 /* testsJoy.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +167,9 @@
 				Base,
 			);
 			mainGroup = 0DE0A5872811925E0080FE70;
+			packageReferences = (
+				0DDAA6DF2822DB3800BC110A /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 0DE0A5912811925E0080FE70 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -185,10 +202,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D2693B2281194AD00826898 /* SplashScreen.swift in Sources */,
+				0DDAA6DE2822D1DC00BC110A /* GetStartedView.swift in Sources */,
 				0D7FFE662812D53800FFFDB2 /* Colors.swift in Sources */,
 				0D7FFE682812D89100FFFDB2 /* Onboarding.swift in Sources */,
+				0DDAA6E72822E0D100BC110A /* Blur.swift in Sources */,
 				0DE0A5962811925E0080FE70 /* ContentView.swift in Sources */,
 				0DE0A5942811925E0080FE70 /* testsJoyApp.swift in Sources */,
+				0DDAA6E92822ECCB00BC110A /* GradientGetStartedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +413,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0DDAA6DF2822DB3800BC110A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0DDAA6E02822DB3800BC110A /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0DDAA6DF2822DB3800BC110A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0DE0A5882811925E0080FE70 /* Project object */;
 }

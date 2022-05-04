@@ -15,13 +15,20 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView{
-            ZStack {
+            
+            if shouldShowOnboarding {
+                OnboardingView(shouldShowOnboarding: $shouldShowOnboarding)
+            } else {
+                GetStartedView()
+            }
+            
+            /*ZStack {
                 //Color.white
                     //.edgesIgnoringSafeArea(.all)
                 Text("You are in the main app now!")
                     .padding()
             }
-            .navigationTitle("HOME")
+            .navigationTitle("HOME")*/
         }
         .fullScreenCover(isPresented: $shouldShowOnboarding, content: {
             OnboardingView(shouldShowOnboarding: $shouldShowOnboarding)
@@ -47,13 +54,15 @@ struct PageView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 300, height: 300)
                 .multilineTextAlignment(.center)
+                .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
                 .padding()
             
             Text(title)
                 //.font(.system(size: 35))
                 .foregroundColor(.white)
                 //.lineSpacing(-200)
-                .font(.custom("Poppins-Medium", size: 35))
+                .font(.custom("Poppins-Bold", size: 35))
+                
             
             Text(subtitle)
                 //.font(.system(size: 30))
@@ -67,11 +76,11 @@ struct PageView: View {
                     //quando se clica no botão ele faz toggle ou seja desaparece
                     shouldShowOnboarding.toggle()
                 }, label: {
-                    Text("Get Started")
+                    Text("Learn Languages")
                         .bold()
-                        .foregroundColor(Color.white)
+                        .foregroundColor(Color.orange)
                         .frame(width: 200, height: 50)
-                        .background(Color.green)
+                        .background(Color.white)
                         .cornerRadius(40)
                 })
             }

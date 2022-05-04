@@ -24,7 +24,7 @@ struct OnboardingView: View {
             
             
             PageView(
-                title: "Practical and Fun Lessons",
+                title: "Practical and Fun Lessons.",
                 subtitle: "Lessons that work for you,so you can learn and memorize while having fun.",
                 imageName: "onboarding1",
                 showsDismissButton: false,
@@ -32,7 +32,7 @@ struct OnboardingView: View {
                 
                 
             PageView(
-                title: "Play and EnJoy",
+                title: "Play and EnJoy.",
                 subtitle: "Quizes, Daily Challenges",
                 imageName: "onboarding4",
                 showsDismissButton: true,
