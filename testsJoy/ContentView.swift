@@ -43,18 +43,23 @@ struct PageView: View {
         VStack{
             Image(imageName)
                 .resizable()
+                .clipShape(Circle())
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 150, height: 150)
+                .frame(width: 300, height: 300)
+                .multilineTextAlignment(.center)
                 .padding()
             
             Text(title)
                 //.font(.system(size: 35))
                 .foregroundColor(.white)
-                .font(.custom("", size: 35))
+                //.lineSpacing(-200)
+                .font(.custom("Poppins-Medium", size: 35))
             
             Text(subtitle)
-                .font(.system(size: 30))
+                //.font(.system(size: 30))
                 .foregroundColor(Color(.white))
+                .font(Font.custom("Poppins-Light", size: 24))
+                .multilineTextAlignment(.center)
                 .padding()
             
             if showsDismissButton {
@@ -66,7 +71,7 @@ struct PageView: View {
                         .bold()
                         .foregroundColor(Color.white)
                         .frame(width: 200, height: 50)
-                        .background(Color.orange)
+                        .background(Color.green)
                         .cornerRadius(40)
                 })
             }

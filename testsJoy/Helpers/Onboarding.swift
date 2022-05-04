@@ -34,17 +34,17 @@ struct OnboardingView: View {
             PageView(
                 title: "Play and EnJoy",
                 subtitle: "Quizes, Daily Challenges",
-                imageName: "onboarding2",
-                showsDismissButton: false,
+                imageName: "onboarding4",
+                showsDismissButton: true,
                 shouldShowOnboarding: $shouldShowOnboarding)
                 
                 
-            PageView(
-                title: "Learn the 1000 more used words in the language you choose" ,
+            /*PageView(
+                title: "Learn Languages" ,
                 subtitle: "",
                 imageName: "onboarding3",
                 showsDismissButton: true,
-                shouldShowOnboarding: $shouldShowOnboarding)
+                shouldShowOnboarding: $shouldShowOnboarding)*/
                 
         }
         //p fazer swipe nos onboardings
