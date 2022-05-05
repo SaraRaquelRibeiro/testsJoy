@@ -19,6 +19,7 @@
 		0DDAA6E12822DB3800BC110A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0DDAA6E02822DB3800BC110A /* Kingfisher */; };
 		0DDAA6E72822E0D100BC110A /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA6E62822E0D100BC110A /* Blur.swift */; };
 		0DDAA6E92822ECCB00BC110A /* GradientGetStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA6E82822ECCA00BC110A /* GradientGetStartedView.swift */; };
+		0DDAA6EB2823F8A800BC110A /* ChooseLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA6EA2823F8A800BC110A /* ChooseLanguageView.swift */; };
 		0DE0A5942811925E0080FE70 /* testsJoyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE0A5932811925E0080FE70 /* testsJoyApp.swift */; };
 		0DE0A5962811925E0080FE70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE0A5952811925E0080FE70 /* ContentView.swift */; };
 		0DE0A598281192600080FE70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE0A597281192600080FE70 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 		0DDAA6DD2822D1DB00BC110A /* GetStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedView.swift; sourceTree = "<group>"; };
 		0DDAA6E62822E0D100BC110A /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		0DDAA6E82822ECCA00BC110A /* GradientGetStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientGetStartedView.swift; sourceTree = "<group>"; };
+		0DDAA6EA2823F8A800BC110A /* ChooseLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLanguageView.swift; sourceTree = "<group>"; };
 		0DE0A5902811925E0080FE70 /* testsJoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testsJoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE0A5932811925E0080FE70 /* testsJoyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testsJoyApp.swift; sourceTree = "<group>"; };
 		0DE0A5952811925E0080FE70 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				0DE0A5952811925E0080FE70 /* ContentView.swift */,
 				0D2693B1281194AD00826898 /* SplashScreen.swift */,
 				0DDAA6DD2822D1DB00BC110A /* GetStartedView.swift */,
+				0DDAA6EA2823F8A800BC110A /* ChooseLanguageView.swift */,
 				0D7FFE692812F85500FFFDB2 /* Resources */,
 				0D7FFE642812D50D00FFFDB2 /* Helpers */,
 				0DE0A597281192600080FE70 /* Assets.xcassets */,
@@ -208,6 +211,7 @@
 				0DDAA6E72822E0D100BC110A /* Blur.swift in Sources */,
 				0DE0A5962811925E0080FE70 /* ContentView.swift in Sources */,
 				0DE0A5942811925E0080FE70 /* testsJoyApp.swift in Sources */,
+				0DDAA6EB2823F8A800BC110A /* ChooseLanguageView.swift in Sources */,
 				0DDAA6E92822ECCB00BC110A /* GradientGetStartedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

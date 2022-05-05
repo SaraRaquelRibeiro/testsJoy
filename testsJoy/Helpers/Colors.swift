@@ -15,8 +15,10 @@ extension Color {
     
     //dá o gradiente preto na imagem top da GetStartedView
     static let blackOpacityGradient = LinearGradient(
-        gradient: Gradient(colors: [Color.black.opacity(0.0), Color.black.opacity(0.80)]),
+        gradient: Gradient(colors: [Color.black.opacity(0.0), Color.black.opacity(0.70)]),
         startPoint: .top,
         endPoint: .bottom)
     
 }
+
+
