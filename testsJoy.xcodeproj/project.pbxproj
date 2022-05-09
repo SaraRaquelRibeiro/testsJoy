@@ -24,6 +24,7 @@
 		0DDAA6F128257A2000BC110A /* LanguageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA6F028257A2000BC110A /* LanguageListView.swift */; };
 		0DDAA6F328257E9600BC110A /* StandardLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA6F228257E9600BC110A /* StandardLanguageView.swift */; };
 		0DDAA6F52825804D00BC110A /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA6F42825804D00BC110A /* Languages.swift */; };
+		0DDAA6FA28297AFE00BC110A /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDAA6F928297AFE00BC110A /* GlobalHelpers.swift */; };
 		0DE0A5942811925E0080FE70 /* testsJoyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE0A5932811925E0080FE70 /* testsJoyApp.swift */; };
 		0DE0A5962811925E0080FE70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE0A5952811925E0080FE70 /* ContentView.swift */; };
 		0DE0A59B281192600080FE70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE0A59A281192600080FE70 /* Preview Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		0DDAA6F028257A2000BC110A /* LanguageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageListView.swift; sourceTree = "<group>"; };
 		0DDAA6F228257E9600BC110A /* StandardLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardLanguageView.swift; sourceTree = "<group>"; };
 		0DDAA6F42825804D00BC110A /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
+		0DDAA6F928297AFE00BC110A /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
 		0DE0A5902811925E0080FE70 /* testsJoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testsJoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE0A5932811925E0080FE70 /* testsJoyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testsJoyApp.swift; sourceTree = "<group>"; };
 		0DE0A5952811925E0080FE70 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				0D7FFE672812D89100FFFDB2 /* Onboarding.swift */,
 				0DDAA6E62822E0D100BC110A /* Blur.swift */,
 				0DDAA6E82822ECCA00BC110A /* GradientGetStartedView.swift */,
+				0DDAA6F928297AFE00BC110A /* GlobalHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -86,6 +89,14 @@
 				0DDAA6D62822B49700BC110A /* Poppins-SemiBold.ttf */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		0DDAA6F62825984F00BC110A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0DDAA6F42825804D00BC110A /* Languages.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		0DE0A5872811925E0080FE70 = {
@@ -116,7 +127,7 @@
 				0DDAA6EA2823F8A800BC110A /* ChooseLanguageView.swift */,
 				0DDAA6F028257A2000BC110A /* LanguageListView.swift */,
 				0DDAA6F228257E9600BC110A /* StandardLanguageView.swift */,
-				0DDAA6F42825804D00BC110A /* Languages.swift */,
+				0DDAA6F62825984F00BC110A /* Models */,
 				0D7FFE692812F85500FFFDB2 /* Resources */,
 				0D7FFE642812D50D00FFFDB2 /* Helpers */,
 				0DE0A599281192600080FE70 /* Preview Content */,
@@ -215,6 +226,7 @@
 			files = (
 				0D2693B2281194AD00826898 /* SplashScreen.swift in Sources */,
 				0DDAA6F328257E9600BC110A /* StandardLanguageView.swift in Sources */,
+				0DDAA6FA28297AFE00BC110A /* GlobalHelpers.swift in Sources */,
 				0DDAA6DE2822D1DC00BC110A /* GetStartedView.swift in Sources */,
 				0DDAA6F128257A2000BC110A /* LanguageListView.swift in Sources */,
 				0D7FFE662812D53800FFFDB2 /* Colors.swift in Sources */,
