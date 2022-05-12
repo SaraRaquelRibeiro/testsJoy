@@ -43,7 +43,7 @@ struct GetStartedView: View {
                    
                     
                     NavigationLink(destination: {
-                        LanguageListView()
+                        ChooseLanguageWithButtonView()
                     }, label: {
                         Text("Get Started")
                             .bold()
@@ -54,6 +54,7 @@ struct GetStartedView: View {
                             .cornerRadius(40)
                     })
                         //.modifier(InnerShadowModifier())
+                        .navigationBarBackButtonHidden(true)
                     
                 }
             }

@@ -42,6 +42,7 @@ struct ButtonLanguage: View {
                     .clipped()
             }
         }
+        //.shadow(color: Color.black.opacity(0.1), radius: 1, y: 5)
     }
 }
 
