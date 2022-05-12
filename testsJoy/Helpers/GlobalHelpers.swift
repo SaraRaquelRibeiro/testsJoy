@@ -10,23 +10,24 @@ import Foundation
 let languageSelect1 = Language(
     languageTitle: "English",
     languageType: "American",
-    imageName: "englishAmerican")
+    imageName: "englishAmerican"
+)
 
 let languageSelect2 = Language(
     languageTitle: "English",
     languageType: "British",
-    imageName: "telephone")
+    imageName: "telephone"
+    )
 
 let languageSelect3 = Language(
     languageTitle: "Chinese",
     languageType: "",
-    imageName: "chineseLang")
-
+    imageName: "chineseLang"
+    )
 let languageSelect4 = Language(
     languageTitle: "Portuguese",
     languageType: "Brazil",
     imageName: "tucano")
-
 let languageSelect5 = Language(
     languageTitle: "Spanish",
     languageType: "Spain",

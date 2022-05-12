@@ -14,7 +14,7 @@ struct StandardLanguageView: View {
     
     //variavel para ajudar/preencher a animação da linha laranja
     @State var fill: CGFloat = 0.0
-
+    
     
     var body: some View {
         
@@ -57,6 +57,7 @@ struct StandardLanguageView: View {
             
         }
         .onTapGesture(perform: {
+            
             self.fill = 1.0
         })
     }

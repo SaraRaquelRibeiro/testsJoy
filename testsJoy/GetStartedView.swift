@@ -43,7 +43,7 @@ struct GetStartedView: View {
                    
                     
                     NavigationLink(destination: {
-                        //ChooseLanguageView()
+                        LanguageListView()
                     }, label: {
                         Text("Get Started")
                             .bold()

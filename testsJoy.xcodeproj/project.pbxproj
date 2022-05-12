@@ -10,6 +10,9 @@
 		0D2693B2281194AD00826898 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2693B1281194AD00826898 /* SplashScreen.swift */; };
 		0D7FFE662812D53800FFFDB2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7FFE652812D53800FFFDB2 /* Colors.swift */; };
 		0D7FFE682812D89100FFFDB2 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7FFE672812D89100FFFDB2 /* Onboarding.swift */; };
+		0DB0854D282BED3800DD5E70 /* ContentViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB0854C282BED3800DD5E70 /* ContentViewTest.swift */; };
+		0DB08550282C05C700DD5E70 /* ChooseLanguageWithButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB0854F282C05C700DD5E70 /* ChooseLanguageWithButtonView.swift */; };
+		0DB08552282C1D3800DD5E70 /* ButtonLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB08551282C1D3800DD5E70 /* ButtonLanguage.swift */; };
 		0DDAA6D82822B49700BC110A /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DDAA6D32822B49700BC110A /* Poppins-Light.ttf */; };
 		0DDAA6D92822B49700BC110A /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DDAA6D42822B49700BC110A /* Poppins-Bold.ttf */; };
 		0DDAA6DA2822B49700BC110A /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DDAA6D52822B49700BC110A /* Poppins-Regular.ttf */; };
@@ -34,6 +37,9 @@
 		0D2693B1281194AD00826898 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		0D7FFE652812D53800FFFDB2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		0D7FFE672812D89100FFFDB2 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		0DB0854C282BED3800DD5E70 /* ContentViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTest.swift; sourceTree = "<group>"; };
+		0DB0854F282C05C700DD5E70 /* ChooseLanguageWithButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLanguageWithButtonView.swift; sourceTree = "<group>"; };
+		0DB08551282C1D3800DD5E70 /* ButtonLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLanguage.swift; sourceTree = "<group>"; };
 		0DDAA6AA2822A8CB00BC110A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0DDAA6D32822B49700BC110A /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Light.ttf"; path = "../../../../../../Downloads/Poppins-Font-2/Poppins-Light.ttf"; sourceTree = "<group>"; };
 		0DDAA6D42822B49700BC110A /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Bold.ttf"; path = "../../../../../../Downloads/Poppins-Font-2/Poppins-Bold.ttf"; sourceTree = "<group>"; };
@@ -91,6 +97,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		0DB0854E282C01D700DD5E70 /* Not in use */ = {
+			isa = PBXGroup;
+			children = (
+				0DB0854C282BED3800DD5E70 /* ContentViewTest.swift */,
+			);
+			path = "Not in use";
+			sourceTree = "<group>";
+		};
 		0DDAA6F62825984F00BC110A /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +141,9 @@
 				0DDAA6EA2823F8A800BC110A /* ChooseLanguageView.swift */,
 				0DDAA6F028257A2000BC110A /* LanguageListView.swift */,
 				0DDAA6F228257E9600BC110A /* StandardLanguageView.swift */,
+				0DB0854F282C05C700DD5E70 /* ChooseLanguageWithButtonView.swift */,
+				0DB08551282C1D3800DD5E70 /* ButtonLanguage.swift */,
+				0DB0854E282C01D700DD5E70 /* Not in use */,
 				0DDAA6F62825984F00BC110A /* Models */,
 				0D7FFE692812F85500FFFDB2 /* Resources */,
 				0D7FFE642812D50D00FFFDB2 /* Helpers */,
@@ -230,13 +247,16 @@
 				0DDAA6DE2822D1DC00BC110A /* GetStartedView.swift in Sources */,
 				0DDAA6F128257A2000BC110A /* LanguageListView.swift in Sources */,
 				0D7FFE662812D53800FFFDB2 /* Colors.swift in Sources */,
+				0DB0854D282BED3800DD5E70 /* ContentViewTest.swift in Sources */,
 				0DDAA6F52825804D00BC110A /* Languages.swift in Sources */,
 				0D7FFE682812D89100FFFDB2 /* Onboarding.swift in Sources */,
+				0DB08550282C05C700DD5E70 /* ChooseLanguageWithButtonView.swift in Sources */,
 				0DDAA6E72822E0D100BC110A /* Blur.swift in Sources */,
 				0DE0A5962811925E0080FE70 /* ContentView.swift in Sources */,
 				0DE0A5942811925E0080FE70 /* testsJoyApp.swift in Sources */,
 				0DDAA6EB2823F8A800BC110A /* ChooseLanguageView.swift in Sources */,
 				0DDAA6E92822ECCB00BC110A /* GradientGetStartedView.swift in Sources */,
+				0DB08552282C1D3800DD5E70 /* ButtonLanguage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

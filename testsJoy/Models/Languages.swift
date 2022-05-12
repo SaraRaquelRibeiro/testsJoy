@@ -14,7 +14,7 @@ struct Language : Identifiable {
     let languageTitle : String
     let languageType : String
     let imageName : String
-    
+   
 }
 
 
@@ -25,11 +25,13 @@ struct LanguagesList {
         languageTitle: "English",
         languageType: "American",
         imageName: "englishAmerican"
+        
     ),
     Language(
         languageTitle: "English",
         languageType: "British",
         imageName: "telephone"
+        
     ),
     Language(
         languageTitle: "Chinese",
