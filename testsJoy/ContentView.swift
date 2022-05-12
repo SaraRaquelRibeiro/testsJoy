@@ -48,6 +48,19 @@ struct PageView: View {
     
     var body: some View {
         VStack{
+            if showsDismissButton {
+                Button(action: {
+                    //quando se clica no botão ele faz toggle ou seja desaparece
+                    shouldShowOnboarding.toggle()
+                }, label: {
+                    Text("Learn Languages")
+                        .bold()
+                        .foregroundColor(Color.orange)
+                        .frame(width: 200, height: 50)
+                        .background(Color.white)
+                        .cornerRadius(40)
+                })
+            }
             Image(imageName)
                 .resizable()
                 .clipShape(Circle())
@@ -71,19 +84,7 @@ struct PageView: View {
                 .multilineTextAlignment(.center)
                 .padding()
             
-            if showsDismissButton {
-                Button(action: {
-                    //quando se clica no botão ele faz toggle ou seja desaparece
-                    shouldShowOnboarding.toggle()
-                }, label: {
-                    Text("Learn Languages")
-                        .bold()
-                        .foregroundColor(Color.orange)
-                        .frame(width: 200, height: 50)
-                        .background(Color.white)
-                        .cornerRadius(40)
-                })
-            }
+            
             
         }
     }

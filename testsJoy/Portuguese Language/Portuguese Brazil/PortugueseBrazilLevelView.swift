@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PortugueseBrazilLevelView: View {
     var body: some View {
-        Text("Portuguese")
+        Text("Portuguese Brazil")
     }
 }
 
