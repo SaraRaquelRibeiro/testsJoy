@@ -38,6 +38,7 @@
 		0DF96CCA282D71C200B744F6 /* SubscriptionModelTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF96CC9282D71C200B744F6 /* SubscriptionModelTwo.swift */; };
 		0DF96CCC282D71D200B744F6 /* SubscriptionModelThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF96CCB282D71D200B744F6 /* SubscriptionModelThree.swift */; };
 		0DF96CCE282D75A000B744F6 /* EnglishAmericanMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF96CCD282D75A000B744F6 /* EnglishAmericanMain.swift */; };
+		0DF96CD0282E9F9C00B744F6 /* SubscriptionConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF96CCF282E9F9C00B744F6 /* SubscriptionConditions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		0DF96CC9282D71C200B744F6 /* SubscriptionModelTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionModelTwo.swift; sourceTree = "<group>"; };
 		0DF96CCB282D71D200B744F6 /* SubscriptionModelThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionModelThree.swift; sourceTree = "<group>"; };
 		0DF96CCD282D75A000B744F6 /* EnglishAmericanMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishAmericanMain.swift; sourceTree = "<group>"; };
+		0DF96CCF282E9F9C00B744F6 /* SubscriptionConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionConditions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +251,7 @@
 				0DF96CC7282D71A900B744F6 /* SubscriptionModelOne.swift */,
 				0DF96CC9282D71C200B744F6 /* SubscriptionModelTwo.swift */,
 				0DF96CCB282D71D200B744F6 /* SubscriptionModelThree.swift */,
+				0DF96CCF282E9F9C00B744F6 /* SubscriptionConditions.swift */,
 			);
 			path = Subscriptions;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				0DF96CCA282D71C200B744F6 /* SubscriptionModelTwo.swift in Sources */,
 				0DDAA6EB2823F8A800BC110A /* ChooseLanguageView.swift in Sources */,
 				0DDAA6E92822ECCB00BC110A /* GradientGetStartedView.swift in Sources */,
+				0DF96CD0282E9F9C00B744F6 /* SubscriptionConditions.swift in Sources */,
 				0DB08552282C1D3800DD5E70 /* ButtonLanguage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
