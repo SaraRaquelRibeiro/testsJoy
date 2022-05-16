@@ -13,6 +13,10 @@ struct EnglishAmericanLevelView: View {
     @State private var size = 0.8
     @State private var opacity = 0.9
     
+    //variaveis p a flag animada
+    @State var isAnimating = false
+    @State var image = 4
+    
     var body: some View {
         ZStack {
             Color.white
@@ -20,43 +24,26 @@ struct EnglishAmericanLevelView: View {
             
             VStack {
                 
-                ZStack (alignment: .leading) {
-                    Text("Choose your level")
-                        .font(.custom("Poppins-Bold", size: 25))
+                VStack (alignment: .leading) {
+                    Text("Choose your language level")
+                        .font(.custom("Poppins-Bold", size: 29))
                         .lineLimit(2)
-                    .frame(width: 300)
+                        .frame(width: 300)
+                        .padding(.leading, -70)
+                        
+                    
+                    Text("You are almost starting")
+                            .opacity(0.5)
+                            .font(.custom("Poppins-Light", size: 17))
+                            .frame(alignment: .bottomTrailing)
+                            .padding(.leading, -35)
+                            .padding(.top, -10)
+                            
                 }
+                
                 Spacer()
                 
                 VStack {
-                        HStack{
-                            Spacer()
-                                HStack{
-                                    VStack {
-                                        Text("Don't be shy,")
-                                            .font(.custom("Poppins-Medium", size: 17))
-                                            .scaleEffect(size)
-                                            .opacity(opacity)
-                                            .animation(Animation.easeOut.delay(0.9))
-                                        
-                                        Text("improve your skills")
-                                            .font(.custom("Poppins-Medium", size: 17))
-                                            .scaleEffect(size)
-                                            .opacity(opacity)
-                                            /*.onAppear {
-                                                withAnimation(.easeIn(duration: 0.6)) {
-                                                    self.size = 0.8
-                                                    self.opacity = 1.0
-                                                }
-                                            }*/
-                                    }
-                                    .padding()
-                                    .foregroundColor(.white)
-                                    .background(Color(UIColor.systemBlue))
-                                    .clipShape(BubbleShape())
-                                }
-                        }
-                        .padding()
                     
                     HStack{
                         
@@ -66,6 +53,37 @@ struct EnglishAmericanLevelView: View {
                             .frame(width: 100, height: 200)
                             .clipped()
                             .padding(.leading, -80)
+                        
+                        //flag animada
+                        ZStack{
+                            VStack {
+                                Image("\(image)")
+                                    //.renderingMode(.template)
+                                    .resizable()
+                                    .frame(width: 100, height: 100)
+                                    .rotationEffect(Angle(degrees: isAnimating ? 1080 : 0))
+                                    .animation(
+                                        Animation
+                                            .easeInOut(duration: 0.9)
+                                            .delay(isAnimating ? 0.5 : 0)
+                                            .repeatForever(autoreverses: false))
+                                    .scaleEffect(isAnimating ? 1 : 0)
+                                    .animation(
+                                        Animation
+                                            .easeInOut(duration: 0.5)
+                                            .delay(isAnimating ? 0.5 : 0)
+                                            .repeatForever(autoreverses: true))
+                            }.frame(width: 150, height: 150)
+                                .onAppear(){
+                                    Timer.scheduledTimer(withTimeInterval: 2.4, repeats: true){_ in
+                                        self.image = Int.random(in: 0...3)
+                                    }
+                                    self.isAnimating = true
+                                }
+                        }
+                        
+                        
+                        
                     }
                     .padding(-80)
                 }
@@ -195,7 +213,7 @@ struct EnglishAmericanLevelView_Previews: PreviewProvider {
     }
 }
 
-struct BubbleShape: Shape {
+/*struct BubbleShape: Shape {
     
     func path(in rect: CGRect) -> Path {
         let width = rect.width
@@ -218,4 +236,4 @@ struct BubbleShape: Shape {
         
         return Path(path.cgPath)
     }
-}
+}*/

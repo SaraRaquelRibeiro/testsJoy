@@ -59,7 +59,7 @@ struct ButtonTrial: View {
                 HStack{
                     VStack (alignment: .leading){
                         Text(textTitle)
-                            .font(.custom("Poppins-SemiBold", size: 26))
+                            .font(.custom("Poppins-SemiBold", size: 24))
                             .foregroundColor(Color("blueDark"))
                             .padding(.top, 30)
                         
