@@ -39,6 +39,7 @@
 		0DF96CCC282D71D200B744F6 /* SubscriptionModelThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF96CCB282D71D200B744F6 /* SubscriptionModelThree.swift */; };
 		0DF96CCE282D75A000B744F6 /* EnglishAmericanMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF96CCD282D75A000B744F6 /* EnglishAmericanMain.swift */; };
 		0DF96CD0282E9F9C00B744F6 /* SubscriptionConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF96CCF282E9F9C00B744F6 /* SubscriptionConditions.swift */; };
+		0DF96CD2283289A700B744F6 /* ButtonTrial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF96CD1283289A700B744F6 /* ButtonTrial.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		0DF96CCB282D71D200B744F6 /* SubscriptionModelThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionModelThree.swift; sourceTree = "<group>"; };
 		0DF96CCD282D75A000B744F6 /* EnglishAmericanMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishAmericanMain.swift; sourceTree = "<group>"; };
 		0DF96CCF282E9F9C00B744F6 /* SubscriptionConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionConditions.swift; sourceTree = "<group>"; };
+		0DF96CD1283289A700B744F6 /* ButtonTrial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTrial.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +254,7 @@
 				0DF96CC9282D71C200B744F6 /* SubscriptionModelTwo.swift */,
 				0DF96CCB282D71D200B744F6 /* SubscriptionModelThree.swift */,
 				0DF96CCF282E9F9C00B744F6 /* SubscriptionConditions.swift */,
+				0DF96CD1283289A700B744F6 /* ButtonTrial.swift */,
 			);
 			path = Subscriptions;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				0DB0854D282BED3800DD5E70 /* ContentViewTest.swift in Sources */,
 				0DDAA6F52825804D00BC110A /* Languages.swift in Sources */,
 				0DB0855E282D0C8600DD5E70 /* PortugueseBrazilLevelView.swift in Sources */,
+				0DF96CD2283289A700B744F6 /* ButtonTrial.swift in Sources */,
 				0D7FFE682812D89100FFFDB2 /* Onboarding.swift in Sources */,
 				0DB08550282C05C700DD5E70 /* ChooseLanguageWithButtonView.swift in Sources */,
 				0DF96CC8282D71A900B744F6 /* SubscriptionModelOne.swift in Sources */,
