@@ -54,7 +54,7 @@ struct SubscriptionModelThree: View {
                                 .foregroundColor(.white)
                                 .padding(.leading, 10)
                         }
-                        .padding(.top, 90)
+                        .padding(.top, 70)
                         
                         HStack {
                             Image("accepted")
@@ -67,7 +67,7 @@ struct SubscriptionModelThree: View {
                                 .foregroundColor(.white)
                                 .padding(.leading, 10)
                         }
-                        .padding(.top, 20)
+                        .padding(.top, 10)
                     }
                     
                     
@@ -77,7 +77,7 @@ struct SubscriptionModelThree: View {
                         .padding(.leading, 10)
                         .frame(width: 290)
                         .multilineTextAlignment(.center)
-                        .padding(.top, 30)
+                        .padding(.top, 20)
                     
                     Spacer()
                     
@@ -104,7 +104,7 @@ struct SubscriptionModelThree: View {
                                         textTag: "Most Popular")
                             
                         }
-                        .padding(.top, 40)
+                        .padding(.top, 30)
                         
                         Spacer()
                         
@@ -115,33 +115,36 @@ struct SubscriptionModelThree: View {
                                     conditions: "12 months: €65.99",
                                     price: "€5.67 / MO",
                                     textTag: "Most Popular")
-                            .padding(.top, -20)
+                            .padding(.top, -60)
                         
                         Spacer()
                         
                     }
+                    
                 }
+            
+           
             
             VStack {
                 Spacer()
                 
+                Text("Cancel your subscription anytime")
+                    .font(.custom("Poppins-Medium", size: 16))
+                    .foregroundColor(.white)
+                
+                
+                
                 NavigationLink(destination: EnglishAmericanMain(),
-                               
                                label: {
-                    
                     ZStack{
-                       
-                        
                         Text("Start 14-day Free Trial")
                             .bold()
                             .foregroundColor(Color("blueDark"))
                             .frame(width: 270, height: 50)
                             //.background(Color.orangeGradient2)
                             .background(Color.white)
-                            .cornerRadius(30)
-                            .shadow(color: Color.blue.opacity(0.3), radius: 1, y: 5)
-                        
-                        
+                            .cornerRadius(20)
+                            .shadow(color: Color.blue.opacity(0.4), radius: 1, y: 5)
                     }
                 })
             }
