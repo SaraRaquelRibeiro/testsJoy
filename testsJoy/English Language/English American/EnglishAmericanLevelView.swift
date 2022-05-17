@@ -98,7 +98,7 @@ struct EnglishAmericanLevelView: View {
                                         .animation(
                                             Animation
                                                 .easeInOut(duration: 16)
-                                                .delay(isAnimating ? 3 : 0)
+                                                .delay(isAnimating ? 0.5 : 0)
                                                 .repeatForever(autoreverses: true))
                                         .scaleEffect(isAnimating ? 1 : 0)
                                         .animation(
@@ -115,10 +115,7 @@ struct EnglishAmericanLevelView: View {
                             
                             VStack {
                                 
-                                
-                                
-                                
-                                //flag animada China
+                                //flag animada US pequeno
                                 VStack {
                                     Image("1")
                                         //.renderingMode(.template)
@@ -145,16 +142,8 @@ struct EnglishAmericanLevelView: View {
                                         }
                                         self.isAnimating = true
                                     }
-                                
                             }
-                            
-                            
                         }
-                        
-                        
-                        
-                        
-                        
                     }
                     
                 }

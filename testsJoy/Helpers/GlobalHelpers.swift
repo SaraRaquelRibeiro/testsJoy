@@ -42,3 +42,16 @@ let languageSelect6 = Language(
 var languageSelection: [Language] {
     return [languageSelect1, languageSelect2, languageSelect3, languageSelect4, languageSelect5, languageSelect6]
 }
+
+
+//***** Courses
+let course1Unit1 = Course(id: UUID().uuidString, name: "Greetings", image: "unit1greetings", color: "orangeGradient1")
+let course2Unit1 = Course(id: UUID().uuidString, name: "Clothes", image: "unit1clothes", color: "greenGradient1")
+let course3Unit1 = Course(id: UUID().uuidString, name: "Numbers", image: "unit1numbers", color: "orangeGradient2")
+let course4Unit1 = Course(id: UUID().uuidString, name: "Food", image: "unit1fruits", color: "blueGradient1")
+
+
+
+
+let coursesFromUnit1 : [Course] = [course1Unit1, course2Unit1, course3Unit1, course4Unit1]
+

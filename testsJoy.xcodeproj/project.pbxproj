@@ -40,6 +40,10 @@
 		0DF96CCE282D75A000B744F6 /* EnglishAmericanMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF96CCD282D75A000B744F6 /* EnglishAmericanMain.swift */; };
 		0DF96CD0282E9F9C00B744F6 /* SubscriptionConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF96CCF282E9F9C00B744F6 /* SubscriptionConditions.swift */; };
 		0DF96CD2283289A700B744F6 /* ButtonTrial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF96CD1283289A700B744F6 /* ButtonTrial.swift */; };
+		0DF96CD42833CB1700B744F6 /* HomeViewAmerican.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF96CD32833CB1600B744F6 /* HomeViewAmerican.swift */; };
+		0DF96CD62833CE7300B744F6 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF96CD52833CE7300B744F6 /* Course.swift */; };
+		0DF96CD92833CF1100B744F6 /* StandardHomeCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF96CD82833CF1100B744F6 /* StandardHomeCourse.swift */; };
+		0DF96CDB2833E4A000B744F6 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF96CDA2833E4A000B744F6 /* HomeVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +81,10 @@
 		0DF96CCD282D75A000B744F6 /* EnglishAmericanMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishAmericanMain.swift; sourceTree = "<group>"; };
 		0DF96CCF282E9F9C00B744F6 /* SubscriptionConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionConditions.swift; sourceTree = "<group>"; };
 		0DF96CD1283289A700B744F6 /* ButtonTrial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTrial.swift; sourceTree = "<group>"; };
+		0DF96CD32833CB1600B744F6 /* HomeViewAmerican.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewAmerican.swift; sourceTree = "<group>"; };
+		0DF96CD52833CE7300B744F6 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		0DF96CD82833CF1100B744F6 /* StandardHomeCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardHomeCourse.swift; sourceTree = "<group>"; };
+		0DF96CDA2833E4A000B744F6 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +185,7 @@
 			children = (
 				0DB0855F282D1C6300DD5E70 /* EnglishAmericanLevelView.swift */,
 				0DF96CCD282D75A000B744F6 /* EnglishAmericanMain.swift */,
+				0DF96CD32833CB1600B744F6 /* HomeViewAmerican.swift */,
 			);
 			path = "English American";
 			sourceTree = "<group>";
@@ -193,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				0DDAA6F42825804D00BC110A /* Languages.swift */,
+				0DF96CD52833CE7300B744F6 /* Course.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -229,6 +239,7 @@
 				0DB08554282D0A3400DD5E70 /* Portuguese Language */,
 				0DB08557282D0BF100DD5E70 /* German Language */,
 				0DB08559282D0C1600DD5E70 /* Spanish Language */,
+				0DF96CD72833CEE400B744F6 /* Views for All Languages */,
 				0DF96CC6282D716F00B744F6 /* Subscriptions */,
 				0DDAA6F62825984F00BC110A /* Models */,
 				0D7FFE692812F85500FFFDB2 /* Resources */,
@@ -257,6 +268,15 @@
 				0DF96CD1283289A700B744F6 /* ButtonTrial.swift */,
 			);
 			path = Subscriptions;
+			sourceTree = "<group>";
+		};
+		0DF96CD72833CEE400B744F6 /* Views for All Languages */ = {
+			isa = PBXGroup;
+			children = (
+				0DF96CD82833CF1100B744F6 /* StandardHomeCourse.swift */,
+				0DF96CDA2833E4A000B744F6 /* HomeVM.swift */,
+			);
+			path = "Views for All Languages";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DF96CD62833CE7300B744F6 /* Course.swift in Sources */,
 				0D2693B2281194AD00826898 /* SplashScreen.swift in Sources */,
 				0DF96CCC282D71D200B744F6 /* SubscriptionModelThree.swift in Sources */,
 				0DF96CC5282D604900B744F6 /* CapsuleButtons.swift in Sources */,
@@ -349,6 +370,7 @@
 				0DDAA6FA28297AFE00BC110A /* GlobalHelpers.swift in Sources */,
 				0DDAA6DE2822D1DC00BC110A /* GetStartedView.swift in Sources */,
 				0DDAA6F128257A2000BC110A /* LanguageListView.swift in Sources */,
+				0DF96CD92833CF1100B744F6 /* StandardHomeCourse.swift in Sources */,
 				0D7FFE662812D53800FFFDB2 /* Colors.swift in Sources */,
 				0DB0854D282BED3800DD5E70 /* ContentViewTest.swift in Sources */,
 				0DDAA6F52825804D00BC110A /* Languages.swift in Sources */,
@@ -357,12 +379,14 @@
 				0D7FFE682812D89100FFFDB2 /* Onboarding.swift in Sources */,
 				0DB08550282C05C700DD5E70 /* ChooseLanguageWithButtonView.swift in Sources */,
 				0DF96CC8282D71A900B744F6 /* SubscriptionModelOne.swift in Sources */,
+				0DF96CD42833CB1700B744F6 /* HomeViewAmerican.swift in Sources */,
 				0DDAA6E72822E0D100BC110A /* Blur.swift in Sources */,
 				0DE0A5962811925E0080FE70 /* ContentView.swift in Sources */,
 				0DE0A5942811925E0080FE70 /* testsJoyApp.swift in Sources */,
 				0DF96CCA282D71C200B744F6 /* SubscriptionModelTwo.swift in Sources */,
 				0DDAA6EB2823F8A800BC110A /* ChooseLanguageView.swift in Sources */,
 				0DDAA6E92822ECCB00BC110A /* GradientGetStartedView.swift in Sources */,
+				0DF96CDB2833E4A000B744F6 /* HomeVM.swift in Sources */,
 				0DF96CD0282E9F9C00B744F6 /* SubscriptionConditions.swift in Sources */,
 				0DB08552282C1D3800DD5E70 /* ButtonLanguage.swift in Sources */,
 			);
