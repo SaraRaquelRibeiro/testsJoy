@@ -15,7 +15,7 @@ struct EnglishAmericanLevelView: View {
     
     //variaveis p a flag animada
     @State var isAnimating = false
-    @State var image = 4
+    @State var image = 1
     
     var body: some View {
         ZStack {
@@ -52,40 +52,111 @@ struct EnglishAmericanLevelView: View {
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 100, height: 200)
                             .clipped()
-                            .padding(.leading, -80)
+                            .padding(.leading, 70)
+                            .padding()
+                       
                         
-                        //flag animada
-                        ZStack{
-                            VStack {
-                                Image("\(image)")
-                                    //.renderingMode(.template)
-                                    .resizable()
-                                    .frame(width: 100, height: 100)
-                                    .rotationEffect(Angle(degrees: isAnimating ? 1080 : 0))
-                                    .animation(
-                                        Animation
-                                            .easeInOut(duration: 0.9)
-                                            .delay(isAnimating ? 0.5 : 0)
-                                            .repeatForever(autoreverses: false))
-                                    .scaleEffect(isAnimating ? 1 : 0)
-                                    .animation(
-                                        Animation
-                                            .easeInOut(duration: 0.5)
-                                            .delay(isAnimating ? 0.5 : 0)
-                                            .repeatForever(autoreverses: true))
-                            }.frame(width: 150, height: 150)
-                                .onAppear(){
-                                    Timer.scheduledTimer(withTimeInterval: 2.4, repeats: true){_ in
-                                        self.image = Int.random(in: 0...3)
-                                    }
-                                    self.isAnimating = true
+                        HStack{
+                            
+                            
+                            VStack{
+                                //flag animada SP
+                                /*VStack {
+                                    Image("3")
+                                        //.renderingMode(.template)
+                                        .resizable()
+                                        .frame(width: 40, height: 40)
+                                        .rotationEffect(Angle(degrees: isAnimating ? 200 : 0))
+                                        .animation(
+                                            Animation
+                                                .easeInOut(duration: 7)
+                                                .delay(isAnimating ? 2 : 0)
+                                                .repeatForever(autoreverses: false))
+                                        .scaleEffect(isAnimating ? 1 : 0)
+                                        .animation(
+                                            Animation
+                                                .easeInOut(duration: 7)
+                                                .delay(isAnimating ? 2 : 0)
+                                                .repeatForever(autoreverses: true))
+                                        .padding(.trailing, 50)
+                                        .padding(.top, -110)
+                                }.frame(width: 150, height: 150)
+                                    .onAppear(){
+                                        Timer.scheduledTimer(withTimeInterval: 2.4, repeats: true){_ in
+                                            self.image = 1
+                                        }
+                                        self.isAnimating = true
+                                    }*/
+                                
+                                //flag animada USA
+                                VStack {
+                                    Image("1")
+                                        //.renderingMode(.template)
+                                        .resizable()
+                                        .frame(width: 100, height: 100)
+                                        .rotationEffect(Angle(degrees: isAnimating ? 500 : 0))
+                                        .animation(
+                                            Animation
+                                                .easeInOut(duration: 16)
+                                                .delay(isAnimating ? 3 : 0)
+                                                .repeatForever(autoreverses: true))
+                                        .scaleEffect(isAnimating ? 1 : 0)
+                                        .animation(
+                                            Animation
+                                                .easeInOut(duration: 16)
+                                                .delay(isAnimating ? 3 : 0)
+                                                .repeatForever(autoreverses: true))
+                                        
+                                        
                                 }
+                                
+                                
+                            }
+                            
+                            VStack {
+                                
+                                
+                                
+                                
+                                //flag animada China
+                                VStack {
+                                    Image("1")
+                                        //.renderingMode(.template)
+                                        .resizable()
+                                        .frame(width: 40, height: 40)
+                                        .rotationEffect(Angle(degrees: isAnimating ? 400 : 0))
+                                        .animation(
+                                            Animation
+                                                .easeInOut(duration: 6)
+                                                .delay(isAnimating ? 2 : 0)
+                                                .repeatForever(autoreverses: false))
+                                        .scaleEffect(isAnimating ? 1 : 0)
+                                        .animation(
+                                            Animation
+                                                .easeInOut(duration: 6)
+                                                .delay(isAnimating ? 2 : 0)
+                                                .repeatForever(autoreverses: true))
+                                        .padding(.top, -90)
+                                        .padding(.leading, -70)
+                                }.frame(width: 150, height: 150)
+                                    .onAppear(){
+                                        Timer.scheduledTimer(withTimeInterval: 2.4, repeats: true){_ in
+                                            self.image = 0
+                                        }
+                                        self.isAnimating = true
+                                    }
+                                
+                            }
+                            
+                            
                         }
                         
                         
                         
+                        
+                        
                     }
-                    .padding(-80)
+                    
                 }
                 Spacer()
                 
