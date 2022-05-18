@@ -33,10 +33,11 @@ struct StandardHomeCourse: View {
                         .stroke(lineWidth: 8.0)
                         .foregroundColor(colors.randomElement()))*/
             
-            /*Text(course.name)
-                .opacity(0.6)
-                .font(.custom("Poppins-Bold", size: 23))
-                .padding(.top,-112)*/
+            Text(course.name)
+                .opacity(0.8)
+                .font(.custom("Poppins-medium", size: 13))
+                .foregroundColor(.black)
+                .padding(.top, -45)
         }
     }
 }

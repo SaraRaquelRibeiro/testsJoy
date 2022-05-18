@@ -14,3 +14,5 @@ struct Course : Identifiable {
     var color : String
     
 }
+
+

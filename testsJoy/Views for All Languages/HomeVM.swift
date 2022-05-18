@@ -12,6 +12,8 @@ class HomeVM : ObservableObject {
     @Published var courses : [String:[Course]] = [:]
     
     public var allUnits : [String] {
+        //inserir a ordem aqui
+        
         courses.keys.map({String($0)})
     }
     
@@ -19,16 +21,16 @@ class HomeVM : ObservableObject {
     public func getCourse (forUnit unit : String) -> [Course] {
         return courses[unit] ?? [] //otherwise just return empty
     }
-    
     init(){
         setupCourses()
     }
     
     func setupCourses(){
         courses["Unit 1"] = coursesFromUnit1
-        courses["Unit 2"] = coursesFromUnit1.shuffled()
-        courses["Unit 3"] = coursesFromUnit1.shuffled()
-        courses["Unit 4"] = coursesFromUnit1.shuffled()
+        courses["Unit 2"] = coursesFromUnit1
+        courses["Unit 3"] = coursesFromUnit1
+        courses["Unit 4"] = coursesFromUnit1
+        
     }
     
 }
