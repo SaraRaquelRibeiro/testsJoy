@@ -12,9 +12,8 @@ class HomeVM : ObservableObject {
     @Published var courses : [String:[Course]] = [:]
     
     public var allUnits : [String] {
-        //inserir a ordem aqui
         
-        courses.keys.map({String($0)})
+        courses.keys.map({String($0)}).sorted()
     }
     
     //para transformar o dictionat course num array assim podemos chamar no foreach

@@ -13,6 +13,8 @@ struct EnglishAmericanLevelView: View {
     @State private var size = 0.8
     @State private var opacity = 0.9
     
+    @AppStorage ("user_state") var user_state: String = "initial"
+    
     //variaveis p a flag animada
     @State var isAnimating = false
     @State var image = 1
@@ -60,33 +62,7 @@ struct EnglishAmericanLevelView: View {
                             
                             
                             VStack{
-                                //flag animada SP
-                                /*VStack {
-                                    Image("3")
-                                        //.renderingMode(.template)
-                                        .resizable()
-                                        .frame(width: 40, height: 40)
-                                        .rotationEffect(Angle(degrees: isAnimating ? 200 : 0))
-                                        .animation(
-                                            Animation
-                                                .easeInOut(duration: 7)
-                                                .delay(isAnimating ? 2 : 0)
-                                                .repeatForever(autoreverses: false))
-                                        .scaleEffect(isAnimating ? 1 : 0)
-                                        .animation(
-                                            Animation
-                                                .easeInOut(duration: 7)
-                                                .delay(isAnimating ? 2 : 0)
-                                                .repeatForever(autoreverses: true))
-                                        .padding(.trailing, 50)
-                                        .padding(.top, -110)
-                                }.frame(width: 150, height: 150)
-                                    .onAppear(){
-                                        Timer.scheduledTimer(withTimeInterval: 2.4, repeats: true){_ in
-                                            self.image = 1
-                                        }
-                                        self.isAnimating = true
-                                    }*/
+                               
                                 
                                 //flag animada USA
                                 VStack {
@@ -106,8 +82,6 @@ struct EnglishAmericanLevelView: View {
                                                 .easeInOut(duration: 16)
                                                 .delay(isAnimating ? 3 : 0)
                                                 .repeatForever(autoreverses: true))
-                                        
-                                        
                                 }
                                 
                                 
@@ -157,7 +131,14 @@ struct EnglishAmericanLevelView: View {
                         CapsuleButtons(color1: Color("orangeGradient1"), color2: Color("orangeGradient2"))
                         .padding(10)
                         
-                        NavigationLink(destination: PortugueseBrazilLevelView(), label: {
+                        //gravar variavel
+                        //defaults.set("american_begginer", forKey: "user_state")
+                        
+                        
+                        
+                        NavigationLink(destination: HomeViewAmerican().onAppear(perform: {
+                            user_state = "american_english"
+                        }), label: {
                             
                             ZStack{
                                 Capsule()
@@ -194,7 +175,13 @@ struct EnglishAmericanLevelView: View {
                         CapsuleButtons(color1: Color("blueGradient1"), color2: Color("blueGradient2"))
                         .padding(10)
                         
-                        NavigationLink(destination: PortugueseBrazilLevelView(), label: {
+                        
+                        
+                        NavigationLink(destination: HomeViewAmerican().simultaneousGesture(TapGesture().onEnded({
+                            user_state = "american_english"
+                        })), label: {
+                            
+                            
                             
                             ZStack{
                                 Capsule()

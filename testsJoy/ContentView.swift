@@ -12,26 +12,28 @@ struct ContentView: View {
     //variavel em @Appstorage p aparecer sóuma vez
     @AppStorage ("shouldShowOnboarding") var shouldShowOnboarding: Bool = true
     
+    @AppStorage ("user_state") var user_state: String = "initial"
+   
+    
     
     var body: some View {
         NavigationView{
             
-            if shouldShowOnboarding {
-                OnboardingView(shouldShowOnboarding: $shouldShowOnboarding)
-            } else {
-                GetStartedView()
+            if user_state == "initial" {
+                if shouldShowOnboarding {
+                    OnboardingView(shouldShowOnboarding: $shouldShowOnboarding)
+                } else {
+                    GetStartedView()
+                }
+            } else if user_state == "american_english" {
+                HomeViewAmerican()
             }
             
-            /*ZStack {
-                //Color.white
-                    //.edgesIgnoringSafeArea(.all)
-                Text("You are in the main app now!")
-                    .padding()
-            }
-            .navigationTitle("HOME")*/
+            
         }
         .fullScreenCover(isPresented: $shouldShowOnboarding, content: {
             OnboardingView(shouldShowOnboarding: $shouldShowOnboarding)
+            
         })
         
     }
@@ -49,9 +51,11 @@ struct PageView: View {
     var body: some View {
         VStack{
             if showsDismissButton {
+                
                 Button(action: {
                     //quando se clica no botão ele faz toggle ou seja desaparece
                     shouldShowOnboarding.toggle()
+                    
                 }, label: {
                     Text("Learn Languages")
                         .bold()

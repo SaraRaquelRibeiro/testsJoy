@@ -9,11 +9,14 @@ import SwiftUI
 
 struct HomeViewAmerican: View {
     
+    let defaults = UserDefaults.standard
+    
     var vm = HomeVM()
     
-    
+    @AppStorage ("user_state") var user_state: String = "initial"
     
     var body: some View {
+        
        
         ZStack{
             Color.black
@@ -29,16 +32,25 @@ struct HomeViewAmerican: View {
                                 Text(uni)
                                     .font(.custom("Poppins-SemiBold", size: 21))
                                 //insert small description after some Units
+                                
                                 if(uni == "Unit 2") {
                                     HStack{
                                         Image(systemName: "circle.fill")
                                             .foregroundColor(.yellow)
                                             .font(.system(size: 6))
+                                            
                                         Text("100 popular words")
                                             .font(.custom("Poppins-regular", size: 16))
                                     }
+                                } else if(uni == "Unit 3"){
+                                    Image(systemName: "circle.fill")
+                                        .foregroundColor(.pink)
+                                        .font(.system(size: 6))
                                     
+                                    Text("100 popular words to travel")
+                                        .font(.custom("Poppins-regular", size: 16))
                                 }
+                                    
                             
                                 Spacer()
                             }
@@ -74,6 +86,8 @@ struct HomeViewAmerican: View {
             }
         }
         .foregroundColor(.white)
+        
+        
     }
 }
 
