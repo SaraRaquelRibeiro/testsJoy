@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D2144F0283D139E00DB512C /* TopImageHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2144EF283D139D00DB512C /* TopImageHomeView.swift */; };
 		0D2693B2281194AD00826898 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2693B1281194AD00826898 /* SplashScreen.swift */; };
 		0D7FFE662812D53800FFFDB2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7FFE652812D53800FFFDB2 /* Colors.swift */; };
 		0D7FFE682812D89100FFFDB2 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7FFE672812D89100FFFDB2 /* Onboarding.swift */; };
@@ -40,13 +41,14 @@
 		0DF96CCE282D75A000B744F6 /* EnglishAmericanMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF96CCD282D75A000B744F6 /* EnglishAmericanMain.swift */; };
 		0DF96CD0282E9F9C00B744F6 /* SubscriptionConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF96CCF282E9F9C00B744F6 /* SubscriptionConditions.swift */; };
 		0DF96CD2283289A700B744F6 /* ButtonTrial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF96CD1283289A700B744F6 /* ButtonTrial.swift */; };
-		0DF96CD42833CB1700B744F6 /* HomeViewAmerican.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF96CD32833CB1600B744F6 /* HomeViewAmerican.swift */; };
+		0DF96CD42833CB1700B744F6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF96CD32833CB1600B744F6 /* HomeView.swift */; };
 		0DF96CD62833CE7300B744F6 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF96CD52833CE7300B744F6 /* Course.swift */; };
 		0DF96CD92833CF1100B744F6 /* StandardHomeCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF96CD82833CF1100B744F6 /* StandardHomeCourse.swift */; };
 		0DF96CDB2833E4A000B744F6 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF96CDA2833E4A000B744F6 /* HomeVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D2144EF283D139D00DB512C /* TopImageHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopImageHomeView.swift; sourceTree = "<group>"; };
 		0D2693B1281194AD00826898 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		0D7FFE652812D53800FFFDB2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		0D7FFE672812D89100FFFDB2 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
@@ -81,7 +83,7 @@
 		0DF96CCD282D75A000B744F6 /* EnglishAmericanMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishAmericanMain.swift; sourceTree = "<group>"; };
 		0DF96CCF282E9F9C00B744F6 /* SubscriptionConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionConditions.swift; sourceTree = "<group>"; };
 		0DF96CD1283289A700B744F6 /* ButtonTrial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTrial.swift; sourceTree = "<group>"; };
-		0DF96CD32833CB1600B744F6 /* HomeViewAmerican.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewAmerican.swift; sourceTree = "<group>"; };
+		0DF96CD32833CB1600B744F6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0DF96CD52833CE7300B744F6 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		0DF96CD82833CF1100B744F6 /* StandardHomeCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardHomeCourse.swift; sourceTree = "<group>"; };
 		0DF96CDA2833E4A000B744F6 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
@@ -99,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D2144EE283D12AB00DB512C /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				0DF96CD32833CB1600B744F6 /* HomeView.swift */,
+				0D2144EF283D139D00DB512C /* TopImageHomeView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
 		0D7FFE642812D50D00FFFDB2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,7 +196,6 @@
 			children = (
 				0DB0855F282D1C6300DD5E70 /* EnglishAmericanLevelView.swift */,
 				0DF96CCD282D75A000B744F6 /* EnglishAmericanMain.swift */,
-				0DF96CD32833CB1600B744F6 /* HomeViewAmerican.swift */,
 			);
 			path = "English American";
 			sourceTree = "<group>";
@@ -273,6 +283,7 @@
 		0DF96CD72833CEE400B744F6 /* Views for All Languages */ = {
 			isa = PBXGroup;
 			children = (
+				0D2144EE283D12AB00DB512C /* HomeView */,
 				0DF96CD82833CF1100B744F6 /* StandardHomeCourse.swift */,
 				0DF96CDA2833E4A000B744F6 /* HomeVM.swift */,
 			);
@@ -379,8 +390,9 @@
 				0D7FFE682812D89100FFFDB2 /* Onboarding.swift in Sources */,
 				0DB08550282C05C700DD5E70 /* ChooseLanguageWithButtonView.swift in Sources */,
 				0DF96CC8282D71A900B744F6 /* SubscriptionModelOne.swift in Sources */,
-				0DF96CD42833CB1700B744F6 /* HomeViewAmerican.swift in Sources */,
+				0DF96CD42833CB1700B744F6 /* HomeView.swift in Sources */,
 				0DDAA6E72822E0D100BC110A /* Blur.swift in Sources */,
+				0D2144F0283D139E00DB512C /* TopImageHomeView.swift in Sources */,
 				0DE0A5962811925E0080FE70 /* ContentView.swift in Sources */,
 				0DE0A5942811925E0080FE70 /* testsJoyApp.swift in Sources */,
 				0DF96CCA282D71C200B744F6 /* SubscriptionModelTwo.swift in Sources */,

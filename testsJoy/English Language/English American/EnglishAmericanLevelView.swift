@@ -131,12 +131,8 @@ struct EnglishAmericanLevelView: View {
                         CapsuleButtons(color1: Color("orangeGradient1"), color2: Color("orangeGradient2"))
                         .padding(10)
                         
-                        //gravar variavel
-                        //defaults.set("american_begginer", forKey: "user_state")
                         
-                        
-                        
-                        NavigationLink(destination: HomeViewAmerican().onAppear(perform: {
+                        NavigationLink(destination: HomeView().onAppear(perform: {
                             user_state = "american_english"
                         }), label: {
                             
@@ -177,7 +173,7 @@ struct EnglishAmericanLevelView: View {
                         
                         
                         
-                        NavigationLink(destination: HomeViewAmerican().simultaneousGesture(TapGesture().onEnded({
+                        NavigationLink(destination: HomeView().simultaneousGesture(TapGesture().onEnded({
                             user_state = "american_english"
                         })), label: {
                             

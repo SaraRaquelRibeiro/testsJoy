@@ -26,7 +26,7 @@ struct ContentView: View {
                     GetStartedView()
                 }
             } else if user_state == "american_english" {
-                HomeViewAmerican()
+                HomeView()
             }
             
             

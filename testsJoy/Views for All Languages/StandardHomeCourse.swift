@@ -32,12 +32,6 @@ struct StandardHomeCourse: View {
                     RoundedRectangle(cornerRadius: 30)
                         .stroke(lineWidth: 8.0)
                         .foregroundColor(colors.randomElement()))*/
-            
-            Text(course.name)
-                .opacity(0.8)
-                .font(.custom("Poppins-medium", size: 13))
-                .foregroundColor(.black)
-                .padding(.top, -45)
         }
     }
 }
