@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D2144F0283D139E00DB512C /* TopImageHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2144EF283D139D00DB512C /* TopImageHomeView.swift */; };
+		0D2144F2283E591C00DB512C /* FlagSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2144F1283E591C00DB512C /* FlagSelected.swift */; };
 		0D2693B2281194AD00826898 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2693B1281194AD00826898 /* SplashScreen.swift */; };
 		0D7FFE662812D53800FFFDB2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7FFE652812D53800FFFDB2 /* Colors.swift */; };
 		0D7FFE682812D89100FFFDB2 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7FFE672812D89100FFFDB2 /* Onboarding.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		0D2144EF283D139D00DB512C /* TopImageHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopImageHomeView.swift; sourceTree = "<group>"; };
+		0D2144F1283E591C00DB512C /* FlagSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagSelected.swift; sourceTree = "<group>"; };
 		0D2693B1281194AD00826898 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		0D7FFE652812D53800FFFDB2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		0D7FFE672812D89100FFFDB2 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				0DF96CD32833CB1600B744F6 /* HomeView.swift */,
 				0D2144EF283D139D00DB512C /* TopImageHomeView.swift */,
+				0D2144F1283E591C00DB512C /* FlagSelected.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				0DDAA6F328257E9600BC110A /* StandardLanguageView.swift in Sources */,
 				0DB08560282D1C6300DD5E70 /* EnglishAmericanLevelView.swift in Sources */,
 				0DDAA6FA28297AFE00BC110A /* GlobalHelpers.swift in Sources */,
+				0D2144F2283E591C00DB512C /* FlagSelected.swift in Sources */,
 				0DDAA6DE2822D1DC00BC110A /* GetStartedView.swift in Sources */,
 				0DDAA6F128257A2000BC110A /* LanguageListView.swift in Sources */,
 				0DF96CD92833CF1100B744F6 /* StandardHomeCourse.swift in Sources */,

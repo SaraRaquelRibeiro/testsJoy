@@ -16,29 +16,44 @@ struct TopImageHomeView: View {
                 .clipped()
             
             
+            
             VStack{
                 Spacer()
-                
+                    
                 HStack{
-                    Text("Learn faster than your friends")
-                        .font(.custom("Poppins-Medium", size: 18))
+                   
+                    Text("EnJoy and Learn")
+                        .font(.custom("Poppins-Medium", size: 14))
+                    
+                    Spacer()
+                        .frame(width: 5)
                     
                     Image(systemName: "circle.fill")
-                        .foregroundColor(.pink)
+                        .foregroundColor(.orange)
                         .font(.system(size: 6))
                     
-                    Text("Win")
-                        .font(.custom("Poppins-Medium", size: 18))
-                    
                 }
+                .padding(.leading, 140)
+                .padding(.trailing, 140)
+                .padding()
+                
                 
             }
-            .padding(.bottom, 70)
+            /*.background(LinearGradient(gradient:
+                                        Gradient(
+                                            colors: [Color.black.opacity(0.0), Color("blueDark").opacity(0.95)]),
+                                       startPoint: .top,
+                                       endPoint: .bottom))*/
+            .background(LinearGradient(gradient:
+                                        Gradient(
+                                            stops: [.init(color: .black.opacity(0.0), location: 0.5),
+                                                    .init(color: Color("blueMedium"), location: 1)]),
+                                       startPoint: .top,
+                                       endPoint: .bottom))
             
-            
-           
         }
         .foregroundColor(.white)
+        
         
     }
 }

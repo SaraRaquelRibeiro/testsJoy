@@ -14,6 +14,7 @@ struct ButtonLanguage: View {
     @State var textTitle: String
     @State var textSubtitle: String
     @State var imageLang: String
+    @State var imageFlag: String
     
     
     var body: some View {
@@ -52,6 +53,7 @@ struct ButtonLanguage_Previews: PreviewProvider {
                        color: .orangeGradient1,
                        textTitle: "English",
                        textSubtitle: "American",
-                       imageLang: "englishAmerican")
+                       imageLang: "englishAmerican",
+                       imageFlag: "1")
     }
 }

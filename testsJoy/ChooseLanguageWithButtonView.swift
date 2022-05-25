@@ -9,13 +9,12 @@ import SwiftUI
 
 struct ChooseLanguageWithButtonView: View {
     
-    @State private var isSelected1 = false
-    @State private var isSelected2 = false
-    @State private var isSelected3 = false
-    @State private var isSelected4 = false
-    @State private var isSelected5 = false
-    @State private var isSelected6 = false
-    @State private var showAlert = false
+    @State var isSelected1 = false
+    @State var isSelected2 = false
+    @State var isSelected3 = false
+    @State var isSelected4 = false
+    @State var isSelected5 = false
+    @State var isSelected6 = false
     
     
     var body: some View {
@@ -43,7 +42,8 @@ struct ChooseLanguageWithButtonView: View {
                                 color: .orangeGradient1,
                                 textTitle: "English",
                                 textSubtitle: "American",
-                                imageLang: "englishAmerican"
+                                imageLang: "englishAmerican",
+                                imageFlag: "1"
                             )
                                 .onTapGesture(perform: {
                                     
@@ -63,7 +63,8 @@ struct ChooseLanguageWithButtonView: View {
                                 color: .orangeGradient1,
                                 textTitle: "English",
                                 textSubtitle: "British",
-                                imageLang: "telephone"
+                                imageLang: "telephone",
+                                imageFlag: "0"
                             )
                                 .onTapGesture(perform: {
                                     
@@ -86,7 +87,8 @@ struct ChooseLanguageWithButtonView: View {
                                 color: .orangeGradient1,
                                 textTitle: "Chinese",
                                 textSubtitle: "",
-                                imageLang: "chineseLang"
+                                imageLang: "chineseLang",
+                                imageFlag: "5"
                             )
                                 .onTapGesture(perform: {
                                     
@@ -106,7 +108,8 @@ struct ChooseLanguageWithButtonView: View {
                                 color: .orangeGradient1,
                                 textTitle: "Portuguese",
                                 textSubtitle: "Brazil",
-                                imageLang: "tucano"
+                                imageLang: "tucano",
+                                imageFlag: "2"
                             )
                                 .onTapGesture(perform: {
                                     
@@ -128,7 +131,8 @@ struct ChooseLanguageWithButtonView: View {
                                 color: .orangeGradient1,
                                 textTitle: "Spanish",
                                 textSubtitle: "Spain",
-                                imageLang: "spanish"
+                                imageLang: "spanish",
+                                imageFlag: "3"
                             )
                                 .onTapGesture(perform: {
                                     
@@ -148,7 +152,8 @@ struct ChooseLanguageWithButtonView: View {
                                 color: .orangeGradient1,
                                 textTitle: "German",
                                 textSubtitle: "",
-                                imageLang: "germanLanguage"
+                                imageLang: "germanLanguage",
+                                imageFlag: "4"
                             )
                                 .onTapGesture(perform: {
                                     
