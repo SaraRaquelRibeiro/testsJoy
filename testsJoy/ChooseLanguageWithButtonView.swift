@@ -33,8 +33,9 @@ struct ChooseLanguageWithButtonView: View {
                                        .font(.custom("Poppins-Light", size: 15))
                                        .frame(alignment: .bottomTrailing)
                                        .padding(5)
+                            Spacer()
                         }
-                        
+                        .padding(.top, -25)
                         
                         HStack (spacing: 30){
                             ButtonLanguage(
@@ -56,6 +57,7 @@ struct ChooseLanguageWithButtonView: View {
                                         isSelected5 = false
                                         isSelected6 = false
                                     }
+                                    
                                 })
                             
                             ButtonLanguage(
@@ -174,9 +176,12 @@ struct ChooseLanguageWithButtonView: View {
                     }
                     .padding()
                 }
+            
+                
                 NavigationLink(destination: {
                     if isSelected1 {
                        EnglishAmericanLevelView()
+                       
                     } else if isSelected2 {
                         
                     } else if isSelected3 {
@@ -203,6 +208,7 @@ struct ChooseLanguageWithButtonView: View {
             }
         }
         
+        
     }
 }
 
@@ -211,3 +217,7 @@ struct ChooseLanguageWithButtonView_Previews: PreviewProvider {
         ChooseLanguageWithButtonView()
     }
 }
+
+
+
+

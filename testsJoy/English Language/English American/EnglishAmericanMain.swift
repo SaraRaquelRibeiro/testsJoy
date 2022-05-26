@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct EnglishAmericanMain: View {
+    
+    
     var body: some View {
-        Text("American main")
+     
+        Text("EnglishAmericanMain")
+        
     }
 }
+
 
 struct EnglishAmericanMain_Previews: PreviewProvider {
     static var previews: some View {
         EnglishAmericanMain()
     }
 }
+
+

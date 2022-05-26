@@ -18,86 +18,28 @@ struct HomeView: View {
     
     @AppStorage ("user_state") var user_state: String = "initial"
     
-    //imprimir as flags no menu
-    @State var isSelected1 = false
-    @State var isSelected2 = false
-    @State var isSelected3 = false
-    @State var isSelected4 = false
-    @State var isSelected5 = false
-    @State var isSelected6 = false
-    let selectFlag = 6
+    
+    @Binding var isNavigationBarHidden: Bool
     
     var body: some View {
-        
-        
-        
             ZStack{
                 Color.white
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack {
                     
-                    //menu do topo
-                        HStack {
-                            Image("owlLogo")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 35)
-                            Spacer()
-                            ZStack{
-                                Capsule()
-                                    .fill(Color.white)
-                                    .frame(width: 75, height: 28)
-                                    .shadow(color: Color.black.opacity(0.2), radius: 1, y: 5)
-                                
-                                HStack {
-                                    Image("diamond")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 20)
-                                    //aqui colocar os diamonds que o user vai ganhar à medida q for finalizando os jogos
-                                    Text("45")
-                                        .font(.custom("Poppins-semibold", size: 14))
-                                        .opacity(0.4)
-                                        .foregroundColor(.black)
-                                }
-                            }
-                            Spacer()
-                            ZStack{
-                                Capsule()
-                                    .fill(Color.white)
-                                    .frame(width: 75, height: 28)
-                                    .shadow(color: Color.black.opacity(0.2), radius: 1, y: 5)
-                                
-                                HStack {
-                                    Image("heart")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 18)
-                                    //aqui colocar as vidas que o user vai ganhar à medida q for finalizando os jogos
-                                    Text("100")
-                                        .font(.custom("Poppins-semibold", size: 14))
-                                        .opacity(0.4)
-                                        .foregroundColor(.black)
-                                }
-                            }
-                            Spacer()
-                            
-                            
-                            FlagSelected(color: .blue,
-                                         imageFlag: "1")
-                                
-                        }
-                        //.background(Color.red)
-                        .padding(.leading, 15)
-                        .padding(.trailing, 10)
-                        .padding(.top, -40)
+                    ZStack{
+                        
+                        //menu do topo
+                        topRowButtons()
+                        
+                        TopImageHomeView()
+                            .frame(width: screen.width)
+                            .padding(.top, -140)
+                            .zIndex(-1)
+                        
+                    }
                     
-                    
-                    TopImageHomeView()
-                        .frame(width: screen.width)
-                        .padding(.top, -200)
-                        .zIndex(-1)
                     
                     
                     ScrollView (showsIndicators: false) {
@@ -212,28 +154,83 @@ struct HomeView: View {
 
 
 struct HomeView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        HomeView()
+        HomeView(isNavigationBarHidden: .constant(true))
     }
 }
 
-/*struct HiddenNavigationBar: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-        .navigationBarTitle("", displayMode: .inline)
-        .navigationBarHidden(true)
+struct topRowButtons : View {
+    
+    var body: some View {
+        
+        HStack {
+            
+            Button(action: {
+                //
+            }, label: {
+                Image("owlLogo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 35)
+            })
+                .buttonStyle(PlainButtonStyle())
+            
+                
+            Spacer()
+            ZStack{
+                Capsule()
+                    .fill(Color.white)
+                    .frame(width: 75, height: 28)
+                    .shadow(color: Color.black.opacity(0.2), radius: 1, y: 5)
+                
+                HStack {
+                    Image("diamond")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 20)
+                    //aqui colocar os diamonds que o user vai ganhar à medida q for finalizando os jogos
+                    Text("45")
+                        .font(.custom("Poppins-semibold", size: 14))
+                        .opacity(0.4)
+                        .foregroundColor(.black)
+                }
+            }
+            
+            Spacer()
+            ZStack{
+                Capsule()
+                    .fill(Color.white)
+                    .frame(width: 75, height: 28)
+                    .shadow(color: Color.black.opacity(0.2), radius: 1, y: 5)
+                
+                HStack {
+                    Image("heart")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 18)
+                    //aqui colocar as vidas que o user vai ganhar à medida q for finalizando os jogos
+                    Text("100")
+                        .font(.custom("Poppins-semibold", size: 14))
+                        .opacity(0.4)
+                        .foregroundColor(.black)
+                }
+            }
+            
+            Spacer()
+           
+            
+            FlagSelected(color: .blue, imageFlag: "1")
+                
+        }
+        //.background(Color.red)
+        .padding(.leading, 15)
+        .padding(.trailing, 10)
+        .padding(.top, -260)
+        
     }
 }
 
-extension View {
-    func hiddenNavigationBarStyle() -> some View {
-        modifier( HiddenNavigationBar() )
-    }
-}
 
-extension UINavigationController {
-    // Remove back button text
-    open override func viewWillLayoutSubviews() {
-        navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-    }
-}*/
+
+

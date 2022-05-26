@@ -14,7 +14,7 @@ struct ContentView: View {
     
     @AppStorage ("user_state") var user_state: String = "initial"
    
-    
+    @Binding var isNavigationBarHidden: Bool
     
     var body: some View {
         NavigationView{
@@ -26,7 +26,7 @@ struct ContentView: View {
                     GetStartedView()
                 }
             } else if user_state == "american_english" {
-                HomeView()
+                HomeView(isNavigationBarHidden: self.$isNavigationBarHidden)
             }
             
             
@@ -97,6 +97,6 @@ struct PageView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(isNavigationBarHidden: .constant(true))
     }
 }

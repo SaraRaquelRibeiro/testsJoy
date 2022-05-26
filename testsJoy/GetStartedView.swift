@@ -14,6 +14,7 @@ struct GetStartedView: View {
     let screen = UIScreen.main.bounds
     
     
+    
     var body: some View {
         
         
@@ -58,6 +59,7 @@ struct GetStartedView: View {
                         .navigationBarBackButtonHidden(true)
                     
                 }
+                
             }
         
         

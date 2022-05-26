@@ -19,6 +19,10 @@ struct EnglishAmericanLevelView: View {
     @State var isAnimating = false
     @State var image = 1
     
+    
+    @State var isNavigationBarHidden: Bool = true
+    
+    
     var body: some View {
         ZStack {
             Color.white
@@ -56,7 +60,7 @@ struct EnglishAmericanLevelView: View {
                             .clipped()
                             .padding(.leading, 70)
                             .padding()
-                       
+                        
                         
                         HStack{
                             
@@ -76,7 +80,7 @@ struct EnglishAmericanLevelView: View {
                                                 .easeInOut(duration: 16)
                                                 .delay(isAnimating ? 0.5 : 0)
                                                 .repeatForever(autoreverses: true))
-                                        .scaleEffect(isAnimating ? 1 : 0)
+                                        .scaleEffect(isAnimating ? 1 : 0.5)
                                         .animation(
                                             Animation
                                                 .easeInOut(duration: 16)
@@ -98,13 +102,13 @@ struct EnglishAmericanLevelView: View {
                                         .rotationEffect(Angle(degrees: isAnimating ? 400 : 0))
                                         .animation(
                                             Animation
-                                                .easeInOut(duration: 6)
+                                                .easeInOut(duration: 20)
                                                 .delay(isAnimating ? 2 : 0)
                                                 .repeatForever(autoreverses: false))
                                         .scaleEffect(isAnimating ? 1 : 0)
                                         .animation(
                                             Animation
-                                                .easeInOut(duration: 6)
+                                                .easeInOut(duration: 20)
                                                 .delay(isAnimating ? 2 : 0)
                                                 .repeatForever(autoreverses: true))
                                         .padding(.top, -90)
@@ -132,7 +136,7 @@ struct EnglishAmericanLevelView: View {
                         .padding(10)
                         
                         
-                        NavigationLink(destination: HomeView().onAppear(perform: {
+                        NavigationLink(destination: HomeView(isNavigationBarHidden: self.$isNavigationBarHidden).onAppear(perform: {
                             user_state = "american_english"
                         }), label: {
                             
@@ -164,6 +168,10 @@ struct EnglishAmericanLevelView: View {
                         
                         
                     }
+                    .navigationBarHidden(self.isNavigationBarHidden)
+                                .onAppear {
+                                    self.isNavigationBarHidden = true
+                                }
                     
                     //azul
                     ZStack {
@@ -173,7 +181,7 @@ struct EnglishAmericanLevelView: View {
                         
                         
                         
-                        NavigationLink(destination: HomeView().simultaneousGesture(TapGesture().onEnded({
+                        NavigationLink(destination: HomeView(isNavigationBarHidden: self.$isNavigationBarHidden).simultaneousGesture(TapGesture().onEnded({
                             user_state = "american_english"
                         })), label: {
                             
@@ -205,6 +213,10 @@ struct EnglishAmericanLevelView: View {
                             }
                         })
                     }
+                    .navigationBarHidden(self.isNavigationBarHidden)
+                                .onAppear {
+                                    self.isNavigationBarHidden = true
+                                }
                     //rosa
                     ZStack {
                         CapsuleButtons(color1: Color("pinkGradient1"), color2: Color("pinkGradient2"))

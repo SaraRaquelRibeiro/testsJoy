@@ -13,9 +13,11 @@ struct SplashScreen: View {
     @State private var size = 0.8
     @State private var opacity = 0.5
     
+    @State var isNavigationBarHidden: Bool = true
+    
     var body: some View {
         if isActive {
-            ContentView()
+            ContentView(isNavigationBarHidden: .constant(true))
         } else {
             VStack {
                 VStack {
