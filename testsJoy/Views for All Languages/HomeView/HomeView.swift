@@ -23,6 +23,7 @@ struct HomeView: View {
     
     var body: some View {
             ZStack{
+                
                 Color.white
                     .edgesIgnoringSafeArea(.all)
                 
@@ -36,8 +37,8 @@ struct HomeView: View {
                         TopImageHomeView()
                             .frame(width: screen.width)
                             .padding(.top, -140)
+                            .padding(.bottom, 60)
                             .zIndex(-1)
-                        
                     }
                     
                     
@@ -144,11 +145,12 @@ struct HomeView: View {
                             }
                     }
                 }
+               
                 
             }
             .foregroundColor(.white)
-        }
         
+        }
         
     }
 

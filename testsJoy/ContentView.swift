@@ -16,7 +16,18 @@ struct ContentView: View {
    
     @Binding var isNavigationBarHidden: Bool
     
+    let tabBarImagesSelected = ["tabViewHomeGray", "tabViewScore", "tabViewProfile", "tabViewDiamond", "tabViewStore"]
+    
+    let tabBarImagesNotSelected = ["tabViewHome", "tabViewScoreGray", "tabViewProfileGray", "tabViewDiamondGray", "tabViewStoreGray"]
+    
+    @State var selectedIndex = 0
+    
+  
+    
     var body: some View {
+        
+        ZStack {
+        
         NavigationView{
             
             if user_state == "initial" {
@@ -36,6 +47,74 @@ struct ContentView: View {
             
         })
         
+            VStack{
+                switch selectedIndex {
+                case 0:
+                    Text("First")
+                        .foregroundColor(.white)
+                default:
+                    Text("remaining tabs")
+                        .foregroundColor(.white)
+                }
+                Spacer()
+            
+                HStack {
+                    ForEach(0..<5){ num in
+                        Button(action: {
+                            selectedIndex = num
+                            
+                        }, label: {
+                            Spacer()
+                            Image(tabBarImagesSelected[num])
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 35)
+                            Spacer()
+                        })
+                        
+                    }
+                }
+                
+            }
+            
+            
+        }
+        
+       /*TabView {
+            //solução para detetar em que homeview o user está
+            if(FlagSelected(color: .blue, imageFlag: "1").imageFlag == "1"){
+                HomeView(isNavigationBarHidden: .constant(true))
+                    .tabItem {
+                        Image("tabViewHome")
+                            .shadow(color: Color.black.opacity(0.2), radius: 1, y: 5)
+                         
+                    }
+                    .tag(0)
+                    .offset(y:10)
+            }
+            else if (FlagSelected(color: .blue, imageFlag: "2").imageFlag == "2"){
+                PortugueseBrazilLevelView()
+                    .tabItem {
+                        Image(systemName: "house")
+                       
+                    }.tag(0)
+            }
+            Text("Second")
+                .tabItem {
+                    Image(systemName: "house")
+                    
+                }.tag(1)
+            
+            Text("Third")
+                .tabItem {
+                    Image(systemName: "house")
+                    
+                }.tag(2)
+        }
+        .onAppear() {
+            UITabBar.appearance().barTintColor = .systemBackground
+                                   }*/
+
     }
 }
 

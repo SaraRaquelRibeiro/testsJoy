@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PortugueseBrazilLevelView: View {
     var body: some View {
-        Text("Portuguese Brazil")
+        FlagSelected(color: .pink, imageFlag: "2")
     }
 }
 
