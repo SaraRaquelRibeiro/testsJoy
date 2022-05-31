@@ -13,7 +13,7 @@ struct FlagSelected: View {
     @State var imageFlag: String
     
     var body: some View {
-        Image(imageFlag)
+        /*Image(imageFlag)
             .resizable()
             .clipShape(Circle())
             .aspectRatio(contentMode: .fit)
@@ -21,6 +21,16 @@ struct FlagSelected: View {
             .multilineTextAlignment(.center)
             .shadow(color: Color.black.opacity(0.5), radius: 5, x: 0, y: 2)
             .overlay(Circle().stroke(color, lineWidth: 2))
+            .padding()*/
+        
+        Image(imageFlag)
+            .resizable()
+            .clipShape(Circle())
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 30, height: 30)
+            .multilineTextAlignment(.center)
+            .shadow(color: Color.black.opacity(0.5), radius: 2, x: 0, y: 2)
+            .overlay(Circle().stroke(color, lineWidth: 1))
             .padding()
     }
 }

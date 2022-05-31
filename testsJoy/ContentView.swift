@@ -15,14 +15,9 @@ struct ContentView: View {
     @AppStorage ("user_state") var user_state: String = "initial"
    
     @Binding var isNavigationBarHidden: Bool
+
     
-    let tabBarImagesSelected = ["tabViewHomeGray", "tabViewScore", "tabViewProfile", "tabViewDiamond", "tabViewStore"]
-    
-    let tabBarImagesNotSelected = ["tabViewHome", "tabViewScoreGray", "tabViewProfileGray", "tabViewDiamondGray", "tabViewStoreGray"]
-    
-    @State var selectedIndex = 0
-    
-  
+    @State var selection = 0
     
     var body: some View {
         
@@ -46,75 +41,97 @@ struct ContentView: View {
             OnboardingView(shouldShowOnboarding: $shouldShowOnboarding)
             
         })
+        }
         
             VStack{
-                switch selectedIndex {
-                case 0:
-                    Text("First")
-                        .foregroundColor(.white)
-                default:
-                    Text("remaining tabs")
-                        .foregroundColor(.white)
-                }
-                Spacer()
             
                 HStack {
-                    ForEach(0..<5){ num in
-                        Button(action: {
-                            selectedIndex = num
-                            
-                        }, label: {
-                            Spacer()
-                            Image(tabBarImagesSelected[num])
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 35)
-                            Spacer()
-                        })
+                    TabView(selection: $selection) {
+                        HomeView(isNavigationBarHidden: .constant(false)).tabItem {
+                           
+                                    if selection == 0 {
+                                        
+                                        Image("tabViewHome_active")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 35)
+                                            
+                                        
+                                    } else {
+                                        Image("tabViewHome")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 35)
+                                    }
+                                    
+                                }.tag(0)
+                                            
+                                SubscriptionModelOne().tabItem {
+                                    if selection == 1 {
+                                        Image("tabViewScore_active")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 35)
+                                    } else {
+                                        Image("tabViewScore")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 35)
+                                    }
+                                    
+                                }.tag(1)
+                                
+                        SubscriptionModelTwo().tabItem {
+                                    if selection == 2 {
+                                        Image("tabViewProfile_active")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 35)
+                                    } else {
+                                        Image("tabViewProfile")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 35)
+                                    }
+                                    
+                                }.tag(2)
+                                
+                        FlagSelected(color: .blue, imageFlag: "1").tabItem {
+                                    if selection == 3 {
+                                        Image("tabViewStar_active")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 35)
+                                    } else {
+                                        Image("tabViewStar")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 35)
+                                    }
+                                    
+                                }.tag(3)
                         
-                    }
+                        SubscriptionModelThree().tabItem {
+                            if selection == 4 {
+                                Image("tabViewStore_active")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 35)
+                            } else {
+                                Image("tabViewStore")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 35)
+                            }
+                            
+                        }.tag(4)
+                        
+                            }
+                    .onAppear() {
+                        UITabBar.appearance().barTintColor = .white}
+                    
                 }
-                
-            }
-            
-            
         }
-        
-       /*TabView {
-            //solução para detetar em que homeview o user está
-            if(FlagSelected(color: .blue, imageFlag: "1").imageFlag == "1"){
-                HomeView(isNavigationBarHidden: .constant(true))
-                    .tabItem {
-                        Image("tabViewHome")
-                            .shadow(color: Color.black.opacity(0.2), radius: 1, y: 5)
-                         
-                    }
-                    .tag(0)
-                    .offset(y:10)
-            }
-            else if (FlagSelected(color: .blue, imageFlag: "2").imageFlag == "2"){
-                PortugueseBrazilLevelView()
-                    .tabItem {
-                        Image(systemName: "house")
-                       
-                    }.tag(0)
-            }
-            Text("Second")
-                .tabItem {
-                    Image(systemName: "house")
-                    
-                }.tag(1)
-            
-            Text("Third")
-                .tabItem {
-                    Image(systemName: "house")
-                    
-                }.tag(2)
-        }
-        .onAppear() {
-            UITabBar.appearance().barTintColor = .systemBackground
-                                   }*/
-
     }
 }
 
@@ -166,9 +183,6 @@ struct PageView: View {
                 .font(Font.custom("Poppins-Light", size: 24))
                 .multilineTextAlignment(.center)
                 .padding()
-            
-            
-            
         }
     }
 }

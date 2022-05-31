@@ -45,13 +45,22 @@ var languageSelection: [Language] {
 
 
 //***** Courses
-let course1Unit1 = Course(id: UUID().uuidString, name: "Greetings", image: "unit1greetings", color: "orangeGradient1")
-let course2Unit1 = Course(id: UUID().uuidString, name: "Clothes", image: "unit1clothes", color: "pinkGradient1")
+//****UNIT 1
+let course1Unit1 = Course(id: UUID().uuidString, name: "Greetings", image: "unit1greetings", color: "orangeGradient2")
+let course2Unit1 = Course(id: UUID().uuidString, name: "Clothes", image: "unit1clothes", color: "orangeGradient2")
 let course3Unit1 = Course(id: UUID().uuidString, name: "Numbers", image: "unit1numbers", color: "orangeGradient2")
-let course4Unit1 = Course(id: UUID().uuidString, name: "Food", image: "unit1fruits", color: "blueGradient1")
+let course4Unit1 = Course(id: UUID().uuidString, name: "Food", image: "unit1fruits", color: "orangeGradient2")
 
-
-
+//****UNIT 2
+let course1Unit2 = Course(id: UUID().uuidString, name: "Greetings", image: "unit1greetings", color: "orangeGradient1")
+let course2Unit2 = Course(id: UUID().uuidString, name: "Clothes", image: "unit1clothes", color: "orangeGradient1")
+let course3Unit2 = Course(id: UUID().uuidString, name: "Numbers", image: "unit1numbers", color: "orangeGradient1")
+let course4Unit2 = Course(id: UUID().uuidString, name: "Food", image: "unit1fruits", color: "orangeGradient1")
 
 let coursesFromUnit1 : [Course] = [course1Unit1, course3Unit1, course2Unit1, course4Unit1]
 
+let coursesFromUnit2 : [Course] = [course1Unit2, course3Unit2, course2Unit2, course4Unit2]
+
+//***** Daily challenges
+let dailyChallenge1 = DailyChallenge(id: UUID().uuidString, name: "Learn 10 New Words", image: "brainMeditation", color: "pinkGradient1", win: "")
+let dailyChallenge2 = DailyChallenge(id: UUID().uuidString, name: "Say Hi", image: "brainMuscle", color: "blueGradient2", win: "")

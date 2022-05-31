@@ -26,7 +26,7 @@ class HomeVM : ObservableObject {
     
     func setupCourses(){
         courses["Unit 1"] = coursesFromUnit1
-        courses["Unit 2"] = coursesFromUnit1
+        courses["Unit 2"] = coursesFromUnit2
         courses["Unit 3"] = coursesFromUnit1
         courses["Unit 4"] = coursesFromUnit1
         

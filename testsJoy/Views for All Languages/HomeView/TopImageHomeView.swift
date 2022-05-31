@@ -10,47 +10,36 @@ import SwiftUI
 struct TopImageHomeView: View {
     var body: some View {
         ZStack{
-            Image("grid")
+            
+            Image("grid2")
                 .resizable()
                 .scaledToFill()
                 .clipped()
+                .shadow(color: Color.black.opacity(0.2), radius: 3, y: 4)
             
             
             
-            VStack{
-                Spacer()
-                    
-                HStack{
-                   
-                    Text("EnJoy and Learn")
-                        .font(.custom("Poppins-Medium", size: 14))
-                    
-                    Spacer()
-                        .frame(width: 5)
-                    
-                    Image(systemName: "circle.fill")
-                        .foregroundColor(.orange)
-                        .font(.system(size: 6))
-                    
-                }
-                .padding(.leading, 140)
-                .padding(.trailing, 140)
-                .padding()
-                
-                
-            }
+          
+            /*Rectangle()
+                .background(LinearGradient(gradient:
+                                            Gradient(
+                                                stops: [.init(color: .black.opacity(0.0), location: 0.5),
+                                                        .init(color: Color.blue, location: 1)]),
+                                           startPoint: .top,
+                                           endPoint: .bottom)
+                                )
+                .opacity(0.4)*/
+            
+            
+            
             /*.background(LinearGradient(gradient:
-                                        Gradient(
-                                            colors: [Color.black.opacity(0.0), Color("blueDark").opacity(0.95)]),
-                                       startPoint: .top,
-                                       endPoint: .bottom))*/
-            .background(LinearGradient(gradient:
                                         Gradient(
                                             stops: [.init(color: .black.opacity(0.0), location: 0.5),
                                                     .init(color: Color("blueMedium"), location: 1)]),
                                        startPoint: .top,
-                                       endPoint: .bottom))
-            
+                                       endPoint: .bottom)
+                            )
+            .opacity(0.9)*/
         }
         .foregroundColor(.white)
         

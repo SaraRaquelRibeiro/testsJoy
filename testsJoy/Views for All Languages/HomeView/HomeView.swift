@@ -33,25 +33,38 @@ struct HomeView: View {
                         
                         //menu do topo
                         topRowButtons()
+                            .padding(.top, 95)
                         
                         TopImageHomeView()
+                            .edgesIgnoringSafeArea(.all)
+                            .zIndex(-1)
+                        
+                        /*TopImageHomeView()
                             .frame(width: screen.width)
                             .padding(.top, -140)
                             .padding(.bottom, 60)
-                            .zIndex(-1)
+                            .zIndex(-1)*/
+                        
+                        
+                        VStack() {
+                            Spacer()
+                            DailyChallengesCell(dailyChallenge: dailyChallenge1)
+                            Spacer()
+                            DailyChallengesCell(dailyChallenge: dailyChallenge2)
+                            Spacer()
+                        }
+                        .padding(.leading, -100)
+                        
                     }
-                    
-                    
                     
                     ScrollView (showsIndicators: false) {
                         LazyVStack {
                             
-                            /*TopImageHomeView()
-                                .frame(width: screen.width)
-                                .padding(.top, -60)*/
+                           
+                            
                             
                             Spacer()
-                                .frame(height: 40)
+                                .frame(height: 20)
                             
                             //inserir as units
                             ForEach(vm.allUnits, id: \.self){ uni in
@@ -106,7 +119,6 @@ struct HomeView: View {
                                             
                                         }
                                         .padding(.bottom, -7)
-                                
                               
                                                 //scrollview p os cursos
                                                 ScrollView(.horizontal, showsIndicators: false) {
@@ -184,7 +196,7 @@ struct topRowButtons : View {
                 Capsule()
                     .fill(Color.white)
                     .frame(width: 75, height: 28)
-                    .shadow(color: Color.black.opacity(0.2), radius: 1, y: 5)
+                    .shadow(color: Color.black.opacity(0.06), radius: 0.7, y: 2)
                 
                 HStack {
                     Image("diamond")
@@ -204,7 +216,7 @@ struct topRowButtons : View {
                 Capsule()
                     .fill(Color.white)
                     .frame(width: 75, height: 28)
-                    .shadow(color: Color.black.opacity(0.2), radius: 1, y: 5)
+                    .shadow(color: Color.black.opacity(0.06), radius: 0.7, y: 2)
                 
                 HStack {
                     Image("heart")
@@ -226,8 +238,8 @@ struct topRowButtons : View {
                 
         }
         //.background(Color.red)
-        .padding(.leading, 15)
-        .padding(.trailing, 10)
+        .padding(.leading, 25)
+        .padding(.trailing, 25)
         .padding(.top, -260)
         
     }
