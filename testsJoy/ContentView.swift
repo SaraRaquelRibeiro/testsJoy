@@ -174,13 +174,13 @@ struct PageView: View {
                 //.font(.system(size: 35))
                 .foregroundColor(.white)
                 //.lineSpacing(-200)
-                .font(.custom("Poppins-Bold", size: 35))
+                .font(.custom("Poppins-Bold", size: 29))
                 
             
             Text(subtitle)
                 //.font(.system(size: 30))
                 .foregroundColor(Color(.white))
-                .font(Font.custom("Poppins-Light", size: 24))
+                .font(Font.custom("Poppins-Light", size: 20))
                 .multilineTextAlignment(.center)
                 .padding()
         }

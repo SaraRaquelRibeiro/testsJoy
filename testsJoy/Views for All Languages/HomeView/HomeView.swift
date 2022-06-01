@@ -21,6 +21,8 @@ struct HomeView: View {
     
     @Binding var isNavigationBarHidden: Bool
     
+    @State var selection = 0
+    
     var body: some View {
             ZStack{
                 
@@ -59,9 +61,6 @@ struct HomeView: View {
                     
                     ScrollView (showsIndicators: false) {
                         LazyVStack {
-                            
-                           
-                            
                             
                             Spacer()
                                 .frame(height: 20)
@@ -157,13 +156,9 @@ struct HomeView: View {
                             }
                     }
                 }
-               
-                
             }
             .foregroundColor(.white)
-        
         }
-        
     }
 
 

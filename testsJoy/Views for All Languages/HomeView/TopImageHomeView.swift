@@ -15,7 +15,7 @@ struct TopImageHomeView: View {
                 .resizable()
                 .scaledToFill()
                 .clipped()
-                .shadow(color: Color.black.opacity(0.2), radius: 3, y: 4)
+                .shadow(color: Color.black.opacity(0.2), radius: 8, y: 7)
             
             
             
