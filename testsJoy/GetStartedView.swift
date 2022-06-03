@@ -13,12 +13,7 @@ struct GetStartedView: View {
     //ajusta ao ecra todo nos lados caso haja uma black bar com full width of the view
     let screen = UIScreen.main.bounds
     
-    
-    
     var body: some View {
-        
-        
-        
             ZStack{
                 Color.black
                     .edgesIgnoringSafeArea(.all)

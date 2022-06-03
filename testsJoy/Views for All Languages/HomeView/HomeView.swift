@@ -19,7 +19,7 @@ struct HomeView: View {
     @AppStorage ("user_state") var user_state: String = "initial"
     
     
-    @Binding var isNavigationBarHidden: Bool
+    //@Binding var isNavigationBarHidden: Bool
     
     @State var selection = 0
     
@@ -35,7 +35,7 @@ struct HomeView: View {
                         
                         //menu do topo
                         topRowButtons()
-                            .padding(.top, 95)
+                            .padding(.top, 115)
                         
                         TopImageHomeView()
                             .edgesIgnoringSafeArea(.all)
@@ -124,7 +124,27 @@ struct HomeView: View {
                                                     LazyHStack {
                                                         ForEach(vm.getCourse(forUnit: uni)) { course in
                                                             VStack {
-                                                                StandardHomeCourse(course: course)
+                                                                Button(action: {
+                                                                    //    
+                                                                    
+                                                                }, label: {
+                                                                    StandardHomeCourse(course: course)
+                                                                            .frame(width: 90, height: 110)
+                                                                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                                                                            .shadow(color: Color.black.opacity(0.2), radius: 5, y: 5)
+                                                                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                                                                            .shadow(color: Color.black.opacity(0.2), radius: 5, y: 5)
+                                                                            //meter a linha colorida
+                                                                            .overlay(
+                                                                                RoundedRectangle(cornerRadius: 20)
+                                                                                    .stroke(lineWidth: 5.0)
+                                                                                    .foregroundColor(Color("\(course.color)")))
+                                                                        //para afastar um bocado os circulos
+                                                                        .padding(.trailing, 14)
+                                                                    
+                                                                })
+                                                                
+                                                                /*StandardHomeCourse(course: course)
                                                                         .frame(width: 90, height: 110)
                                                                         .clipShape(RoundedRectangle(cornerRadius: 20))
                                                                         .shadow(color: Color.black.opacity(0.2), radius: 5, y: 5)
@@ -136,7 +156,8 @@ struct HomeView: View {
                                                                                 .stroke(lineWidth: 5.0)
                                                                                 .foregroundColor(Color("\(course.color)")))
                                                                     //para afastar um bocado os circulos
-                                                                    .padding(.trailing, 14)
+                                                                    .padding(.trailing, 14)*/
+                                                                    
                                                                 
                                                                 Text(course.name)
                                                                     .opacity(0.6)
@@ -165,7 +186,8 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     
     static var previews: some View {
-        HomeView(isNavigationBarHidden: .constant(true))
+        HomeView()
+        //HomeView(isNavigationBarHidden: .constant(false))
     }
 }
 

@@ -15,9 +15,19 @@ struct SplashScreen: View {
     
     @State var isNavigationBarHidden: Bool = true
     
+    @AppStorage ("user_state") var user_state: String = "initial"
+    
     var body: some View {
         if isActive {
-            ContentView(isNavigationBarHidden: .constant(true))
+            if user_state == "initial" {
+                OnboardingView()
+               
+            } else if user_state == "american_english" {
+                HomeView()
+                //HomeView(isNavigationBarHidden: self.$isNavigationBarHidden)
+            }
+            
+            
         } else {
             VStack {
                 VStack {

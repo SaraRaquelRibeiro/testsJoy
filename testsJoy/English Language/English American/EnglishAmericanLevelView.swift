@@ -63,11 +63,7 @@ struct EnglishAmericanLevelView: View {
                         
                         
                         HStack{
-                            
-                            
                             VStack{
-                               
-                                
                                 //flag animada USA
                                 VStack {
                                     Image("1")
@@ -87,8 +83,6 @@ struct EnglishAmericanLevelView: View {
                                                 .delay(isAnimating ? 3 : 0)
                                                 .repeatForever(autoreverses: true))
                                 }
-                                
-                                
                             }
                             
                             VStack {
@@ -136,7 +130,7 @@ struct EnglishAmericanLevelView: View {
                         .padding(10)
                         
                         
-                        NavigationLink(destination: HomeView(isNavigationBarHidden: self.$isNavigationBarHidden).onAppear(perform: {
+                        NavigationLink(destination: ContentView().onAppear(perform: {
                             user_state = "american_english"
                         }), label: {
                             
@@ -181,7 +175,7 @@ struct EnglishAmericanLevelView: View {
                         
                         
                         
-                        NavigationLink(destination: HomeView(isNavigationBarHidden: self.$isNavigationBarHidden).simultaneousGesture(TapGesture().onEnded({
+                        NavigationLink(destination: HomeView().simultaneousGesture(TapGesture().onEnded({
                             user_state = "american_english"
                         })), label: {
                             

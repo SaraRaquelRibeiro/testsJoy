@@ -19,6 +19,7 @@
 		0DB08552282C1D3800DD5E70 /* ButtonLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB08551282C1D3800DD5E70 /* ButtonLanguage.swift */; };
 		0DB0855E282D0C8600DD5E70 /* PortugueseBrazilLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB0855D282D0C8600DD5E70 /* PortugueseBrazilLevelView.swift */; };
 		0DB08560282D1C6300DD5E70 /* EnglishAmericanLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB0855F282D1C6300DD5E70 /* EnglishAmericanLevelView.swift */; };
+		0DC79DB8284A4AF800EFC1AD /* courseOneUnitOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC79DB7284A4AF800EFC1AD /* courseOneUnitOne.swift */; };
 		0DDAA6D82822B49700BC110A /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DDAA6D32822B49700BC110A /* Poppins-Light.ttf */; };
 		0DDAA6D92822B49700BC110A /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DDAA6D42822B49700BC110A /* Poppins-Bold.ttf */; };
 		0DDAA6DA2822B49700BC110A /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DDAA6D52822B49700BC110A /* Poppins-Regular.ttf */; };
@@ -63,6 +64,7 @@
 		0DB08551282C1D3800DD5E70 /* ButtonLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLanguage.swift; sourceTree = "<group>"; };
 		0DB0855D282D0C8600DD5E70 /* PortugueseBrazilLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortugueseBrazilLevelView.swift; sourceTree = "<group>"; };
 		0DB0855F282D1C6300DD5E70 /* EnglishAmericanLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishAmericanLevelView.swift; sourceTree = "<group>"; };
+		0DC79DB7284A4AF800EFC1AD /* courseOneUnitOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = courseOneUnitOne.swift; sourceTree = "<group>"; };
 		0DDAA6AA2822A8CB00BC110A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0DDAA6D32822B49700BC110A /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Light.ttf"; path = "../../../../../../Downloads/Poppins-Font-2/Poppins-Light.ttf"; sourceTree = "<group>"; };
 		0DDAA6D42822B49700BC110A /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Bold.ttf"; path = "../../../../../../Downloads/Poppins-Font-2/Poppins-Bold.ttf"; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			children = (
 				0DB0855F282D1C6300DD5E70 /* EnglishAmericanLevelView.swift */,
 				0DF96CCD282D75A000B744F6 /* EnglishAmericanMain.swift */,
+				0DC79DB6284A4ACE00EFC1AD /* Units1 */,
 			);
 			path = "English American";
 			sourceTree = "<group>";
@@ -221,6 +224,14 @@
 				0DB0855D282D0C8600DD5E70 /* PortugueseBrazilLevelView.swift */,
 			);
 			path = "Portuguese Brazil";
+			sourceTree = "<group>";
+		};
+		0DC79DB6284A4ACE00EFC1AD /* Units1 */ = {
+			isa = PBXGroup;
+			children = (
+				0DC79DB7284A4AF800EFC1AD /* courseOneUnitOne.swift */,
+			);
+			path = Units1;
 			sourceTree = "<group>";
 		};
 		0DDAA6F62825984F00BC110A /* Models */ = {
@@ -406,6 +417,7 @@
 				0DDAA6F52825804D00BC110A /* Languages.swift in Sources */,
 				0DB0855E282D0C8600DD5E70 /* PortugueseBrazilLevelView.swift in Sources */,
 				0DF96CD2283289A700B744F6 /* ButtonTrial.swift in Sources */,
+				0DC79DB8284A4AF800EFC1AD /* courseOneUnitOne.swift in Sources */,
 				0D7FFE682812D89100FFFDB2 /* Onboarding.swift in Sources */,
 				0DB08550282C05C700DD5E70 /* ChooseLanguageWithButtonView.swift in Sources */,
 				0DF96CC8282D71A900B744F6 /* SubscriptionModelOne.swift in Sources */,

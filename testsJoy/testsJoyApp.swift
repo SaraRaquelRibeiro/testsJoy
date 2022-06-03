@@ -10,8 +10,6 @@ import SwiftUI
 @main
 struct testsJoyApp: App {
     
-    
-    
     @State var selection = 0
     
     var body: some Scene {
