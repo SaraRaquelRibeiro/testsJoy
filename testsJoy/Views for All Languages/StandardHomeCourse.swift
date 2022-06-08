@@ -42,3 +42,19 @@ struct StandardHomeCourse_Previews: PreviewProvider {
             
     }
 }
+
+struct GrayRectangle: View {
+   
+    var body: some View {
+        RoundedRectangle(cornerRadius: 20)
+            .fill(.gray.opacity(0.5))
+            .frame(width: 95, height: 115)
+    }
+}
+
+struct GrayRectangle_Previews: PreviewProvider {
+    static var previews: some View {
+       GrayRectangle()
+            
+    }
+}

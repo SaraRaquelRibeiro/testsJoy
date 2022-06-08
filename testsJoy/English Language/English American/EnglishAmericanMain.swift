@@ -23,5 +23,3 @@ struct EnglishAmericanMain_Previews: PreviewProvider {
         EnglishAmericanMain()
     }
 }
-
-

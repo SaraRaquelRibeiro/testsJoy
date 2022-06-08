@@ -17,37 +17,6 @@ struct DailyChallengesCell: View {
         
         
         HStack {
-            /*ZStack {
-                    Capsule()
-                        .fill(Color.white)
-                        .frame(width: 140, height: 50)
-                        .shadow(color: Color.black.opacity(0.1), radius: 1, y: 5)
-                    
-                    Image(dailyChallenge.image)
-                        .resizable()
-                        .scaledToFill()
-                        .clipShape(Circle())
-                        .frame(width: 50, height: 50)
-                        .overlay(Circle()
-                                    .stroke(lineWidth: 4.0)
-                                    .foregroundColor(Color(dailyChallenge.color))
-                        )
-                        .padding(.leading, -75)
-                    
-                    Text(dailyChallenge.name)
-                        .font(.custom("Poppins-medium", size: 13))
-                        .opacity(0.7)
-                        .frame(width: 120, height: 70)
-                        .foregroundColor(Color(dailyChallenge.color))
-                        .multilineTextAlignment(.leading)
-                        .padding(.trailing, -40)
-                
-                Image(dailyChallenge.win)
-                    .resizable()
-                    .frame(width: 25, height: 25)
-                    .offset(x: 69, y: 15)
-            }*/
-            
             Image(dailyChallenge.image)
                 .resizable()
                 .scaledToFill()

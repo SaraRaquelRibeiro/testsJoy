@@ -14,8 +14,13 @@ extension Color {
     static let orangeGradient2 = Color("orangeGradient2")
     static let blueGradient1 = Color("blueGradient1")
     static let blueGradient2 = Color("blueGradient2")
+    static let blueGradient3 = Color("blueGradient3")
     static let greenGradient1 = Color("greenGradient1")
     static let greenGradient2 = Color("greenGradient2")
+    static let blueLight = Color("blueLight")
+    static let blueMedium = Color("blueMedium")
+    static let blueDark = Color("blueDark")
+    static let grayLight = Color("grayLight")
     
     
     //dá o gradiente preto na imagem top da GetStartedView

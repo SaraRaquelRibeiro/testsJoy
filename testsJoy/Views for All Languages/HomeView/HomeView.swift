@@ -18,6 +18,8 @@ struct HomeView: View {
     
     @AppStorage ("user_state") var user_state: String = "initial"
     
+    @State private var isShowingRectangle = true
+    
     
     //@Binding var isNavigationBarHidden: Bool
     
@@ -125,23 +127,30 @@ struct HomeView: View {
                                                         ForEach(vm.getCourse(forUnit: uni)) { course in
                                                             VStack {
                                                                 Button(action: {
-                                                                    //    
                                                                     
+                                                                    isShowingRectangle.toggle()
                                                                 }, label: {
-                                                                    StandardHomeCourse(course: course)
-                                                                            .frame(width: 90, height: 110)
-                                                                            .clipShape(RoundedRectangle(cornerRadius: 20))
-                                                                            .shadow(color: Color.black.opacity(0.2), radius: 5, y: 5)
-                                                                            .clipShape(RoundedRectangle(cornerRadius: 20))
-                                                                            .shadow(color: Color.black.opacity(0.2), radius: 5, y: 5)
-                                                                            //meter a linha colorida
-                                                                            .overlay(
-                                                                                RoundedRectangle(cornerRadius: 20)
-                                                                                    .stroke(lineWidth: 5.0)
-                                                                                    .foregroundColor(Color("\(course.color)")))
-                                                                        //para afastar um bocado os circulos
-                                                                        .padding(.trailing, 14)
-                                                                    
+                                                                    ZStack{
+                                                                        StandardHomeCourse(course: course)
+                                                                                .frame(width: 90, height: 110)
+                                                                                .clipShape(RoundedRectangle(cornerRadius: 20))
+                                                                                .shadow(color: Color.black.opacity(0.2), radius: 5, y: 5)
+                                                                                .clipShape(RoundedRectangle(cornerRadius: 20))
+                                                                                .shadow(color: Color.black.opacity(0.2), radius: 5, y: 5)
+                                                                                //meter a linha colorida
+                                                                                .overlay(
+                                                                                    RoundedRectangle(cornerRadius: 20)
+                                                                                        .stroke(lineWidth: 5.0)
+                                                                                        .foregroundColor(Color("\(course.color)")))
+                                                                            //para afastar um bocado os circulos
+                                                                            .padding(.trailing, 14)
+                                                                        
+                                                                        if isShowingRectangle{
+                                                                            
+                                                                             GrayRectangle()
+                                                                                .padding(.leading, -13)
+                                                                        }
+                                                                    }
                                                                 })
                                                                 
                                                                 /*StandardHomeCourse(course: course)
@@ -261,7 +270,3 @@ struct topRowButtons : View {
         
     }
 }
-
-
-
-

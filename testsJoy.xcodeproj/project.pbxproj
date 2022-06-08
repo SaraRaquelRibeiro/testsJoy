@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		0D09C3C628462BAF00E91DBC /* DailyChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D09C3C528462BAF00E91DBC /* DailyChallenge.swift */; };
 		0D09C3C92846306F00E91DBC /* DailyChallengesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D09C3C82846306F00E91DBC /* DailyChallengesCell.swift */; };
+		0D1D90EF284F830A003391FF /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D90EE284F8309003391FF /* QuestionView.swift */; };
+		0D1D90F2284FB83B003391FF /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D90F1284FB83B003391FF /* ProgressBar.swift */; };
+		0D1D90F4284FBC8C003391FF /* AnswerRowSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D90F3284FBC8B003391FF /* AnswerRowSquare.swift */; };
+		0D1D90F6284FBC9F003391FF /* AnswerRowCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D90F5284FBC9F003391FF /* AnswerRowCircle.swift */; };
+		0D1D90F828509A64003391FF /* AnswerRowRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D90F728509A64003391FF /* AnswerRowRectangle.swift */; };
+		0D1D90FB2850A21A003391FF /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D90FA2850A21A003391FF /* Trivia.swift */; };
+		0D1D90FD2850A249003391FF /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D90FC2850A249003391FF /* Answer.swift */; };
+		0D1D91002850A2D0003391FF /* TriviaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D90FF2850A2CF003391FF /* TriviaManager.swift */; };
+		0D1D9102285110E2003391FF /* ButtonCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D9101285110E2003391FF /* ButtonCourses.swift */; };
 		0D2144F0283D139E00DB512C /* TopImageHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2144EF283D139D00DB512C /* TopImageHomeView.swift */; };
 		0D2144F2283E591C00DB512C /* FlagSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2144F1283E591C00DB512C /* FlagSelected.swift */; };
 		0D2693B2281194AD00826898 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2693B1281194AD00826898 /* SplashScreen.swift */; };
@@ -54,6 +63,15 @@
 /* Begin PBXFileReference section */
 		0D09C3C528462BAF00E91DBC /* DailyChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChallenge.swift; sourceTree = "<group>"; };
 		0D09C3C82846306F00E91DBC /* DailyChallengesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChallengesCell.swift; sourceTree = "<group>"; };
+		0D1D90EE284F8309003391FF /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		0D1D90F1284FB83B003391FF /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		0D1D90F3284FBC8B003391FF /* AnswerRowSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRowSquare.swift; sourceTree = "<group>"; };
+		0D1D90F5284FBC9F003391FF /* AnswerRowCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRowCircle.swift; sourceTree = "<group>"; };
+		0D1D90F728509A64003391FF /* AnswerRowRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRowRectangle.swift; sourceTree = "<group>"; };
+		0D1D90FA2850A21A003391FF /* Trivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trivia.swift; sourceTree = "<group>"; };
+		0D1D90FC2850A249003391FF /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		0D1D90FF2850A2CF003391FF /* TriviaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaManager.swift; sourceTree = "<group>"; };
+		0D1D9101285110E2003391FF /* ButtonCourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCourses.swift; sourceTree = "<group>"; };
 		0D2144EF283D139D00DB512C /* TopImageHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopImageHomeView.swift; sourceTree = "<group>"; };
 		0D2144F1283E591C00DB512C /* FlagSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagSelected.swift; sourceTree = "<group>"; };
 		0D2693B1281194AD00826898 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
@@ -117,6 +135,45 @@
 			path = "Daily Challenges";
 			sourceTree = "<group>";
 		};
+		0D1D90ED284F8261003391FF /* API and courses */ = {
+			isa = PBXGroup;
+			children = (
+				0D1D90FE2850A284003391FF /* API connection */,
+				0D1D90EE284F8309003391FF /* QuestionView.swift */,
+				0D1D90F92850A1DB003391FF /* Model API */,
+				0D1D90F0284FB829003391FF /* Components */,
+			);
+			path = "API and courses";
+			sourceTree = "<group>";
+		};
+		0D1D90F0284FB829003391FF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0D1D90F1284FB83B003391FF /* ProgressBar.swift */,
+				0D1D90F728509A64003391FF /* AnswerRowRectangle.swift */,
+				0D1D90F3284FBC8B003391FF /* AnswerRowSquare.swift */,
+				0D1D90F5284FBC9F003391FF /* AnswerRowCircle.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0D1D90F92850A1DB003391FF /* Model API */ = {
+			isa = PBXGroup;
+			children = (
+				0D1D90FA2850A21A003391FF /* Trivia.swift */,
+				0D1D90FC2850A249003391FF /* Answer.swift */,
+			);
+			path = "Model API";
+			sourceTree = "<group>";
+		};
+		0D1D90FE2850A284003391FF /* API connection */ = {
+			isa = PBXGroup;
+			children = (
+				0D1D90FF2850A2CF003391FF /* TriviaManager.swift */,
+			);
+			path = "API connection";
+			sourceTree = "<group>";
+		};
 		0D2144EE283D12AB00DB512C /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				0D7FFE652812D53800FFFDB2 /* Colors.swift */,
+				0D1D9101285110E2003391FF /* ButtonCourses.swift */,
 				0D7FFE672812D89100FFFDB2 /* Onboarding.swift */,
 				0DDAA6E62822E0D100BC110A /* Blur.swift */,
 				0DDAA6E82822ECCA00BC110A /* GradientGetStartedView.swift */,
@@ -167,7 +225,6 @@
 			isa = PBXGroup;
 			children = (
 				0DB0855B282D0C5100DD5E70 /* English American */,
-				0DB0855A282D0C3F00DD5E70 /* English British */,
 			);
 			path = "English Language";
 			sourceTree = "<group>";
@@ -178,34 +235,6 @@
 				0DB0855C282D0C7100DD5E70 /* Portuguese Brazil */,
 			);
 			path = "Portuguese Language";
-			sourceTree = "<group>";
-		};
-		0DB08557282D0BF100DD5E70 /* German Language */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "German Language";
-			sourceTree = "<group>";
-		};
-		0DB08558282D0C0200DD5E70 /* Chinese Language */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Chinese Language";
-			sourceTree = "<group>";
-		};
-		0DB08559282D0C1600DD5E70 /* Spanish Language */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Spanish Language";
-			sourceTree = "<group>";
-		};
-		0DB0855A282D0C3F00DD5E70 /* English British */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "English British";
 			sourceTree = "<group>";
 		};
 		0DB0855B282D0C5100DD5E70 /* English American */ = {
@@ -272,12 +301,10 @@
 				0DB0854F282C05C700DD5E70 /* ChooseLanguageWithButtonView.swift */,
 				0DB08551282C1D3800DD5E70 /* ButtonLanguage.swift */,
 				0DB08553282D0A2900DD5E70 /* English Language */,
-				0DB08558282D0C0200DD5E70 /* Chinese Language */,
 				0DB08554282D0A3400DD5E70 /* Portuguese Language */,
-				0DB08557282D0BF100DD5E70 /* German Language */,
-				0DB08559282D0C1600DD5E70 /* Spanish Language */,
 				0DF96CD72833CEE400B744F6 /* Views for All Languages */,
 				0D09C3C72846305100E91DBC /* Daily Challenges */,
+				0D1D90ED284F8261003391FF /* API and courses */,
 				0DF96CC6282D716F00B744F6 /* Subscriptions */,
 				0DDAA6F62825984F00BC110A /* Models */,
 				0D7FFE692812F85500FFFDB2 /* Resources */,
@@ -401,6 +428,7 @@
 			files = (
 				0DF96CD62833CE7300B744F6 /* Course.swift in Sources */,
 				0D2693B2281194AD00826898 /* SplashScreen.swift in Sources */,
+				0D1D91002850A2D0003391FF /* TriviaManager.swift in Sources */,
 				0DF96CCC282D71D200B744F6 /* SubscriptionModelThree.swift in Sources */,
 				0DF96CC5282D604900B744F6 /* CapsuleButtons.swift in Sources */,
 				0DF96CCE282D75A000B744F6 /* EnglishAmericanMain.swift in Sources */,
@@ -409,21 +437,28 @@
 				0DB08560282D1C6300DD5E70 /* EnglishAmericanLevelView.swift in Sources */,
 				0DDAA6FA28297AFE00BC110A /* GlobalHelpers.swift in Sources */,
 				0D2144F2283E591C00DB512C /* FlagSelected.swift in Sources */,
+				0D1D90EF284F830A003391FF /* QuestionView.swift in Sources */,
 				0DDAA6DE2822D1DC00BC110A /* GetStartedView.swift in Sources */,
+				0D1D90FD2850A249003391FF /* Answer.swift in Sources */,
 				0DDAA6F128257A2000BC110A /* LanguageListView.swift in Sources */,
 				0DF96CD92833CF1100B744F6 /* StandardHomeCourse.swift in Sources */,
 				0D7FFE662812D53800FFFDB2 /* Colors.swift in Sources */,
 				0DB0854D282BED3800DD5E70 /* ContentViewTest.swift in Sources */,
+				0D1D90F6284FBC9F003391FF /* AnswerRowCircle.swift in Sources */,
 				0DDAA6F52825804D00BC110A /* Languages.swift in Sources */,
 				0DB0855E282D0C8600DD5E70 /* PortugueseBrazilLevelView.swift in Sources */,
 				0DF96CD2283289A700B744F6 /* ButtonTrial.swift in Sources */,
 				0DC79DB8284A4AF800EFC1AD /* courseOneUnitOne.swift in Sources */,
 				0D7FFE682812D89100FFFDB2 /* Onboarding.swift in Sources */,
+				0D1D90FB2850A21A003391FF /* Trivia.swift in Sources */,
+				0D1D90F4284FBC8C003391FF /* AnswerRowSquare.swift in Sources */,
 				0DB08550282C05C700DD5E70 /* ChooseLanguageWithButtonView.swift in Sources */,
+				0D1D90F2284FB83B003391FF /* ProgressBar.swift in Sources */,
 				0DF96CC8282D71A900B744F6 /* SubscriptionModelOne.swift in Sources */,
 				0DF96CD42833CB1700B744F6 /* HomeView.swift in Sources */,
 				0DDAA6E72822E0D100BC110A /* Blur.swift in Sources */,
 				0D09C3C92846306F00E91DBC /* DailyChallengesCell.swift in Sources */,
+				0D1D90F828509A64003391FF /* AnswerRowRectangle.swift in Sources */,
 				0D2144F0283D139E00DB512C /* TopImageHomeView.swift in Sources */,
 				0DE0A5962811925E0080FE70 /* ContentView.swift in Sources */,
 				0DE0A5942811925E0080FE70 /* testsJoyApp.swift in Sources */,
@@ -432,6 +467,7 @@
 				0DDAA6E92822ECCB00BC110A /* GradientGetStartedView.swift in Sources */,
 				0DF96CDB2833E4A000B744F6 /* HomeVM.swift in Sources */,
 				0DF96CD0282E9F9C00B744F6 /* SubscriptionConditions.swift in Sources */,
+				0D1D9102285110E2003391FF /* ButtonCourses.swift in Sources */,
 				0DB08552282C1D3800DD5E70 /* ButtonLanguage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
