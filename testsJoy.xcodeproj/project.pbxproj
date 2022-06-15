@@ -18,9 +18,13 @@
 		0D1D90FD2850A249003391FF /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D90FC2850A249003391FF /* Answer.swift */; };
 		0D1D91002850A2D0003391FF /* TriviaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D90FF2850A2CF003391FF /* TriviaManager.swift */; };
 		0D1D9102285110E2003391FF /* ButtonCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D9101285110E2003391FF /* ButtonCourses.swift */; };
+		0D1D910428536502003391FF /* WinOrFail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D910328536502003391FF /* WinOrFail.swift */; };
 		0D2144F0283D139E00DB512C /* TopImageHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2144EF283D139D00DB512C /* TopImageHomeView.swift */; };
 		0D2144F2283E591C00DB512C /* FlagSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2144F1283E591C00DB512C /* FlagSelected.swift */; };
 		0D2693B2281194AD00826898 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2693B1281194AD00826898 /* SplashScreen.swift */; };
+		0D37B27D2858DA190045F7F6 /* WinOrFailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37B27C2858DA180045F7F6 /* WinOrFailScreen.swift */; };
+		0D37B2832859E3E30045F7F6 /* WinScreenOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37B2822859E3E30045F7F6 /* WinScreenOne.swift */; };
+		0D37B2852859E3F30045F7F6 /* FailScreenOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37B2842859E3F30045F7F6 /* FailScreenOne.swift */; };
 		0D7FFE662812D53800FFFDB2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7FFE652812D53800FFFDB2 /* Colors.swift */; };
 		0D7FFE682812D89100FFFDB2 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7FFE672812D89100FFFDB2 /* Onboarding.swift */; };
 		0DB0854D282BED3800DD5E70 /* ContentViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB0854C282BED3800DD5E70 /* ContentViewTest.swift */; };
@@ -72,9 +76,13 @@
 		0D1D90FC2850A249003391FF /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		0D1D90FF2850A2CF003391FF /* TriviaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaManager.swift; sourceTree = "<group>"; };
 		0D1D9101285110E2003391FF /* ButtonCourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCourses.swift; sourceTree = "<group>"; };
+		0D1D910328536502003391FF /* WinOrFail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinOrFail.swift; sourceTree = "<group>"; };
 		0D2144EF283D139D00DB512C /* TopImageHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopImageHomeView.swift; sourceTree = "<group>"; };
 		0D2144F1283E591C00DB512C /* FlagSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagSelected.swift; sourceTree = "<group>"; };
 		0D2693B1281194AD00826898 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		0D37B27C2858DA180045F7F6 /* WinOrFailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinOrFailScreen.swift; sourceTree = "<group>"; };
+		0D37B2822859E3E30045F7F6 /* WinScreenOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinScreenOne.swift; sourceTree = "<group>"; };
+		0D37B2842859E3F30045F7F6 /* FailScreenOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailScreenOne.swift; sourceTree = "<group>"; };
 		0D7FFE652812D53800FFFDB2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		0D7FFE672812D89100FFFDB2 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		0DB0854C282BED3800DD5E70 /* ContentViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTest.swift; sourceTree = "<group>"; };
@@ -153,6 +161,11 @@
 				0D1D90F728509A64003391FF /* AnswerRowRectangle.swift */,
 				0D1D90F3284FBC8B003391FF /* AnswerRowSquare.swift */,
 				0D1D90F5284FBC9F003391FF /* AnswerRowCircle.swift */,
+				0D1D9101285110E2003391FF /* ButtonCourses.swift */,
+				0D1D910328536502003391FF /* WinOrFail.swift */,
+				0D37B2822859E3E30045F7F6 /* WinScreenOne.swift */,
+				0D37B2842859E3F30045F7F6 /* FailScreenOne.swift */,
+				0D37B27C2858DA180045F7F6 /* WinOrFailScreen.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -188,7 +201,6 @@
 			isa = PBXGroup;
 			children = (
 				0D7FFE652812D53800FFFDB2 /* Colors.swift */,
-				0D1D9101285110E2003391FF /* ButtonCourses.swift */,
 				0D7FFE672812D89100FFFDB2 /* Onboarding.swift */,
 				0DDAA6E62822E0D100BC110A /* Blur.swift */,
 				0DDAA6E82822ECCA00BC110A /* GradientGetStartedView.swift */,
@@ -432,6 +444,7 @@
 				0DF96CCC282D71D200B744F6 /* SubscriptionModelThree.swift in Sources */,
 				0DF96CC5282D604900B744F6 /* CapsuleButtons.swift in Sources */,
 				0DF96CCE282D75A000B744F6 /* EnglishAmericanMain.swift in Sources */,
+				0D37B2852859E3F30045F7F6 /* FailScreenOne.swift in Sources */,
 				0D09C3C628462BAF00E91DBC /* DailyChallenge.swift in Sources */,
 				0DDAA6F328257E9600BC110A /* StandardLanguageView.swift in Sources */,
 				0DB08560282D1C6300DD5E70 /* EnglishAmericanLevelView.swift in Sources */,
@@ -443,6 +456,8 @@
 				0DDAA6F128257A2000BC110A /* LanguageListView.swift in Sources */,
 				0DF96CD92833CF1100B744F6 /* StandardHomeCourse.swift in Sources */,
 				0D7FFE662812D53800FFFDB2 /* Colors.swift in Sources */,
+				0D1D910428536502003391FF /* WinOrFail.swift in Sources */,
+				0D37B27D2858DA190045F7F6 /* WinOrFailScreen.swift in Sources */,
 				0DB0854D282BED3800DD5E70 /* ContentViewTest.swift in Sources */,
 				0D1D90F6284FBC9F003391FF /* AnswerRowCircle.swift in Sources */,
 				0DDAA6F52825804D00BC110A /* Languages.swift in Sources */,
@@ -455,6 +470,7 @@
 				0DB08550282C05C700DD5E70 /* ChooseLanguageWithButtonView.swift in Sources */,
 				0D1D90F2284FB83B003391FF /* ProgressBar.swift in Sources */,
 				0DF96CC8282D71A900B744F6 /* SubscriptionModelOne.swift in Sources */,
+				0D37B2832859E3E30045F7F6 /* WinScreenOne.swift in Sources */,
 				0DF96CD42833CB1700B744F6 /* HomeView.swift in Sources */,
 				0DDAA6E72822E0D100BC110A /* Blur.swift in Sources */,
 				0D09C3C92846306F00E91DBC /* DailyChallengesCell.swift in Sources */,

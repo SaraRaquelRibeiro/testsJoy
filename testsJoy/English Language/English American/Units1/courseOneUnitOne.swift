@@ -14,6 +14,8 @@ struct courseOneUnitOne: View {
     var answer: Answer
     @State private var isSelected = false
     
+    @State var showSheet: Bool = false
+    
     var body: some View {
         ZStack{
             Color(.white)
@@ -46,6 +48,8 @@ struct courseOneUnitOne: View {
                     .multilineTextAlignment(.leading)
                     .frame(width: 300)
                 
+               
+                
                 ForEach(triviaManager.answerChoices, id: \.id){ answer in
                     AnswerRowRectangle(answer: answer)
                         .environmentObject(triviaManager)
@@ -53,15 +57,57 @@ struct courseOneUnitOne: View {
                
                 Spacer()
                 
+                HStack{
+                    
+                    
+                    Button(action: {
+                       
+                       //testar screen the fail or win
+                        showSheet.toggle()
+                        
+                    }, label: {
+                        //PrimaryButton(text: "Next", background: triviaManager.answerSelected ? Color.blueLight : .gray.opacity(0.2))
+                        //ButtonCourses(text: "Next", background: triviaManager.answerSelected ? Color.blueLight : .gray.opacity(0.2))
+                        ButtonCourses(text: "testar",
+                                      textColor: triviaManager.answerSelected ? Color.white : Color.gray.opacity(0.7),
+                                      shadowColor: triviaManager.answerSelected ? Color.greenCorrectAnswerBackground : .gray.opacity(0.7),
+                                      background: triviaManager.answerSelected ? Color.greenGradient1.opacity(0.8)  : Color.gray.opacity(0.2))
+                    })
+                    //se a resposta ainda não foi selecionada o button is disabled
+                        .disabled(!triviaManager.answerSelected)
+                        .sheet(isPresented: $showSheet, content: {
+                            
+                            if answer.isCorrect {
+                                WinOrFailScreen(text: "", textCorrectAnswer: "", correctAnswer: "", textColor: Color.greenGradient1, backgroundColor: Color.greenGradient1, answer: Answer(text: "", isCorrect: true), isShowing: .constant(true))
+                            }
+                            else{
+                                WinOrFailScreen(text: "", textCorrectAnswer: "", correctAnswer: "", textColor: Color.red, backgroundColor: Color.red, answer: Answer(text: "", isCorrect: true), isShowing: .constant(true))
+                            }
+                            
+                            
+                        })
+                        .padding(.bottom, 90)
+                
+                
                 Button(action: {
+                   
                     triviaManager.goToNextQuestion()
+                    //***quando clico check quero verificar se a answer está correta ou não e aí salto para o ecrã do win or fail
+                    
+                    
+                    
                 }, label: {
                     //PrimaryButton(text: "Next", background: triviaManager.answerSelected ? Color.blueLight : .gray.opacity(0.2))
                     //ButtonCourses(text: "Next", background: triviaManager.answerSelected ? Color.blueLight : .gray.opacity(0.2))
+                    ButtonCourses(text: "Check",
+                                  textColor: triviaManager.answerSelected ? Color.white : Color.gray.opacity(0.7),
+                                  shadowColor: triviaManager.answerSelected ? Color.greenCorrectAnswerBackground : .gray.opacity(0.7),
+                                  background: triviaManager.answerSelected ? Color.greenGradient1.opacity(0.8)  : Color.gray.opacity(0.2))
                 })
                 //se a resposta ainda não foi selecionada o button is disabled
                     .disabled(!triviaManager.answerSelected)
                     .padding(.bottom, 90)
+                }
                 
             }
             
@@ -88,6 +134,7 @@ struct courseOneUnitOne: View {
             }
             .ignoresSafeArea(.container)
         }
+        .navigationBarHidden(true)
     }
 }
 

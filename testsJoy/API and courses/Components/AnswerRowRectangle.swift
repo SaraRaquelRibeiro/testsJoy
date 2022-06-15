@@ -23,6 +23,10 @@ struct AnswerRowRectangle: View {
                 .fill(isSelected ? Color.blueGradient3.opacity(0.1) : Color(red: 255, green: 245, blue: 158))
                 .frame(maxWidth: .infinity, maxHeight: 40, alignment: .leading)
                 .multilineTextAlignment(.leading)
+                /*.onTapGesture(perform: {
+                    isSelected.toggle()
+                    
+                })*/
             
                 //.background(isSelected ? Color.blueGradient3.opacity(0.2) : .white)
                 .shadow(color: .gray.opacity(0.3), radius: 6, x: -2, y: 5)
@@ -39,10 +43,18 @@ struct AnswerRowRectangle: View {
                 })
             
             RoundedRectangle(cornerRadius: 10)
-                .stroke(isSelected ? (answer.isCorrect ? Color.greenGradient1: .red.opacity(0.5)) : .gray.opacity(0.2))
+                .stroke(isSelected ? Color.blueGradient2 : .gray.opacity(0.2))
                 .frame(maxWidth: .infinity, maxHeight: 40, alignment: .leading)
                 .padding(.leading, 20)
                 .padding(.trailing, 20)
+            
+            //**** depois de clicar fica a saber se acertou ou não na pergunta
+            /*RoundedRectangle(cornerRadius: 10)
+                .stroke(isSelected ? (answer.isCorrect ? Color.greenGradient1: .red.opacity(0.5)) : .gray.opacity(0.2))
+                .frame(maxWidth: .infinity, maxHeight: 40, alignment: .leading)
+                .padding(.leading, 20)
+                .padding(.trailing, 20)*/
+            
             
             
             HStack(spacing: 20) {
@@ -67,50 +79,22 @@ struct AnswerRowRectangle: View {
                 
                 if answer.isCorrect {
                     HStack{
-                        Text("you're awesome")
+                        Text("win")
                     }
                     .frame(maxWidth: .infinity, maxHeight: 80, alignment: .leading)
                     .background(.green)
                     
                 } else {
                     
-                        Text("you're awesome")
-                            .foregroundColor(Color.greenGradient2)
-                            .font(.custom("Poppins-Bold", size: 25))
+                    
+                    
+                    WinOrFail(text: "Fail", textCorrectAnswer: "The correct answer is:", correctAnswer: "blabla", textColor: Color.pinkIncorrectAnswerText, backgroundColor: Color.pinkIncorrectAnswerBackground)
                     
                     
                 }
             }*/
         }
         
-        /*HStack(spacing: 20) {
-            Image(systemName: "circle.fill")
-                .font(.caption)
-            
-            Text(answer.text)
-                .bold()
-            
-            if isSelected {
-                
-                
-            }
-        }
-        .padding()
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .foregroundColor(triviaManager.answerSelected ? (isSelected ? Color.orangeGradient2 : .gray) : Color.orangeGradient2)
-        //.background(triviaManager.answerSelected ? (isSelected ? Color.blueLight : .green) : Color.white)
-        .background(isSelected ? Color.blueGradient3.opacity(0.2) : .white)
-        .cornerRadius(10)
-        .shadow(color: .gray.opacity(0.3), radius: 6, x: -2, y: 5)
-        //.stroke(isSelected ? Color.orangeGradient2.opacity(0.7) : Color.black.opacity(0.7), style: StrokeStyle(lineWidth: 5.5))
-        
-        .onTapGesture(perform: {
-            //se o user ainda não selecionou uma answer
-            if !triviaManager.answerSelected{
-                isSelected = true
-                triviaManager.selectAnswer(answer: answer)
-            }
-        })*/
     }
 }
 

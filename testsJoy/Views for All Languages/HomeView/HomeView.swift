@@ -221,18 +221,19 @@ struct topRowButtons : View {
             ZStack{
                 Capsule()
                     .fill(Color.white)
-                    .frame(width: 75, height: 28)
+                    .frame(width: 80, height: 28)
                     .shadow(color: Color.black.opacity(0.06), radius: 0.7, y: 2)
                 
                 HStack {
-                    Image("diamond")
+                    Image("coin")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 20)
+                        .frame(width: 17)
+                        .padding(.leading, -10)
                     //aqui colocar os diamonds que o user vai ganhar à medida q for finalizando os jogos
-                    Text("45")
-                        .font(.custom("Poppins-semibold", size: 14))
-                        .opacity(0.4)
+                    Text("45.0")
+                        .font(.custom("Poppins-semibold", size: 13))
+                        .opacity(0.5)
                         .foregroundColor(.black)
                 }
             }
@@ -241,18 +242,19 @@ struct topRowButtons : View {
             ZStack{
                 Capsule()
                     .fill(Color.white)
-                    .frame(width: 75, height: 28)
+                    .frame(width: 80, height: 28)
                     .shadow(color: Color.black.opacity(0.06), radius: 0.7, y: 2)
                 
                 HStack {
                     Image("heart")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 18)
+                        .frame(width: 16)
+                        .padding(.leading, -10)
                     //aqui colocar as vidas que o user vai ganhar à medida q for finalizando os jogos
                     Text("100")
-                        .font(.custom("Poppins-semibold", size: 14))
-                        .opacity(0.4)
+                        .font(.custom("Poppins-semibold", size: 13))
+                        .opacity(0.5)
                         .foregroundColor(.black)
                 }
             }
