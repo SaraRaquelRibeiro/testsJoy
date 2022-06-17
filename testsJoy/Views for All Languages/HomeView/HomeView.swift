@@ -11,7 +11,8 @@ struct HomeView: View {
     
     let defaults = UserDefaults.standard
     
-    var vm = HomeVM()
+    @StateObject var vm = HomeVM()
+    
     
     let screen = UIScreen.main.bounds
     
@@ -24,6 +25,8 @@ struct HomeView: View {
     //@Binding var isNavigationBarHidden: Bool
     
     @State var selection = 0
+    
+   
     
     var body: some View {
             ZStack{
@@ -61,20 +64,38 @@ struct HomeView: View {
                         
                     }
                     
-                    ScrollView (showsIndicators: false) {
+                    NavigationView{
+                        
+                        List{
+                            ForEach(vm.units){ uni in
+                                CategoryRow(unit: uni)
+                            }
+                            
+                        }
+                        .navigationBarHidden(true)
+                        .navigationBarTitle("")
+                        
+                    }
+                    
+                    
+                    
+                    /*ScrollView (showsIndicators: false) {
                         LazyVStack {
                             
                             Spacer()
                                 .frame(height: 20)
                             
                             //inserir as units
-                            ForEach(vm.allUnits, id: \.self){ uni in
+                            ForEach(vm.units){ uni in
+                                
+                                CategoryRow(unit: uni)
+                                
                                 HStack {
                                         Text(uni)
                                                 .font(.custom("Poppins-SemiBold", size: 21))
                                                             .opacity(0.8)
-                                                        .foregroundColor(.black)
-                                                        .padding(.leading)
+                                                            .foregroundColor(.black)
+                                                            .padding(.leading)
                                                         
                                     
                                     
@@ -118,14 +139,18 @@ struct HomeView: View {
                                                 
                                     Spacer()
                                             
-                                        }
-                                        .padding(.bottom, -7)
+                                        /
+                                        //.padding(.bottom, -7)
                               
                                                 //scrollview p os cursos
-                                                ScrollView(.horizontal, showsIndicators: false) {
-                                                    LazyHStack {
-                                                        ForEach(vm.getCourse(forUnit: uni)) { course in
+                                                //ScrollView(.horizontal, showsIndicators: false) {
+                                                NavigationView {
+                                                    //LazyHStack {
+                                                    List{
+                                                        //ForEach(vm.getCourse(forUnit: uni)) { course in
                                                             VStack {
+                                                                
+                                                                
                                                                 Button(action: {
                                                                     
                                                                     isShowingRectangle.toggle()
@@ -152,29 +177,13 @@ struct HomeView: View {
                                                                         }
                                                                     }
                                                                 })
-                                                                
-                                                                /*StandardHomeCourse(course: course)
-                                                                        .frame(width: 90, height: 110)
-                                                                        .clipShape(RoundedRectangle(cornerRadius: 20))
-                                                                        .shadow(color: Color.black.opacity(0.2), radius: 5, y: 5)
-                                                                        .clipShape(RoundedRectangle(cornerRadius: 20))
-                                                                        .shadow(color: Color.black.opacity(0.2), radius: 5, y: 5)
-                                                                        //meter a linha colorida
-                                                                        .overlay(
-                                                                            RoundedRectangle(cornerRadius: 20)
-                                                                                .stroke(lineWidth: 5.0)
-                                                                                .foregroundColor(Color("\(course.color)")))
-                                                                    //para afastar um bocado os circulos
-                                                                    .padding(.trailing, 14)*/
-                                                                    
-                                                                
                                                                 Text(course.name)
                                                                     .opacity(0.6)
                                                                     .font(.custom("Poppins-medium", size: 11))
                                                                     .foregroundColor(.black)
                                                                     .padding(.leading, -13)
                                                             }
-                                                        }
+                                                        //}
                                                     }
                                                     .padding(.top, 10)
                                                     .padding(.bottom, 30)
@@ -184,7 +193,7 @@ struct HomeView: View {
                                 }
                                 .padding(.horizontal, 10)
                             }
-                    }
+                    }*/
                 }
             }
             .foregroundColor(.white)
@@ -196,6 +205,7 @@ struct HomeView_Previews: PreviewProvider {
     
     static var previews: some View {
         HomeView()
+            
         //HomeView(isNavigationBarHidden: .constant(false))
     }
 }
@@ -228,11 +238,11 @@ struct topRowButtons : View {
                     Image("coin")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 17)
+                        .frame(width: 18)
                         .padding(.leading, -10)
                     //aqui colocar os diamonds que o user vai ganhar à medida q for finalizando os jogos
                     Text("45.0")
-                        .font(.custom("Poppins-semibold", size: 13))
+                        .font(.custom("Poppins-medium", size: 13))
                         .opacity(0.5)
                         .foregroundColor(.black)
                 }
@@ -253,7 +263,7 @@ struct topRowButtons : View {
                         .padding(.leading, -10)
                     //aqui colocar as vidas que o user vai ganhar à medida q for finalizando os jogos
                     Text("100")
-                        .font(.custom("Poppins-semibold", size: 13))
+                        .font(.custom("Poppins-medium", size: 13))
                         .opacity(0.5)
                         .foregroundColor(.black)
                 }

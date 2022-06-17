@@ -25,6 +25,7 @@ extension Color {
     static let pinkIncorrectAnswerBackground = Color("pinkIncorrectAnswerBackground")
     static let pinkIncorrectAnswerText = Color("pinkIncorrectAnswerText")
     static let greenCorrectAnswerBackground = Color("greenCorrectAnswerBackground")
+    static let greenStrong = Color("greenStrong")
     
     
     //dá o gradiente preto na imagem top da GetStartedView

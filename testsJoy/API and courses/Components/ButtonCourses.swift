@@ -19,7 +19,7 @@ struct ButtonCourses: View {
         Text(text)
             .font(.custom("Poppins-Bold", size: 20))
             .foregroundColor(textColor)
-            .frame(width: 190, height: 44)
+            .frame(width: 220, height: 46)
             //.background(Color.orangeGradient2)
             .background(background)
             .cornerRadius(15)

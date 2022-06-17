@@ -22,6 +22,8 @@ class TriviaManager : ObservableObject {
     @Published private(set) var score = 0
     @Published private(set) var category : AttributedString = ""
     
+    @EnvironmentObject var triviaManager : TriviaManager
+    
     init() {
         Task.init {
            await fetchTrivia()
@@ -79,7 +81,7 @@ class TriviaManager : ObservableObject {
     
     func setQuestion () { //chamadam em 2 sitios, na func goToNextQuestion
         answerSelected = false
-        progress = CGFloat(Double(index + 1) / Double(length) * 240)
+        progress = CGFloat(Double(index + 1) / Double(length) * 350)
         
         if index < length {
             let currentTriviaQuestion = trivia[index]
@@ -93,10 +95,20 @@ class TriviaManager : ObservableObject {
     func selectAnswer(answer: Answer){
         //set answerselected to true - o user já selecionou uma answer
         answerSelected = true
+       
         if answer.isCorrect {
             //increment a score **** aqui vai poder meter-se as moedas
             score += 1
         }
+        
     }
     
+    func checkIfCorrect (answer: Answer){
+        answerSelected = true
+        if !triviaManager.answerSelected{
+            
+            triviaManager.selectAnswer(answer: answer)
+           
+        }
+    }
 }

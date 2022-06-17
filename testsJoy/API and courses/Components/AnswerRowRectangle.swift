@@ -23,12 +23,6 @@ struct AnswerRowRectangle: View {
                 .fill(isSelected ? Color.blueGradient3.opacity(0.1) : Color(red: 255, green: 245, blue: 158))
                 .frame(maxWidth: .infinity, maxHeight: 40, alignment: .leading)
                 .multilineTextAlignment(.leading)
-                /*.onTapGesture(perform: {
-                    isSelected.toggle()
-                    
-                })*/
-            
-                //.background(isSelected ? Color.blueGradient3.opacity(0.2) : .white)
                 .shadow(color: .gray.opacity(0.3), radius: 6, x: -2, y: 5)
                 .padding(.leading, 20)
                 .padding(.trailing, 20)
@@ -48,15 +42,6 @@ struct AnswerRowRectangle: View {
                 .padding(.leading, 20)
                 .padding(.trailing, 20)
             
-            //**** depois de clicar fica a saber se acertou ou não na pergunta
-            /*RoundedRectangle(cornerRadius: 10)
-                .stroke(isSelected ? (answer.isCorrect ? Color.greenGradient1: .red.opacity(0.5)) : .gray.opacity(0.2))
-                .frame(maxWidth: .infinity, maxHeight: 40, alignment: .leading)
-                .padding(.leading, 20)
-                .padding(.trailing, 20)*/
-            
-            
-            
             HStack(spacing: 20) {
                 
                 Image(systemName: "circle.fill")
@@ -65,34 +50,18 @@ struct AnswerRowRectangle: View {
                 Text(answer.text)
                     .bold()
                 
-                
+                if isSelected {
+                    Spacer()
+                    Image(systemName: answer.isCorrect ? "checkmark.circle.fill" : "x.circle.fill")
+                        .foregroundColor(answer.isCorrect ? Color.green : Color.red)
+                }
             }
             .padding()
             .frame(maxWidth: .infinity, alignment: .leading)
-            .foregroundColor(triviaManager.answerSelected ? (isSelected ? Color.orangeGradient2 : .gray) : Color.orangeGradient2)
+            .foregroundColor(triviaManager.answerSelected ? (isSelected ? Color.blueGradient2 : .gray) : Color.blueGradient2)
             .padding(.leading, 20)
             .padding(.trailing, 20)
             
-            
-            
-            /*if isSelected {
-                
-                if answer.isCorrect {
-                    HStack{
-                        Text("win")
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: 80, alignment: .leading)
-                    .background(.green)
-                    
-                } else {
-                    
-                    
-                    
-                    WinOrFail(text: "Fail", textCorrectAnswer: "The correct answer is:", correctAnswer: "blabla", textColor: Color.pinkIncorrectAnswerText, backgroundColor: Color.pinkIncorrectAnswerBackground)
-                    
-                    
-                }
-            }*/
         }
         
     }

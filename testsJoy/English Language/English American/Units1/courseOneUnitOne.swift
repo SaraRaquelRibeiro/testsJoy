@@ -16,6 +16,8 @@ struct courseOneUnitOne: View {
     
     @State var showSheet: Bool = false
     
+    @State private var sheetMode : SheetMode = .quarter
+    
     var body: some View {
         ZStack{
             Color(.white)
@@ -48,8 +50,6 @@ struct courseOneUnitOne: View {
                     .multilineTextAlignment(.leading)
                     .frame(width: 300)
                 
-               
-                
                 ForEach(triviaManager.answerChoices, id: \.id){ answer in
                     AnswerRowRectangle(answer: answer)
                         .environmentObject(triviaManager)
@@ -57,7 +57,60 @@ struct courseOneUnitOne: View {
                
                 Spacer()
                 
-                HStack{
+                ZStack{
+                    
+                    Button(action: {
+                       
+                       //testar screen the fail or win
+                        switch sheetMode {
+                        case .quarter:
+                            sheetMode = .half
+                        case .half:
+                            sheetMode = .quarter
+                      
+                        }
+                        
+                    }, label: {
+                       
+                        ButtonCourses(text: "testar",
+                                      textColor: triviaManager.answerSelected ? Color.white : Color.gray.opacity(0.7),
+                                      shadowColor: triviaManager.answerSelected ? Color.greenCorrectAnswerBackground : .gray.opacity(0.7),
+                                      background: triviaManager.answerSelected ? Color.greenGradient1.opacity(0.8)  : Color.gray.opacity(0.2))
+                    })
+                    //se a resposta ainda não foi selecionada o button is disabled
+                        .disabled(!triviaManager.answerSelected)
+                    
+                    FlexibleSheet(sheetMode: $sheetMode, content: {
+                        
+                        if answer.isCorrect {
+                            VStack{
+                                
+                                    WinScreenOne(answer: Answer(text: "ffof", isCorrect: true), correctAnswer: "so nice")
+                               
+                                
+                            }
+                            .frame(maxWidth: .infinity, maxHeight: 300)
+                            .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+                            
+                        } else {
+                            VStack{
+                                //WinScreenOne(answer: Answer(text: "ffof", isCorrect: true), correctAnswer: "so nice")
+                                FailScreenOne(answer: Answer(text: "ffof", isCorrect: false), correctAnswer: "")
+                               
+                                
+                            }
+                            .frame(maxWidth: .infinity, maxHeight: 300)
+                            .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+                        }
+                        
+                        
+                       
+                    })
+                    
+                }
+                
+                
+                /*HStack{
                     
                     
                     Button(action: {
@@ -66,8 +119,7 @@ struct courseOneUnitOne: View {
                         showSheet.toggle()
                         
                     }, label: {
-                        //PrimaryButton(text: "Next", background: triviaManager.answerSelected ? Color.blueLight : .gray.opacity(0.2))
-                        //ButtonCourses(text: "Next", background: triviaManager.answerSelected ? Color.blueLight : .gray.opacity(0.2))
+                       
                         ButtonCourses(text: "testar",
                                       textColor: triviaManager.answerSelected ? Color.white : Color.gray.opacity(0.7),
                                       shadowColor: triviaManager.answerSelected ? Color.greenCorrectAnswerBackground : .gray.opacity(0.7),
@@ -77,37 +129,22 @@ struct courseOneUnitOne: View {
                         .disabled(!triviaManager.answerSelected)
                         .sheet(isPresented: $showSheet, content: {
                             
+                            //WinScreenOne(answer: Answer(text: "", isCorrect: false), correctAnswer: "inserir resposta correcta")
+                            
                             if answer.isCorrect {
-                                WinOrFailScreen(text: "", textCorrectAnswer: "", correctAnswer: "", textColor: Color.greenGradient1, backgroundColor: Color.greenGradient1, answer: Answer(text: "", isCorrect: true), isShowing: .constant(true))
+                                WinScreenOne(answer: Answer(text: "", isCorrect: false), correctAnswer: "inserir resposta correcta")
                             }
                             else{
-                                WinOrFailScreen(text: "", textCorrectAnswer: "", correctAnswer: "", textColor: Color.red, backgroundColor: Color.red, answer: Answer(text: "", isCorrect: true), isShowing: .constant(true))
+                               FailScreenOne(answer: Answer(text: "", isCorrect: false), correctAnswer: "inserir resposta correta")
+                                    .frame(width: 325, height: 550)
+                                    .clipShape(RoundedRectangle(cornerRadius: 20, style: .circular))
+                                    .clearModalBackground()
                             }
                             
                             
                         })
                         .padding(.bottom, 90)
-                
-                
-                Button(action: {
-                   
-                    triviaManager.goToNextQuestion()
-                    //***quando clico check quero verificar se a answer está correta ou não e aí salto para o ecrã do win or fail
-                    
-                    
-                    
-                }, label: {
-                    //PrimaryButton(text: "Next", background: triviaManager.answerSelected ? Color.blueLight : .gray.opacity(0.2))
-                    //ButtonCourses(text: "Next", background: triviaManager.answerSelected ? Color.blueLight : .gray.opacity(0.2))
-                    ButtonCourses(text: "Check",
-                                  textColor: triviaManager.answerSelected ? Color.white : Color.gray.opacity(0.7),
-                                  shadowColor: triviaManager.answerSelected ? Color.greenCorrectAnswerBackground : .gray.opacity(0.7),
-                                  background: triviaManager.answerSelected ? Color.greenGradient1.opacity(0.8)  : Color.gray.opacity(0.2))
-                })
-                //se a resposta ainda não foi selecionada o button is disabled
-                    .disabled(!triviaManager.answerSelected)
-                    .padding(.bottom, 90)
-                }
+                }*/
                 
             }
             
@@ -142,5 +179,32 @@ struct courseOneUnitOne_Previews: PreviewProvider {
     static var previews: some View {
         courseOneUnitOne(answer: Answer(text: "Single", isCorrect: false))
             .environmentObject(TriviaManager())
+    }
+}
+
+//**** funções para formatar o tamanho etc da .sheet que salta no fail e win
+struct ClearBackgroundView: UIViewRepresentable {
+    func makeUIView(context: Context) -> some UIView {
+        let view = UIView()
+        DispatchQueue.main.async {
+            view.superview?.superview?.backgroundColor = .clear
+        }
+        return view
+    }
+    func updateUIView(_ uiView: UIViewType, context: Context) {
+    }
+}
+
+struct ClearBackgroundViewModifier: ViewModifier {
+    
+    func body(content: Content) -> some View {
+        content
+            .background(ClearBackgroundView())
+    }
+}
+
+extension View {
+    func clearModalBackground()->some View {
+        self.modifier(ClearBackgroundViewModifier())
     }
 }

@@ -16,35 +16,47 @@ struct FailScreenOne: View {
     
     @EnvironmentObject var triviaManager : TriviaManager
     
+    //criar um array de pequenas imagens para aparecerem aleatoriamente
+    
+  
+    
     var body: some View {
         ZStack (alignment: .top){
             Color.pinkIncorrectAnswerBackground
                 .edgesIgnoringSafeArea(.all)
             
             
-                VStack(alignment: .leading, spacing: 15){
-                    Spacer()
-                    
-                    Text("Incorrect")
-                        .font(.custom("Poppins-semibold", size: 22))
-                        .foregroundColor(Color.pinkIncorrectAnswerText)
-                        .padding(.bottom, 20)
-                    
-                        Text("Correct Answer:")
-                            .font(.custom("Poppins-regular", size: 18))
-                            .foregroundColor(Color.pinkIncorrectAnswerText)
-                            
-                        Text(correctAnswer)
-                            .font(.custom("Poppins-medium", size: 20))
-                            .foregroundColor(Color.pinkIncorrectAnswerText)
-                    Spacer()
-                }
-                .padding(.leading, -100)
+            VStack {
+                //Spacer()
+                LottieView(fileName: "fail").frame(width: 150, height: 150)
+                    .padding(.top, -40)
                 
+                VStack(alignment: .leading, spacing: 10){
+                        
+                        Text("Incorrect")
+                            .font(.custom("Poppins-semibold", size: 18))
+                            .foregroundColor(Color.pinkIncorrectAnswerText)
+                            .padding(.bottom, 5)
+                        
+                            Text("Correct Answer:")
+                                .font(.custom("Poppins-regular", size: 14))
+                                .foregroundColor(Color.pinkIncorrectAnswerText)
+                                
+                            Text(correctAnswer)
+                                .font(.custom("Poppins-medium", size: 16))
+                                .foregroundColor(Color.pinkIncorrectAnswerText)
+                        Spacer()
+                    }
+                .padding(.leading, -150)
+                .padding(.top, -50)
+                
+            }
                 
             Button(action: {
+                
                 triviaManager.goToNextQuestion()
                 //***quando clico check quero verificar se a answer está correta ou não e aí salto para o ecrã do win or fail
+                
                 
                 
             }, label: {
@@ -53,9 +65,12 @@ struct FailScreenOne: View {
                               shadowColor: Color.pinkIncorrectAnswerText,
                               background: Color.white)
             })
-                 .frame(maxHeight: .infinity, alignment: .bottom)
+                .frame(maxHeight: .infinity, alignment: .bottom)
+                .padding(.bottom, 80)
+                 
             
         }
+        .animation(.none)
     }
 }
 

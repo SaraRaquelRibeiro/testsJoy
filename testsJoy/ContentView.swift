@@ -107,6 +107,7 @@ struct ContentView: View {
                                 
                 }
                 .onAppear() {
+                   
                     
                     UITabBar.appearance().barTintColor = .white
                     let tabBarAppearence = UITabBarAppearance()
