@@ -23,6 +23,7 @@
 		0D2ABF1B285B8DE30069129D /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2ABF1A285B8DE30069129D /* Tests.swift */; };
 		0D37B2832859E3E30045F7F6 /* WinScreenOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37B2822859E3E30045F7F6 /* WinScreenOne.swift */; };
 		0D37B2852859E3F30045F7F6 /* FailScreenOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37B2842859E3F30045F7F6 /* FailScreenOne.swift */; };
+		0D4272CF2860D69A00E87CE1 /* SquareBackgroundCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4272CE2860D69900E87CE1 /* SquareBackgroundCourses.swift */; };
 		0D7D49D6285C7FD7005AA45E /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7D49D5285C7FD7005AA45E /* CategoryRow.swift */; };
 		0D7D49D8285C8331005AA45E /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7D49D7285C8331005AA45E /* CategoryItem.swift */; };
 		0D7D49DA285C862F005AA45E /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7D49D9285C862F005AA45E /* Unit.swift */; };
@@ -87,6 +88,7 @@
 		0D2ABF1A285B8DE30069129D /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		0D37B2822859E3E30045F7F6 /* WinScreenOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinScreenOne.swift; sourceTree = "<group>"; };
 		0D37B2842859E3F30045F7F6 /* FailScreenOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailScreenOne.swift; sourceTree = "<group>"; };
+		0D4272CE2860D69900E87CE1 /* SquareBackgroundCourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareBackgroundCourses.swift; sourceTree = "<group>"; };
 		0D7D49D5285C7FD7005AA45E /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		0D7D49D7285C8331005AA45E /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
 		0D7D49D9285C862F005AA45E /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
@@ -173,7 +175,6 @@
 				0D1D90F1284FB83B003391FF /* ProgressBar.swift */,
 				0D1D90F728509A64003391FF /* AnswerRowRectangle.swift */,
 				0D1D90F3284FBC8B003391FF /* AnswerRowSquare.swift */,
-				0D1D9101285110E2003391FF /* ButtonCourses.swift */,
 				0DBA5498285A3D1F0016973D /* FlexibleSheet.swift */,
 				0D37B2822859E3E30045F7F6 /* WinScreenOne.swift */,
 				0D37B2842859E3F30045F7F6 /* FailScreenOne.swift */,
@@ -208,18 +209,43 @@
 			path = HomeView;
 			sourceTree = "<group>";
 		};
+		0D4272CA2860C58000E87CE1 /* Courses */ = {
+			isa = PBXGroup;
+			children = (
+				0D7D49D7285C8331005AA45E /* CategoryItem.swift */,
+				0D7D49D5285C7FD7005AA45E /* CategoryRow.swift */,
+			);
+			path = Courses;
+			sourceTree = "<group>";
+		};
+		0D4272CB2860C59600E87CE1 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				0DDAA6E62822E0D100BC110A /* Blur.swift */,
+				0DDAA6E82822ECCA00BC110A /* GradientGetStartedView.swift */,
+				0D7FFE652812D53800FFFDB2 /* Colors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		0D4272CC2860C5C100E87CE1 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				0D1D9101285110E2003391FF /* ButtonCourses.swift */,
+				0DF96CC4282D604900B744F6 /* CapsuleButtons.swift */,
+				0D4272CE2860D69900E87CE1 /* SquareBackgroundCourses.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		0D7FFE642812D50D00FFFDB2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				0D7FFE652812D53800FFFDB2 /* Colors.swift */,
-				0DBA5494285A0D940016973D /* LottieView.swift */,
+				0D4272CC2860C5C100E87CE1 /* Buttons */,
+				0D4272CB2860C59600E87CE1 /* Colors */,
+				0D4272CA2860C58000E87CE1 /* Courses */,
 				0D7FFE672812D89100FFFDB2 /* Onboarding.swift */,
-				0D7D49D5285C7FD7005AA45E /* CategoryRow.swift */,
-				0D7D49D7285C8331005AA45E /* CategoryItem.swift */,
-				0DDAA6E62822E0D100BC110A /* Blur.swift */,
-				0DDAA6E82822ECCA00BC110A /* GradientGetStartedView.swift */,
 				0DDAA6F928297AFE00BC110A /* GlobalHelpers.swift */,
-				0DF96CC4282D604900B744F6 /* CapsuleButtons.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -282,6 +308,7 @@
 		0DBA548C2859F61B0016973D /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				0DBA5494285A0D940016973D /* LottieView.swift */,
 				0DBA549C285B80640016973D /* coinsWin1.json */,
 				0DBA549D285B80650016973D /* coinsWin2.json */,
 				0DBA548F2859F65E0016973D /* fail.json */,
@@ -486,6 +513,7 @@
 				0D1D90EF284F830A003391FF /* QuestionView.swift in Sources */,
 				0DDAA6DE2822D1DC00BC110A /* GetStartedView.swift in Sources */,
 				0D1D90FD2850A249003391FF /* Answer.swift in Sources */,
+				0D4272CF2860D69A00E87CE1 /* SquareBackgroundCourses.swift in Sources */,
 				0DF96CD92833CF1100B744F6 /* StandardHomeCourse.swift in Sources */,
 				0D7FFE662812D53800FFFDB2 /* Colors.swift in Sources */,
 				0DB0854D282BED3800DD5E70 /* ContentViewTest.swift in Sources */,

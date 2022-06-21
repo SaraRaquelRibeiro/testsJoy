@@ -48,7 +48,7 @@ struct GrayRectangle: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 20)
             .fill(.gray.opacity(0.5))
-            .frame(width: 95, height: 115)
+            .frame(width: 90, height: 110)
     }
 }
 

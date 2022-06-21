@@ -8,7 +8,9 @@
 import Foundation
 import SwiftUI
 
+
 struct Unit : Identifiable {
+    
     var id: String
     var name : String
     var courses : [Course]
@@ -18,4 +20,7 @@ struct Unit : Identifiable {
     var badge : Image {
         Image(badgeName)
     }
+    var color : String
 }
+
+

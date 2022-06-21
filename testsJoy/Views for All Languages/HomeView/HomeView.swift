@@ -67,13 +67,25 @@ struct HomeView: View {
                     NavigationView{
                         
                         List{
-                            ForEach(vm.units){ uni in
+                            ForEach(vm.units, id:\.id){ uni in
                                 CategoryRow(unit: uni)
+                                //remover linha separator
+                                    .listRowSeparator(.hidden)
+                                    
                             }
+                            .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                             
                         }
+                        
                         .navigationBarHidden(true)
                         .navigationBarTitle("")
+                        .background(Color.white.ignoresSafeArea())
+                        .onAppear {
+                            // Set the default to clear
+                            UITableView.appearance().backgroundColor = .clear
+                        }
+                        //.colorScheme(.light)
+                        
                         
                     }
                     

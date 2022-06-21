@@ -11,7 +11,8 @@ struct Course : Identifiable {
     var id: String
     var name : String
     var image : String
-    var color : String
+    var color1 : String
+    var color2 : String
     
 }
 

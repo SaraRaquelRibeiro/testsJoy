@@ -10,12 +10,20 @@ import SwiftUI
 struct CategoryItem: View {
     var course : Course
     
+    
     var body: some View {
         VStack(alignment: .leading){
             Image(course.image)
                 .resizable()
-                .frame(width: 155, height: 155)
-                .cornerRadius(100)
+                .frame(width: 90, height: 110)
+                .clipShape(RoundedRectangle(cornerRadius: 18))
+                .shadow(color: Color.black.opacity(0.4), radius: 1, x: 2,y: 3)
+                /*.overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(lineWidth: 4.0)
+                        .shadow(color: Color.black.opacity(0.3), radius: 2, x: 1, y: 3)
+                        .foregroundColor(Color("\(course.color1)")))*/
+                .padding(.top, 10)
             
             Text(course.name)
                 .opacity(0.6)
