@@ -38,6 +38,8 @@
 		0D97DE842863360F00192CCF /* TopRowBtns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D97DE832863360F00192CCF /* TopRowBtns.swift */; };
 		0D97DE9228639CFB00192CCF /* LevelsWithPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D97DE9128639CFB00192CCF /* LevelsWithPath.swift */; };
 		0D97DE942864843A00192CCF /* CharView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D97DE932864843900192CCF /* CharView.swift */; };
+		0D97DE992864C5B100192CCF /* AnswerRowSquareGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D97DE982864C5B000192CCF /* AnswerRowSquareGrid.swift */; };
+		0D97DE9B2864C61C00192CCF /* ImageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D97DE9A2864C61C00192CCF /* ImageTest.swift */; };
 		0DB0854D282BED3800DD5E70 /* ContentViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB0854C282BED3800DD5E70 /* ContentViewTest.swift */; };
 		0DB08550282C05C700DD5E70 /* ChooseLanguageWithButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB0854F282C05C700DD5E70 /* ChooseLanguageWithButtonView.swift */; };
 		0DB08552282C1D3800DD5E70 /* ButtonLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB08551282C1D3800DD5E70 /* ButtonLanguage.swift */; };
@@ -111,6 +113,8 @@
 		0D97DE832863360F00192CCF /* TopRowBtns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRowBtns.swift; sourceTree = "<group>"; };
 		0D97DE9128639CFB00192CCF /* LevelsWithPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsWithPath.swift; sourceTree = "<group>"; };
 		0D97DE932864843900192CCF /* CharView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharView.swift; sourceTree = "<group>"; };
+		0D97DE982864C5B000192CCF /* AnswerRowSquareGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRowSquareGrid.swift; sourceTree = "<group>"; };
+		0D97DE9A2864C61C00192CCF /* ImageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTest.swift; sourceTree = "<group>"; };
 		0DB0854C282BED3800DD5E70 /* ContentViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTest.swift; sourceTree = "<group>"; };
 		0DB0854F282C05C700DD5E70 /* ChooseLanguageWithButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLanguageWithButtonView.swift; sourceTree = "<group>"; };
 		0DB08551282C1D3800DD5E70 /* ButtonLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLanguage.swift; sourceTree = "<group>"; };
@@ -180,7 +184,6 @@
 				0D1D90EE284F8309003391FF /* QuestionView.swift */,
 				0DBA549A285B739B0016973D /* ReachEnd.swift */,
 				0D1D90F92850A1DB003391FF /* Model API */,
-				0D1D90F0284FB829003391FF /* Components */,
 			);
 			path = "API and courses";
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				0D1D90F1284FB83B003391FF /* ProgressBar.swift */,
 				0D1D90F728509A64003391FF /* AnswerRowRectangle.swift */,
 				0D1D90F3284FBC8B003391FF /* AnswerRowSquare.swift */,
+				0D97DE982864C5B000192CCF /* AnswerRowSquareGrid.swift */,
 				0DBA5498285A3D1F0016973D /* FlexibleSheet.swift */,
 				0D37B2822859E3E30045F7F6 /* WinScreenOne.swift */,
 				0D37B2842859E3F30045F7F6 /* FailScreenOne.swift */,
@@ -288,6 +292,7 @@
 				0D97DE7728620C5800192CCF /* SwipeCorrectWord.swift */,
 				0D97DE7B28620C9200192CCF /* CompleteSentence.swift */,
 				0D97DE7D28620C9D00192CCF /* CompleteWord.swift */,
+				0D1D90F0284FB829003391FF /* Components */,
 			);
 			path = Games;
 			sourceTree = "<group>";
@@ -305,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				0DB0854C282BED3800DD5E70 /* ContentViewTest.swift */,
+				0D97DE9A2864C61C00192CCF /* ImageTest.swift */,
 				0D97DE932864843900192CCF /* CharView.swift */,
 			);
 			path = "Not in use";
@@ -551,12 +557,14 @@
 				0D1D90EF284F830A003391FF /* QuestionView.swift in Sources */,
 				0D97DE7828620C5800192CCF /* SwipeCorrectWord.swift in Sources */,
 				0DDAA6DE2822D1DC00BC110A /* GetStartedView.swift in Sources */,
+				0D97DE992864C5B100192CCF /* AnswerRowSquareGrid.swift in Sources */,
 				0D1D90FD2850A249003391FF /* Answer.swift in Sources */,
 				0D4272CF2860D69A00E87CE1 /* SquareBackgroundCourses.swift in Sources */,
 				0D97DE7C28620C9200192CCF /* CompleteSentence.swift in Sources */,
 				0DF96CD92833CF1100B744F6 /* StandardHomeCourse.swift in Sources */,
 				0D7FFE662812D53800FFFDB2 /* Colors.swift in Sources */,
 				0DB0854D282BED3800DD5E70 /* ContentViewTest.swift in Sources */,
+				0D97DE9B2864C61C00192CCF /* ImageTest.swift in Sources */,
 				0D97DE9228639CFB00192CCF /* LevelsWithPath.swift in Sources */,
 				0D97DE7E28620C9D00192CCF /* CompleteWord.swift in Sources */,
 				0DDAA6F52825804D00BC110A /* Languages.swift in Sources */,

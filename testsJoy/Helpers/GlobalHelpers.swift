@@ -77,3 +77,16 @@ let staticAllUnits : [Unit] = [unit1, unit2]
 //***** Daily challenges
 let dailyChallenge1 = DailyChallenge(id: UUID().uuidString, name: "Learn 10 New Words", image: "brainMeditation", color: "pinkGradient1", win: "")
 let dailyChallenge2 = DailyChallenge(id: UUID().uuidString, name: "Say Hi", image: "brainMuscle", color: "blueGradient2", win: "")
+
+
+//*** PARA TESTAR AS IMAGES NO GameSelectByImage - apagar
+
+let exampleImages1 = ImageTest(id: UUID().uuidString, name: "unit1fruits")
+let exampleImages2 = ImageTest(id: UUID().uuidString, name: "unit1greetings")
+let exampleImages3 = ImageTest(id: UUID().uuidString, name: "unit1numbers")
+let exampleImages4 = ImageTest(id: UUID().uuidString, name: "unit1clothes")
+var exampleImages: [ImageTest] {
+    return [exampleImages1, exampleImages2, exampleImages3, exampleImages4]
+}
+
+

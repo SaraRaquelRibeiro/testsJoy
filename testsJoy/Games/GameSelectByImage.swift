@@ -17,6 +17,9 @@ struct GameSelectByImage: View {
     
     @State var word : String
     
+    var imagesTest: [ImageTest]
+   
+    
     var body: some View {
         
         ZStack{
@@ -28,9 +31,12 @@ struct GameSelectByImage: View {
                 
                 //QUESTION
                 VStack(alignment: .leading, spacing: 20){
+                    
                     Text(question)
-                        .font(.custom("Poppins-semibold", size: 18))
-                        .foregroundColor(Color.blueGradient2)
+                        .font(.custom("Poppins-medium", size: 20))
+                        .foregroundColor(Color.black.opacity(0.6))
+                        .padding(.top, -40)
+                    
                     
                     Button(action: {
                         
@@ -40,18 +46,28 @@ struct GameSelectByImage: View {
                             .scaledToFit()
                             .foregroundColor(Color.blueGradient2)
                             .font(.caption)
-                            .frame(width: 35, height: 35)
+                            .frame(width: 42, height: 42)
                             .shadow(color: .gray.opacity(0.4), radius: 1, x: -1, y: 3)
                         
                     })
                 }
-               
                 
                 Text(word)
-                    .font(.custom("Poppins-semibold", size: 24))
-                    .foregroundColor(Color.black.opacity(0.6))
-                    
-                    
+                    .font(.custom("Poppins-semibold", size: 25))
+                    .foregroundColor(Color.black.opacity(0.8))
+                
+                
+                AnswerRowSquareGrid(imsgesTest: imagesTest)
+                    .padding(.bottom, 40)
+               
+                
+                ButtonCourses(text: "Verify",
+                              textColor: Color.white,
+                              shadowColor: Color.greenCorrectAnswerBackground,
+                              background: Color.greenGradient1.opacity(0.8))
+                    .padding(.bottom, -30)
+                
+                
             }
             
             //BOTTOM
@@ -85,6 +101,6 @@ struct GameSelectByImage: View {
 
 struct GameSelectByImage_Previews: PreviewProvider {
     static var previews: some View {
-        GameSelectByImage(question: "What is the meaning?", word: "Water")
+        GameSelectByImage(question: "What is the meaning?", word: "Water", imagesTest: exampleImages)
     }
 }
