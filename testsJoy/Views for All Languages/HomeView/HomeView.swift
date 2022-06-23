@@ -39,7 +39,9 @@ struct HomeView: View {
                     ZStack{
                         
                         //menu do topo
-                        topRowButtons()
+                        /*topRowButtons()
+                            .padding(.top, 115)*/
+                        TopRowBtns(logo: "owlLogo", languageFlag: "1")
                             .padding(.top, 115)
                         
                         TopImageHomeView()
@@ -88,6 +90,7 @@ struct HomeView: View {
                         
                         
                     }
+                    .padding(.leading, -10)
                     
                     
                     
@@ -244,7 +247,8 @@ struct topRowButtons : View {
                 Capsule()
                     .fill(Color.white)
                     .frame(width: 80, height: 28)
-                    .shadow(color: Color.black.opacity(0.06), radius: 0.7, y: 2)
+                    .shadow(color: Color.black.opacity(0.12), radius: 0.7, y: 2)
+                
                 
                 HStack {
                     Image("coin")
@@ -254,8 +258,8 @@ struct topRowButtons : View {
                         .padding(.leading, -10)
                     //aqui colocar os diamonds que o user vai ganhar à medida q for finalizando os jogos
                     Text("45.0")
-                        .font(.custom("Poppins-medium", size: 13))
-                        .opacity(0.5)
+                        .font(.custom("Poppins-semibold", size: 14))
+                        .opacity(0.4)
                         .foregroundColor(.black)
                 }
             }
@@ -265,7 +269,7 @@ struct topRowButtons : View {
                 Capsule()
                     .fill(Color.white)
                     .frame(width: 80, height: 28)
-                    .shadow(color: Color.black.opacity(0.06), radius: 0.7, y: 2)
+                    .shadow(color: Color.black.opacity(0.12), radius: 0.7, y: 2)
                 
                 HStack {
                     Image("heart")
@@ -275,8 +279,8 @@ struct topRowButtons : View {
                         .padding(.leading, -10)
                     //aqui colocar as vidas que o user vai ganhar à medida q for finalizando os jogos
                     Text("100")
-                        .font(.custom("Poppins-medium", size: 13))
-                        .opacity(0.5)
+                        .font(.custom("Poppins-semibold", size: 14))
+                        .opacity(0.4)
                         .foregroundColor(.black)
                 }
             }

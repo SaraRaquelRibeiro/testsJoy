@@ -30,7 +30,7 @@ struct FlagSelected: View {
             .frame(width: 30, height: 30)
             .multilineTextAlignment(.center)
             .shadow(color: Color.black.opacity(0.5), radius: 2, x: 0, y: 2)
-            .overlay(Circle().stroke(color, lineWidth: 1))
+            //.overlay(Circle().stroke(color, lineWidth: 1))
             .padding()
     }
 }

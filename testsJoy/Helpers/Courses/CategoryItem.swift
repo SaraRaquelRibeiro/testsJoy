@@ -12,12 +12,12 @@ struct CategoryItem: View {
     
     
     var body: some View {
-        VStack(alignment: .leading){
+        VStack(alignment: .leading, spacing: 8){
             Image(course.image)
                 .resizable()
                 .frame(width: 90, height: 110)
                 .clipShape(RoundedRectangle(cornerRadius: 18))
-                .shadow(color: Color.black.opacity(0.4), radius: 1, x: 2,y: 3)
+                .shadow(color: Color.black.opacity(0.4), radius: 4, x: 2,y: 3)
                 /*.overlay(
                     RoundedRectangle(cornerRadius: 20)
                         .stroke(lineWidth: 4.0)
@@ -26,10 +26,10 @@ struct CategoryItem: View {
                 .padding(.top, 10)
             
             Text(course.name)
-                .opacity(0.6)
-                .font(.custom("Poppins-medium", size: 11))
+                .opacity(0.8)
+                .font(.system(size: 14))
                 .foregroundColor(.black)
-                .padding(.leading)
+                .padding(.leading, 10)
             
         }
         .padding(.leading, 15)

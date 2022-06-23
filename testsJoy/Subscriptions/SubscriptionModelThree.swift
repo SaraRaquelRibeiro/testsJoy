@@ -18,7 +18,7 @@ struct SubscriptionModelThree: View {
                 .edgesIgnoringSafeArea(.all)
             VStack{
                 HStack{
-                    NavigationLink(destination: EnglishAmericanMain(), label: {
+                    NavigationLink(destination: EnglishAmericanLevelView(), label: {
                         Image(systemName: "xmark")
                             .font(.custom("Poppins-Bold", size: 16))
                             .foregroundColor(.white)
@@ -134,7 +134,7 @@ struct SubscriptionModelThree: View {
                 
                 
                 
-                NavigationLink(destination: EnglishAmericanMain(),
+                NavigationLink(destination: EnglishAmericanLevelView(),
                                label: {
                     ZStack{
                         Text("Start 14-day Free Trial")

@@ -14,7 +14,7 @@ struct SubscriptionModelTwo: View {
                 .edgesIgnoringSafeArea(.all)
             VStack{
                 HStack{
-                    NavigationLink(destination: EnglishAmericanMain(), label: {
+                    NavigationLink(destination: EnglishAmericanLevelView(), label: {
                         Text("No thanks")
                             .font(.custom("Poppins-REGULAR", size: 16))
                             .foregroundColor(.white)
@@ -78,7 +78,7 @@ struct SubscriptionModelTwo: View {
             VStack {
                 Spacer()
                 
-                NavigationLink(destination: EnglishAmericanMain(),
+                NavigationLink(destination: EnglishAmericanLevelView(),
                                
                                label: {
                     

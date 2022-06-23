@@ -9,17 +9,23 @@ import SwiftUI
 
 struct CategoryRow: View {
     var unit : Unit
-   
+    var vm = HomeVM()
     @StateObject var triviaManager = TriviaManager()
     
-    @State private var isShowingRectangle = true
+    @State private var isShowingRectangle = false
+    
+    @State private var isBlocked = true
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 10){
+        VStack(alignment: .leading, spacing: 5){
             
             
-            VStack (alignment: .leading, spacing: 8) {
+            VStack (alignment: .leading, spacing: 10) {
                 HStack{
+                    
+                    //*****se o user já iniciou a unit aparece uma circular bar, senão aparece o badge da unit
+                    /*CircularProgressBar(progress: .constant(30))
+                        .frame(width: 20, height: 20)*/
                     
                     unit.badge
                         .resizable()
@@ -35,36 +41,28 @@ struct CategoryRow: View {
                         .foregroundColor(.black)
                         .padding(.top, 5)
                     
-                   
-                        
-                    
-                   
+                    ProgressBar(progress: 20)
+                        .scaleEffect(0.8)
                 }
                 .padding(.leading)
                 
-                ZStack {
-                    RoundedRectangle(cornerRadius: 8)
-                        //.stroke(lineWidth: 2.0)
-                        .fill(Color("\(unit.color)").opacity(0.6))
-                        .shadow(color: Color.black.opacity(0.2), radius: 1, x: 1, y: 3)
-                        .foregroundColor(Color("\(unit.color)").opacity(0.4))
-                        .frame(width: 150, height: 24)
-                    
-                    Text(unit.description)
-                        .font(.custom("Poppins-medium", size: 12))
-                        //.opacity(0.6)
-                        .foregroundColor(.white)
-                        
-                    
-                }
-                .padding(.leading, 15)
+                Text(unit.description)
+                    .font(.custom("Poppins-light", size: 15))
+                    .opacity(0.7)
+                    .multilineTextAlignment(.leading)
+                    .lineLimit(nil)
+                    .frame(width: 280)
+                    .foregroundColor(.black)
+                    .padding(.leading, 10)
+              
             }
             
             ScrollView(.horizontal, showsIndicators: false){
-                HStack(alignment: .top, spacing: 10){
+                HStack(alignment: .top, spacing: 5){
                     ForEach(unit.courses){ course in
                         NavigationLink {
-                            SubscriptionModelOne()
+                            
+                            LevelsView(unit: vm.units[0], course: vm.units[0].courses[0])
                             //courseOneUnitOne(answer: Answer(text: "", isCorrect: true), showSheet: true)
                         } label: {
                             
@@ -72,9 +70,32 @@ struct CategoryRow: View {
                                 SquareBackgroundCourses(course: course)
                                     .padding(.leading, 15)
                                     .padding(.bottom, 12)
+                                    
                                 
                                 CategoryItem(course: course)
                                 
+                                if isBlocked{
+                                    /*Image(unit.lock)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 30, height: 30)
+                                        .padding(.top, 70)
+                                        .padding(.leading, 75)*/
+                                    
+                                    ZStack {
+                                        Circle()
+                                            .fill(Color.blueGradient4)
+                                            .frame(width: 31, height: 31)
+                                            
+                                        
+                                        Image(systemName: "lock.fill")
+                                            .font(.system(size: 16, weight: .black))
+                                            .shadow(color: .gray, radius: 3, x: 2, y: 2)
+                                            .foregroundColor(.white)
+                                    }
+                                    .padding(.top, 70)
+                                .padding(.leading, 75)
+                                }
                                 
                                 if isShowingRectangle {
                                     GrayRectangle()
@@ -88,11 +109,14 @@ struct CategoryRow: View {
                         .onTapGesture(perform: {
                             isShowingRectangle = false
                         })
+                        
                     }
                 }
             }
-            .frame(height: 170)
+            .frame(height: 160)
+
         }
+        .padding(.bottom, 20)
     }
 }
 

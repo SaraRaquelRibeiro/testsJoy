@@ -15,12 +15,13 @@ struct SquareBackgroundCourses: View {
     var body: some View {
         VStack{
             RoundedRectangle(cornerRadius: 20)
-                .fill(LinearGradient(
+                .fill(Color.blueGradient2.opacity(0.5))
+                /*.fill(LinearGradient(
                     gradient: .init(colors: [Color("\(course.color1)"), Color("\(course.color2)")]),
-                    startPoint: .init(x: 0.5, y: 0),
-                    endPoint: .init(x: 0.5, y: 0.6)
-                  ))
-                .frame(width: 102, height: 122)
+                    startPoint: .init(x: 0.8, y: 0),
+                    endPoint: .init(x: 0.5, y: 0.9)
+                  ))*/
+                .frame(width: 102, height: 120)
             
         }
     }

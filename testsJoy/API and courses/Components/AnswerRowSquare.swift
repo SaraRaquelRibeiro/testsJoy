@@ -16,8 +16,10 @@ struct AnswerRowSquare: View {
                 .foregroundColor(Color.white)
                 .shadow(color: .gray.opacity(0.2), radius: 6, x: -2, y: 5)
             
-            Text("resposta")
-                .bold()
+            Image("unit1clothes")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 110, height: 110)
         }
         
         

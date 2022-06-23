@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Course : Identifiable {
     var id: String
@@ -13,6 +14,11 @@ struct Course : Identifiable {
     var image : String
     var color1 : String
     var color2 : String
+    //imagem que aparece nos níveis da unitx
+    var imageLevel : String
+    //position de cada image level
+    var coordinateX : CGFloat
+    var coordinateY: CGFloat
     
 }
 

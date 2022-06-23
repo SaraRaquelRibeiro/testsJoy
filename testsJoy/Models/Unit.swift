@@ -21,6 +21,8 @@ struct Unit : Identifiable {
         Image(badgeName)
     }
     var color : String
+    
+    var lock : String
 }
 
 

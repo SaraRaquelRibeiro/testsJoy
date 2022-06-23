@@ -15,6 +15,7 @@ extension Color {
     static let blueGradient1 = Color("blueGradient1")
     static let blueGradient2 = Color("blueGradient2")
     static let blueGradient3 = Color("blueGradient3")
+    static let blueGradient4 = Color("blueGradient4")
     static let greenGradient1 = Color("greenGradient1")
     static let greenGradient2 = Color("greenGradient2")
     static let blueLight = Color("blueLight")
