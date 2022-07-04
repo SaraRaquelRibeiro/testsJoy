@@ -41,7 +41,7 @@ struct courseOneUnitOne: View {
                     .shadow(color: .gray.opacity(0.4), radius: 1, x: -1, y: 3)
                     .padding(.leading, -120)
                     .padding(.top, -150)
-                
+                    
                 
                 Text("\(triviaManager.question)")
                     .font(.system(size: 16))
@@ -95,7 +95,7 @@ struct courseOneUnitOne: View {
                         } else {
                             VStack{
                                 //WinScreenOne(answer: Answer(text: "ffof", isCorrect: true), correctAnswer: "so nice")
-                                FailScreenOne(answer: Answer(text: "ffof", isCorrect: false), correctAnswer: "")
+                                WinScreenOne(answer: Answer(text: "ffof", isCorrect: false), correctAnswer: "")
                                
                                 
                             }

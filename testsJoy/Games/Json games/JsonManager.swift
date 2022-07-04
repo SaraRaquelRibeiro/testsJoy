@@ -1,15 +1,15 @@
 //
-//  TriviaManager.swift
+//  JsonManager.swift
 //  testsJoy
 //
-//  Created by Sara Ribeiro on 08/06/2022.
+//  Created by Sara Ribeiro on 29/06/2022.
 //
 
 import Foundation
 import SwiftUI
 
-class TriviaManager : ObservableObject {
-    private(set) var trivia : [Trivia.Result] = []
+class JsonManager : ObservableObject {
+    private(set) var json : [Json.Result] = []
     @Published private(set) var length = 0
     //question of the array
     @Published private(set) var index = 0
@@ -20,9 +20,9 @@ class TriviaManager : ObservableObject {
     @Published private(set) var answerChoices : [Answer] = []
     @Published private(set) var progress : CGFloat = 0.00
     @Published private(set) var score = 0
-    @Published private(set) var category : AttributedString = ""
+    @Published private(set) var word : AttributedString = ""
     
-    @EnvironmentObject var triviaManager : TriviaManager
+    @EnvironmentObject var jsonManager : JsonManager
     
     init() {
         Task.init {
@@ -32,7 +32,11 @@ class TriviaManager : ObservableObject {
     
     //para ir buscar o trivia
     func fetchTrivia() async {
-        guard let url = URL(string: "https://opentdb.com/api.php?amount=10") else {fatalError("Missing URL")}
+        guard let url = Bundle.main.url(forResource: "dataGame1", withExtension: "json")
+                   else {
+                       print("Json file not found")
+                       return
+                   }
        
         //fazer o request
         let urlRequest = URLRequest(url: url)
@@ -46,7 +50,7 @@ class TriviaManager : ObservableObject {
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             
             
-            let decodedData = try decoder.decode(Trivia.self, from: data)
+            let decodedData = try decoder.decode(Json.self, from: data)
             
             //gravar os resultados numa variavel
             
@@ -58,8 +62,8 @@ class TriviaManager : ObservableObject {
                 self.reachedEnd = false
                 
                 
-                self.trivia = decodedData.results
-                self.length = self.trivia.count
+                self.json = decodedData.results
+                self.length = self.json.count
                 //como estamos dentro de uma closure temos de inserir o self
                 self.setQuestion()
             }
@@ -81,13 +85,13 @@ class TriviaManager : ObservableObject {
     
     func setQuestion () { //chamadam em 2 sitios, na func goToNextQuestion
         answerSelected = false
-        progress = CGFloat(Double(index + 1) / Double(length) * 200)
+        progress = CGFloat(Double(index + 1) / Double(length) * 350)
         
         if index < length {
-            let currentTriviaQuestion = trivia[index]
-            category = currentTriviaQuestion.formattedCategory
-            question = currentTriviaQuestion.formattedQuestion
-            answerChoices = currentTriviaQuestion.answers
+            let currentQuestion = json[index]
+            word = currentQuestion.formattedWord
+            question = currentQuestion.formattedQuestion
+            answerChoices = currentQuestion.answers
         }
     }
     
@@ -105,10 +109,11 @@ class TriviaManager : ObservableObject {
     
     func checkIfCorrect (answer: Answer){
         answerSelected = true
-        if !triviaManager.answerSelected{
+        if !jsonManager.answerSelected{
             
-            triviaManager.selectAnswer(answer: answer)
+            jsonManager.selectAnswer(answer: answer)
            
         }
     }
 }
+

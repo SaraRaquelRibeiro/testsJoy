@@ -17,11 +17,19 @@ struct CapsuleButtons: View {
         ZStack{
             Capsule()
                 .fill(LinearGradient(
+              gradient: .init(colors: [color1, color2]),
+              startPoint: .init(x: 0.5, y: 0),
+              endPoint: .init(x: 0.5, y: 0.6)
+            ))
+            .frame(width: 280, height: 100)
+            
+            /*Capsule()
+                .fill(LinearGradient(
                   gradient: .init(colors: [color1, color2]),
                   startPoint: .init(x: 0.5, y: 0),
                   endPoint: .init(x: 0.5, y: 0.6)
                 ))
-                .frame(width: 270, height: 90)
+                .frame(width: 270, height: 90)*/
             
         }
         

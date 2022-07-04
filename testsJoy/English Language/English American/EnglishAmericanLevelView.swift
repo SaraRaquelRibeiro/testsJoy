@@ -61,8 +61,19 @@ struct EnglishAmericanLevelView: View {
                             .padding(.leading, 70)
                             .padding()
                         
+                        ZStack {
+                            Image("1")
+                                //.renderingMode(.template)
+                                .resizable()
+                                .frame(width: 90, height: 90)
+                                .rotationEffect(Angle(degrees: isAnimating ? 500 : 0))
+                                
+                            LottieView(fileName: "rocket-loader").frame(width: 180, height: 180)
+                            
+                        }
                         
-                        HStack{
+                        
+                        /*HStack{
                             VStack{
                                 //flag animada USA
                                 VStack {
@@ -84,9 +95,7 @@ struct EnglishAmericanLevelView: View {
                                                 .repeatForever(autoreverses: true))
                                 }
                             }
-                            
                             VStack {
-                                
                                 //flag animada US pequeno
                                 VStack {
                                     Image("1")
@@ -115,8 +124,9 @@ struct EnglishAmericanLevelView: View {
                                         self.isAnimating = true
                                     }
                             }
-                        }
+                        }*/
                     }
+                    .padding(.leading, -40)
                     
                 }
                 Spacer()
@@ -137,7 +147,7 @@ struct EnglishAmericanLevelView: View {
                             ZStack{
                                 Capsule()
                                     .fill(Color.white)
-                                    .frame(width: 253, height: 72)
+                                    .frame(width: 258, height: 77)
                                     .shadow(color: Color.black.opacity(0.2), radius: 1, y: 5)
                                 
                                 HStack{
@@ -184,7 +194,7 @@ struct EnglishAmericanLevelView: View {
                             ZStack{
                                 Capsule()
                                     .fill(Color.white)
-                                    .frame(width: 253, height: 72)
+                                    .frame(width: 258, height: 77)
                                     .shadow(color: Color.black.opacity(0.2), radius: 1, y: 5)
                                 
                                 HStack{
@@ -221,9 +231,10 @@ struct EnglishAmericanLevelView: View {
                         }, label: {
                             
                             ZStack{
+                                //RoundedRectangle(cornerRadius: 26)
                                 Capsule()
                                     .fill(Color.white)
-                                    .frame(width: 253, height: 72)
+                                    .frame(width: 258, height: 77)
                                     .shadow(color: Color.black.opacity(0.2), radius: 1, y: 5)
                                 
                                 HStack{
@@ -247,7 +258,6 @@ struct EnglishAmericanLevelView: View {
                             }
                         })
                     }
-                    
                 }
                 
             }

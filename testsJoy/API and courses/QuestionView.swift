@@ -21,7 +21,7 @@ struct QuestionView: View {
                 ZStack {
                     Rectangle()
                         .fill(LinearGradient(gradient: Gradient(colors: [Color.blueGradient3, Color.blueGradient2]), startPoint: .leading, endPoint: .bottom))
-                        .frame(height: 80, alignment: .bottom)
+                        .frame(height: 70, alignment: .bottom)
                     
                     HStack{
                         

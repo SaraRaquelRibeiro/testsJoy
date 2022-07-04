@@ -1,0 +1,24 @@
+[
+   {
+      "type":"selectByImage",
+      "question":"What is the meaning",
+      "soundImageName":"sound",
+      "sound":"Team Lead",
+      "word":"Water",
+      "correctImageName":"unit1greetings",
+      "wrongImage1Name":"unit1clothes",
+      "wrongImage2Name":"unit1fruits",
+      "wrongImage3Name":"unit1numbers"
+   },
+   {
+      "type":"selectByImage",
+      "question":"What is the meaning",
+      "soundImageName":"sound",
+      "sound":"Team Lead",
+      "word":"Yellow bridge",
+      "correctImageName":"tucano",
+      "wrongImage1Name":"telephone",
+      "wrongImage2Name":"youtube",
+      "wrongImage3Name":"joyLetters"
+   }
+]

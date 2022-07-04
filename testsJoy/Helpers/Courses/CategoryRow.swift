@@ -45,15 +45,17 @@ struct CategoryRow: View {
                         .scaleEffect(0.8)
                 }
                 .padding(.leading)
+                .padding(.bottom, 10)
                 
                 Text(unit.description)
                     .font(.custom("Poppins-light", size: 15))
                     .opacity(0.7)
                     .multilineTextAlignment(.leading)
                     .lineLimit(nil)
-                    .frame(width: 280)
+                    .frame(width: 300)
                     .foregroundColor(.black)
                     .padding(.leading, 10)
+                    .padding(.bottom, 10)
               
             }
             
@@ -62,7 +64,11 @@ struct CategoryRow: View {
                     ForEach(unit.courses){ course in
                         NavigationLink {
                             
-                            LevelsView(unit: vm.units[0], course: vm.units[0].courses[0])
+                            
+                                LevelsView(unit: vm.units[0],
+                                           course: vm.units[0].courses[0],
+                                           level: vm.units[0].courses[0].levels[0])
+                           
                             //courseOneUnitOne(answer: Answer(text: "", isCorrect: true), showSheet: true)
                         } label: {
                             

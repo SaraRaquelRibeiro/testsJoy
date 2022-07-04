@@ -14,6 +14,8 @@ struct Course : Identifiable {
     var image : String
     var color1 : String
     var color2 : String
+    var levels : [Level]
+    
     //imagem que aparece nos níveis da unitx
     var imageLevel : String
     //position de cada image level
