@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WinScreenOne: View {
     
-    var answer: Answer
+    var answer: AnswerTrivia
     
     @EnvironmentObject var triviaManager : TriviaManager
     
@@ -69,6 +69,6 @@ struct WinScreenOne: View {
 
 struct WinScreenOne_Previews: PreviewProvider {
     static var previews: some View {
-        WinScreenOne(answer: Answer(text: "", isCorrect: true), correctAnswer: "")
+        WinScreenOne(answer: AnswerTrivia(text: "", isCorrect: true), correctAnswer: "")
     }
 }

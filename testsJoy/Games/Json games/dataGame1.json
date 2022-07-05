@@ -5,10 +5,29 @@
       "soundImageName":"sound",
       "sound":"Team Lead",
       "word":"Water",
-      "correctImageName":"unit1greetings",
-      "wrongImage1Name":"unit1clothes",
-      "wrongImage2Name":"unit1fruits",
-      "wrongImage3Name":"unit1numbers"
+      "answers": [
+          {
+              "text": "bird",
+              "path": "unit1clothes",
+              "isCorrectAnswer": false,
+          },
+          {
+              "text": "flower",
+              "path": "unit1fruits",
+              "isCorrectAnswer": false,
+          },
+          {
+              "text": "water",
+              "path": "unit1numbers",
+              "isCorrectAnswer": true,
+          },
+          {
+              "text": "hello",
+              "path": "unit1greetings",
+              "isCorrectAnswer": false,
+          }
+      
+      ]
    },
    {
       "type":"selectByImage",
@@ -16,9 +35,28 @@
       "soundImageName":"sound",
       "sound":"Team Lead",
       "word":"Yellow bridge",
-      "correctImageName":"tucano",
-      "wrongImage1Name":"telephone",
-      "wrongImage2Name":"youtube",
-      "wrongImage3Name":"joyLetters"
+      "answers": [
+          {
+              "text": "bird",
+              "path": "tucano",
+              "isCorrectAnswer": false,
+          },
+          {
+              "text": "flower",
+              "path": "youtube",
+              "isCorrectAnswer": false,
+          },
+          {
+              "text": "river",
+              "path": "heart",
+              "isCorrectAnswer": false,
+          },
+          {
+              "text": "bridge",
+              "path": "telephone",
+              "isCorrectAnswer": true,
+          }
+      
+      ]
    }
 ]

@@ -26,28 +26,38 @@ struct LevelsView: View {
             ZStack {
                 Rectangle()
                     .fill(Color("\(unit.color)").opacity(0.8))
-                    .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 190, alignment: .top)
+                    .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 200, alignment: .top)
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack {
                     
                     
                     HStack {
+                        
+                        
+                        
                         Image(systemName: "chevron.backward")
-                            .font(.custom("Poppins-Bold", size: 25))
+                            .font(.custom("Poppins-semibold", size: 20))
                             .foregroundColor(Color.white.opacity(0.5))
                             .padding(.leading, 20)
                             .padding(.bottom, 55)
-                        TopRowBtns(logo: "", languageFlag: "")
+                        TopRowBtns(logo: "", languageFlag: "1")
                             .padding(.leading, -50)
                             .padding(.top, 400)
                     }
                     
                     HStack {
-                        Text(unit.name)
-                            .font(.custom("Poppins-Bold", size: 25))
-                            .foregroundColor(.white)
-                            .padding(.leading, -120)
+                        VStack {
+                            Text(unit.name)
+                                .font(.custom("Poppins-Bold", size: 25))
+                                .foregroundColor(.white)
+                                .shadow(color: .black.opacity(0.2), radius: 3, x: 2, y: 3)
+                                .padding(.leading, -120)
+                            Text(course.name)
+                                .font(.custom("Poppins-medium", size: 20))
+                                .foregroundColor(.white)
+                                .padding(.leading, -120)
+                        }
                         
                           Image("owlLogo")
                             .resizable()
@@ -72,21 +82,13 @@ struct LevelsView: View {
                     /*CategoryItem(course: course)
                          .padding(.leading, 100)
                          .padding(.top, 200)*/
-                    CharView(input: "Learn and have fun.")
+                    CharView(input: " Select the first Level ")
                         .position(x: 130, y: 200)
                     
                     ForEach(course.levels){ level in
                             ItemsFromLevel(level: level)
                         }
-                    Button(action: {
-                        
-                    }, label: {
-                        LottieView(fileName: "down").frame(width: 90, height: 90)
-                            .animation(
-                                Animation.linear.repeatForever()
-                            )
-                    })
-                        .position(x: 115, y: 260)
+                  
                 }
                
             }

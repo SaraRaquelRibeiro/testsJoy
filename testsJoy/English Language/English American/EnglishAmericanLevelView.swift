@@ -71,60 +71,6 @@ struct EnglishAmericanLevelView: View {
                             LottieView(fileName: "rocket-loader").frame(width: 180, height: 180)
                             
                         }
-                        
-                        
-                        /*HStack{
-                            VStack{
-                                //flag animada USA
-                                VStack {
-                                    Image("1")
-                                        //.renderingMode(.template)
-                                        .resizable()
-                                        .frame(width: 100, height: 100)
-                                        .rotationEffect(Angle(degrees: isAnimating ? 500 : 0))
-                                        .animation(
-                                            Animation
-                                                .easeInOut(duration: 16)
-                                                .delay(isAnimating ? 0.5 : 0)
-                                                .repeatForever(autoreverses: true))
-                                        .scaleEffect(isAnimating ? 1 : 0.5)
-                                        .animation(
-                                            Animation
-                                                .easeInOut(duration: 16)
-                                                .delay(isAnimating ? 3 : 0)
-                                                .repeatForever(autoreverses: true))
-                                }
-                            }
-                            VStack {
-                                //flag animada US pequeno
-                                VStack {
-                                    Image("1")
-                                        //.renderingMode(.template)
-                                        .resizable()
-                                        .frame(width: 40, height: 40)
-                                        .rotationEffect(Angle(degrees: isAnimating ? 400 : 0))
-                                        .animation(
-                                            Animation
-                                                .easeInOut(duration: 20)
-                                                .delay(isAnimating ? 2 : 0)
-                                                .repeatForever(autoreverses: false))
-                                        .scaleEffect(isAnimating ? 1 : 0)
-                                        .animation(
-                                            Animation
-                                                .easeInOut(duration: 20)
-                                                .delay(isAnimating ? 2 : 0)
-                                                .repeatForever(autoreverses: true))
-                                        .padding(.top, -90)
-                                        .padding(.leading, -70)
-                                }.frame(width: 150, height: 150)
-                                    .onAppear(){
-                                        Timer.scheduledTimer(withTimeInterval: 2.4, repeats: true){_ in
-                                            self.image = 0
-                                        }
-                                        self.isAnimating = true
-                                    }
-                            }
-                        }*/
                     }
                     .padding(.leading, -40)
                     
@@ -136,7 +82,11 @@ struct EnglishAmericanLevelView: View {
                     
                     //laranja
                     ZStack {
-                        CapsuleButtons(color1: Color("orangeGradient1"), color2: Color("orangeGradient2"))
+                        CapsuleButtons(color1: Color("orangeGradient1"),
+                                       color2: Color("orangeGradient2"),
+                                       width: 280,
+                                       height: 100,
+                                       text: "")
                         .padding(10)
                         
                         
@@ -180,7 +130,11 @@ struct EnglishAmericanLevelView: View {
                     //azul
                     ZStack {
                         
-                        CapsuleButtons(color1: Color("blueGradient1"), color2: Color("blueGradient2"))
+                        CapsuleButtons(color1: Color("blueGradient1"),
+                                       color2: Color("blueGradient2"),
+                                       width: 280,
+                                       height: 100,
+                                       text: "")
                         .padding(10)
                         
                         
@@ -223,7 +177,11 @@ struct EnglishAmericanLevelView: View {
                                 }
                     //rosa
                     ZStack {
-                        CapsuleButtons(color1: Color("pinkGradient1"), color2: Color("pinkGradient2"))
+                        CapsuleButtons(color1: Color("pinkGradient1"),
+                                       color2: Color("pinkGradient2"),
+                                       width: 280,
+                                       height: 100,
+                                       text: "")
                         .padding(10)
                         
                         Button(action: {

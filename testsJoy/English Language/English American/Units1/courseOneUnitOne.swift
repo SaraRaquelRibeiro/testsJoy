@@ -11,7 +11,7 @@ struct courseOneUnitOne: View {
     //connection à api e funcs no triviamanager mas em environment---> adicioná-lo la em baixo na preview
     @EnvironmentObject var triviaManager : TriviaManager
     
-    var answer: Answer
+    var answer: AnswerTrivia
     @State private var isSelected = false
     
     @State var showSheet: Bool = false
@@ -85,7 +85,7 @@ struct courseOneUnitOne: View {
                         if answer.isCorrect {
                             VStack{
                                 
-                                    WinScreenOne(answer: Answer(text: "ffof", isCorrect: true), correctAnswer: "so nice")
+                                    WinScreenOne(answer: AnswerTrivia(text: "ffof", isCorrect: true), correctAnswer: "so nice")
                                
                                 
                             }
@@ -95,7 +95,7 @@ struct courseOneUnitOne: View {
                         } else {
                             VStack{
                                 //WinScreenOne(answer: Answer(text: "ffof", isCorrect: true), correctAnswer: "so nice")
-                                WinScreenOne(answer: Answer(text: "ffof", isCorrect: false), correctAnswer: "")
+                                WinScreenOne(answer: AnswerTrivia(text: "ffof", isCorrect: false), correctAnswer: "")
                                
                                 
                             }
@@ -177,7 +177,7 @@ struct courseOneUnitOne: View {
 
 struct courseOneUnitOne_Previews: PreviewProvider {
     static var previews: some View {
-        courseOneUnitOne(answer: Answer(text: "Single", isCorrect: false))
+        courseOneUnitOne(answer: AnswerTrivia(text: "Single", isCorrect: false))
             .environmentObject(TriviaManager())
     }
 }

@@ -9,9 +9,8 @@ import Foundation
 
 struct DailyChallenge : Identifiable {
     var id: String
-    var name : String
-    var image : String
+    var title : String
+    var subtitle : String
     var color : String
-    var win : String
-    
+    var image: String
 }

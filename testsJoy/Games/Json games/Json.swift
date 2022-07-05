@@ -44,13 +44,13 @@ struct Json : Decodable {
            
         }
         //fazer a logica dos erros nas respostas que estão correctas ou falsas
-        var answers: [Answer] {
+        var answers: [AnswerTrivia] {
             do {
                 //temos que criar uma instance de Answer pq é um array
-                let correct = [Answer(text: try AttributedString(markdown: correctAnswer), isCorrect: true)]
+                let correct = [AnswerTrivia(text: try AttributedString(markdown: correctAnswer), isCorrect: true)]
                 //mapear as respostas incorrectas
                 let incorrects = try incorrectAnswers.map { answer in
-                    Answer(text: try AttributedString(markdown: answer), isCorrect: false)
+                    AnswerTrivia(text: try AttributedString(markdown: answer), isCorrect: false)
                 }
                 //concatenar as answers together
                 let allAnswers = correct + incorrects

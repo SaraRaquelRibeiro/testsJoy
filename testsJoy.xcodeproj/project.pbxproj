@@ -8,15 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		0D09C3C628462BAF00E91DBC /* DailyChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D09C3C528462BAF00E91DBC /* DailyChallenge.swift */; };
-		0D09C3C92846306F00E91DBC /* DailyChallengesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D09C3C82846306F00E91DBC /* DailyChallengesCell.swift */; };
 		0D1D90EF284F830A003391FF /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D90EE284F8309003391FF /* QuestionView.swift */; };
 		0D1D90F2284FB83B003391FF /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D90F1284FB83B003391FF /* ProgressBar.swift */; };
 		0D1D90F4284FBC8C003391FF /* AnswerRowSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D90F3284FBC8B003391FF /* AnswerRowSquare.swift */; };
 		0D1D90F828509A64003391FF /* AnswerRowRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D90F728509A64003391FF /* AnswerRowRectangle.swift */; };
 		0D1D90FB2850A21A003391FF /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D90FA2850A21A003391FF /* Trivia.swift */; };
-		0D1D90FD2850A249003391FF /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D90FC2850A249003391FF /* Answer.swift */; };
+		0D1D90FD2850A249003391FF /* AnswerTrivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D90FC2850A249003391FF /* AnswerTrivia.swift */; };
 		0D1D91002850A2D0003391FF /* TriviaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D90FF2850A2CF003391FF /* TriviaManager.swift */; };
 		0D1D9102285110E2003391FF /* ButtonCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1D9101285110E2003391FF /* ButtonCourses.swift */; };
+		0D1E04F2287313C800E114EB /* Challenges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1E04F1287313C800E114EB /* Challenges.swift */; };
+		0D1E04F428743B3300E114EB /* GamesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1E04F328743B3300E114EB /* GamesManager.swift */; };
+		0D1E04F928746D3A00E114EB /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1E04F828746D3A00E114EB /* GameView.swift */; };
 		0D2144F0283D139E00DB512C /* TopImageHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2144EF283D139D00DB512C /* TopImageHomeView.swift */; };
 		0D2144F2283E591C00DB512C /* FlagSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2144F1283E591C00DB512C /* FlagSelected.swift */; };
 		0D218FCB286B57C000851D7F /* AnswerCircleRightWrong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D218FCA286B57BF00851D7F /* AnswerCircleRightWrong.swift */; };
@@ -92,15 +94,17 @@
 
 /* Begin PBXFileReference section */
 		0D09C3C528462BAF00E91DBC /* DailyChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChallenge.swift; sourceTree = "<group>"; };
-		0D09C3C82846306F00E91DBC /* DailyChallengesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChallengesCell.swift; sourceTree = "<group>"; };
 		0D1D90EE284F8309003391FF /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		0D1D90F1284FB83B003391FF /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		0D1D90F3284FBC8B003391FF /* AnswerRowSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRowSquare.swift; sourceTree = "<group>"; };
 		0D1D90F728509A64003391FF /* AnswerRowRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRowRectangle.swift; sourceTree = "<group>"; };
 		0D1D90FA2850A21A003391FF /* Trivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trivia.swift; sourceTree = "<group>"; };
-		0D1D90FC2850A249003391FF /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		0D1D90FC2850A249003391FF /* AnswerTrivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTrivia.swift; sourceTree = "<group>"; };
 		0D1D90FF2850A2CF003391FF /* TriviaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaManager.swift; sourceTree = "<group>"; };
 		0D1D9101285110E2003391FF /* ButtonCourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCourses.swift; sourceTree = "<group>"; };
+		0D1E04F1287313C800E114EB /* Challenges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenges.swift; sourceTree = "<group>"; };
+		0D1E04F328743B3300E114EB /* GamesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesManager.swift; sourceTree = "<group>"; };
+		0D1E04F828746D3A00E114EB /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		0D2144EF283D139D00DB512C /* TopImageHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopImageHomeView.swift; sourceTree = "<group>"; };
 		0D2144F1283E591C00DB512C /* FlagSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagSelected.swift; sourceTree = "<group>"; };
 		0D218FCA286B57BF00851D7F /* AnswerCircleRightWrong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCircleRightWrong.swift; sourceTree = "<group>"; };
@@ -190,7 +194,7 @@
 		0D09C3C72846305100E91DBC /* Daily Challenges */ = {
 			isa = PBXGroup;
 			children = (
-				0D09C3C82846306F00E91DBC /* DailyChallengesCell.swift */,
+				0D1E04F1287313C800E114EB /* Challenges.swift */,
 			);
 			path = "Daily Challenges";
 			sourceTree = "<group>";
@@ -217,6 +221,7 @@
 				0DBA5498285A3D1F0016973D /* FlexibleSheet.swift */,
 				0D37B2822859E3E30045F7F6 /* WinScreenOne.swift */,
 				0D37B2842859E3F30045F7F6 /* FailScreenOne.swift */,
+				0D1E04F828746D3A00E114EB /* GameView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -225,7 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				0D1D90FA2850A21A003391FF /* Trivia.swift */,
-				0D1D90FC2850A249003391FF /* Answer.swift */,
+				0D1D90FC2850A249003391FF /* AnswerTrivia.swift */,
 			);
 			path = "Model API";
 			sourceTree = "<group>";
@@ -236,6 +241,14 @@
 				0D1D90FF2850A2CF003391FF /* TriviaManager.swift */,
 			);
 			path = "API connection";
+			sourceTree = "<group>";
+		};
+		0D1E04F7287467F600E114EB /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0D1E04F328743B3300E114EB /* GamesManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		0D2144EE283D12AB00DB512C /* HomeView */ = {
@@ -315,6 +328,7 @@
 		0D97DE722862055800192CCF /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				0D1E04F7287467F600E114EB /* Manager */,
 				0D97DE732862058100192CCF /* GameSelectByImage.swift */,
 				0D97DE7528620C3400192CCF /* RightOrWrong.swift */,
 				0D97DE7928620C7900192CCF /* WordToImage.swift */,
@@ -599,12 +613,14 @@
 				0D97DE7828620C5800192CCF /* SwipeCorrectWord.swift in Sources */,
 				0DDAA6DE2822D1DC00BC110A /* GetStartedView.swift in Sources */,
 				0D97DE992864C5B100192CCF /* AnswerRowSquareGrid.swift in Sources */,
-				0D1D90FD2850A249003391FF /* Answer.swift in Sources */,
+				0D1D90FD2850A249003391FF /* AnswerTrivia.swift in Sources */,
 				0D4272CF2860D69A00E87CE1 /* SquareBackgroundCourses.swift in Sources */,
 				0D97DE7C28620C9200192CCF /* CompleteSentence.swift in Sources */,
 				0DF96CD92833CF1100B744F6 /* StandardHomeCourse.swift in Sources */,
+				0D1E04F428743B3300E114EB /* GamesManager.swift in Sources */,
 				0D7FFE662812D53800FFFDB2 /* Colors.swift in Sources */,
 				0DB0854D282BED3800DD5E70 /* ContentViewTest.swift in Sources */,
+				0D1E04F928746D3A00E114EB /* GameView.swift in Sources */,
 				0D97DE9B2864C61C00192CCF /* ImageTest.swift in Sources */,
 				0D97DE7E28620C9D00192CCF /* CompleteWord.swift in Sources */,
 				0DDAA6F52825804D00BC110A /* Languages.swift in Sources */,
@@ -615,6 +631,7 @@
 				0D97DE8228632A2E00192CCF /* LevelsView.swift in Sources */,
 				0DF96CD2283289A700B744F6 /* ButtonTrial.swift in Sources */,
 				0D218FD4286C7C0400851D7F /* Json.swift in Sources */,
+				0D1E04F2287313C800E114EB /* Challenges.swift in Sources */,
 				0DC79DB8284A4AF800EFC1AD /* courseOneUnitOne.swift in Sources */,
 				0D7FFE682812D89100FFFDB2 /* Onboarding.swift in Sources */,
 				0D1D90FB2850A21A003391FF /* Trivia.swift in Sources */,
@@ -628,7 +645,6 @@
 				0D37B2832859E3E30045F7F6 /* WinScreenOne.swift in Sources */,
 				0DF96CD42833CB1700B744F6 /* HomeView.swift in Sources */,
 				0DDAA6E72822E0D100BC110A /* Blur.swift in Sources */,
-				0D09C3C92846306F00E91DBC /* DailyChallengesCell.swift in Sources */,
 				0D1D90F828509A64003391FF /* AnswerRowRectangle.swift in Sources */,
 				0DBA549B285B739B0016973D /* ReachEnd.swift in Sources */,
 				0D97DE7628620C3400192CCF /* RightOrWrong.swift in Sources */,

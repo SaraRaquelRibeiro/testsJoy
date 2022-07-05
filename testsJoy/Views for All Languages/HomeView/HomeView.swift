@@ -33,41 +33,37 @@ struct HomeView: View {
                 
                 Color.white
                     .edgesIgnoringSafeArea(.all)
-                
+                NavigationView{
+               
                 VStack {
                     
-                    ZStack{
+                    
                         
                         //menu do topo
                         /*topRowButtons()
                             .padding(.top, 115)*/
                         TopRowBtns(logo: "owlLogo", languageFlag: "1")
-                            .padding(.top, 115)
+                            .padding(.top, 260)
+                           
                         
-                        TopImageHomeView()
-                            .edgesIgnoringSafeArea(.all)
-                            .zIndex(-1)
-                        
-                        /*TopImageHomeView()
-                            .frame(width: screen.width)
-                            .padding(.top, -140)
-                            .padding(.bottom, 60)
-                            .zIndex(-1)*/
-                        
+                        //TopImageHomeView()
+                            //.edgesIgnoringSafeArea(.all)
+                            //.zIndex(-1)
+                    
                         
                         VStack() {
-                            Spacer()
-                            DailyChallengesCell(dailyChallenge: dailyChallenge1)
-                            Spacer()
-                            DailyChallengesCell(dailyChallenge: dailyChallenge2)
-                            Spacer()
+                            
+                            HStack{
+                                
+                                Challenges(challenge: dailyChallenge1)
+                            }
+                            .padding(.leading)
+                            
                         }
-                        .padding(.leading, -100)
-                        
-                    }
+                        //.edgesIgnoringSafeArea(.all)
+                        //.zIndex(-1)
+                        .padding(.top, -170)
                     
-                    NavigationView{
-                        
                         List{
                             ForEach(vm.units, id:\.id){ uni in
                                 CategoryRow(unit: uni)
@@ -76,7 +72,6 @@ struct HomeView: View {
                                     
                             }
                             .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                            
                         }
                         
                         .navigationBarHidden(true)
@@ -90,7 +85,8 @@ struct HomeView: View {
                         
                         
                     }
-                    .padding(.leading, -10)
+                    .padding(.leading, -14)
+                    
                     
                 }
             }

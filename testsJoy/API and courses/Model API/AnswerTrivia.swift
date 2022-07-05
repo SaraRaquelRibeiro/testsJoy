@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Answer: Identifiable {
+struct AnswerTrivia: Identifiable {
     var id = UUID()
     var text: AttributedString
     var isCorrect: Bool

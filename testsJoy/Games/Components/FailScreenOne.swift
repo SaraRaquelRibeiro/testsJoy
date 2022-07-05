@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FailScreenOne: View {
     
-    var answer: Answer
+    var answer: AnswerTrivia
     
     //meter aqui a correct answer caso o user tenha errado
     var correctAnswer : String
@@ -76,7 +76,7 @@ struct FailScreenOne: View {
 
 struct FailScreenOne_Previews: PreviewProvider {
     static var previews: some View {
-        FailScreenOne(answer: Answer(text: "", isCorrect: true),
+        FailScreenOne(answer: AnswerTrivia(text: "", isCorrect: true),
                       correctAnswer: "")
     }
 }

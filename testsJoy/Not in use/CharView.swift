@@ -20,8 +20,9 @@ struct CharView: View {
             HStack(spacing: 0) {
                 ForEach(characterArray.indices) { index in
                     Text("\(characterArray[index])")
-                        .font(.custom("Poppins-light", size: 19))
-                        .foregroundColor(.black.opacity(0.7))
+                        .font(.custom("Poppins-semibold", size: 19))
+                        .foregroundColor(.white)
+                        .background(Color.blueGradient2)
                         .multilineTextAlignment(.leading)
                         .lineLimit(nil)
                         .opacity(characterLoopIndex >= index ? 1 : 0)

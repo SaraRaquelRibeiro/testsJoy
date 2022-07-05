@@ -11,6 +11,9 @@ struct CapsuleButtons: View {
     
     @State var color1: Color
     @State var color2: Color
+    @State var width: CGFloat
+    @State var height: CGFloat
+    @State var text: String
     
     var body: some View {
         
@@ -21,16 +24,10 @@ struct CapsuleButtons: View {
               startPoint: .init(x: 0.5, y: 0),
               endPoint: .init(x: 0.5, y: 0.6)
             ))
-            .frame(width: 280, height: 100)
-            
-            /*Capsule()
-                .fill(LinearGradient(
-                  gradient: .init(colors: [color1, color2]),
-                  startPoint: .init(x: 0.5, y: 0),
-                  endPoint: .init(x: 0.5, y: 0.6)
-                ))
-                .frame(width: 270, height: 90)*/
-            
+            .frame(width: width, height: height)
+            Text(text)
+                .font(.custom("Poppins-bold", size: 15))
+                .foregroundColor(.white)
         }
         
     }
@@ -38,6 +35,10 @@ struct CapsuleButtons: View {
 
 struct CapsuleButtons_Previews: PreviewProvider {
     static var previews: some View {
-        CapsuleButtons(color1: Color.blueGradient1, color2: Color.orangeGradient2)
+        CapsuleButtons(color1: Color.blueGradient1,
+                       color2: Color.orangeGradient2,
+                       width: 280,
+                       height: 100,
+                       text: "Get now")
     }
 }

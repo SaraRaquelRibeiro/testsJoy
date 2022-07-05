@@ -17,7 +17,7 @@ class TriviaManager : ObservableObject {
     @Published private(set) var reachedEnd = false
     @Published private(set) var answerSelected = false
     @Published private(set) var question : AttributedString = ""
-    @Published private(set) var answerChoices : [Answer] = []
+    @Published private(set) var answerChoices : [AnswerTrivia] = []
     @Published private(set) var progress : CGFloat = 0.00
     @Published private(set) var score = 0
     @Published private(set) var category : AttributedString = ""
@@ -92,7 +92,7 @@ class TriviaManager : ObservableObject {
     }
     
     //detetar se é a answer correcta e se sim passar p true
-    func selectAnswer(answer: Answer){
+    func selectAnswer(answer: AnswerTrivia){
         //set answerselected to true - o user já selecionou uma answer
         answerSelected = true
        
@@ -103,7 +103,7 @@ class TriviaManager : ObservableObject {
         
     }
     
-    func checkIfCorrect (answer: Answer){
+    func checkIfCorrect (answer: AnswerTrivia){
         answerSelected = true
         if !triviaManager.answerSelected{
             

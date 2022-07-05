@@ -20,30 +20,22 @@ class HomeVM : ObservableObject {
         )
     }
     
-    /*public var allUnits : [String] {
-        
-        courses.keys.map({String($0)}).sorted()
-    }*/
-    
-    //para transformar o dictionat course num array assim podemos chamar no foreach
-    /*public func getCourse (forUnit unit : String) -> [Course] {
-        return courses[unit] ?? [] //otherwise just return empty
-    }*/
-    
     init(){
         //setupCourses()
         setupUnits()
     }
-    
-    /*func setupCourses(){
-        courses["Unit 1"] = coursesFromUnit1
-        courses["Unit 2"] = coursesFromUnit2
-        courses["Unit 3"] = coursesFromUnit1
-        courses["Unit 4"] = coursesFromUnit1
-        
-    }*/
+  
     func setupUnits(){
         units = staticAllUnits
+    }
+    
+    @Published var questions : [Question] = []
+    
+    var questionsDict : [String:[Question]] {
+        Dictionary(
+            grouping: questions,
+            by: {  $0.type  }
+        )
     }
     
 }

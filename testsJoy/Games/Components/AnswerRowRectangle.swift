@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AnswerRowRectangle: View {
     
-    var answer: Answer
+    var answer: AnswerTrivia
     @State private var isSelected = false
     
     //connection à api e funcs no triviamanager mas em environment---> adicioná-lo la em baixo na preview
@@ -69,7 +69,7 @@ struct AnswerRowRectangle: View {
 
 struct AnswerRowRectangle_Previews: PreviewProvider {
     static var previews: some View {
-        AnswerRowRectangle(answer: Answer(text: "Single", isCorrect: false))
+        AnswerRowRectangle(answer: AnswerTrivia(text: "Single", isCorrect: false))
             .environmentObject(TriviaManager())
     }
 }

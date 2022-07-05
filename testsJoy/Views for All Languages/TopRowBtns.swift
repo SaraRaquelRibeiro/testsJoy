@@ -21,59 +21,59 @@ struct TopRowBtns: View {
                 Image(logo)
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 35)
+                    .frame(width: 30)
             })
                 .buttonStyle(PlainButtonStyle())
+                .padding(.leading)
             
                 
             Spacer()
-            ZStack{
-                Capsule()
-                    .fill(Color.white)
-                    .frame(width: 80, height: 28)
-                    .shadow(color: Color.black.opacity(0.12), radius: 0.7, y: 2)
-                
-                
-                HStack {
-                    Image("coin")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 18)
-                        .padding(.leading, -10)
-                    //aqui colocar os diamonds que o user vai ganhar à medida q for finalizando os jogos
-                    Text("45.0")
-                        .font(.custom("Poppins-semibold", size: 14))
-                        .opacity(0.4)
-                        .foregroundColor(.black)
+            HStack {
+                ZStack{
+                    Capsule()
+                        .fill(Color.white)
+                        .frame(width: 220, height: 32)
+                        .shadow(color: Color.black.opacity(0.15), radius: 3, y: 2)
+                    
+                    
+                    HStack {
+                        Spacer()
+                        Image("coin")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 18)
+                            .padding(.leading, -10)
+                        //aqui colocar os diamonds que o user vai ganhar à medida q for finalizando os jogos
+                        Text("45.0")
+                            .font(.custom("Poppins-semibold", size: 14))
+                            .opacity(0.4)
+                            .foregroundColor(.black)
+                    
+                        
+                        HStack{
+                            Image("heart")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 16)
+                                .padding(.leading, -10)
+                            //aqui colocar as vidas que o user vai ganhar à medida q for finalizando os jogos
+                            Text("100")
+                                .font(.custom("Poppins-semibold", size: 14))
+                                .opacity(0.4)
+                                .foregroundColor(.black)
+                        }
+                        .padding(.leading, 40)
+                           
+                        Spacer()
+                        
+                    }
                 }
+                .padding(.trailing, -120)
+                FlagSelected(color: .blue, imageFlag: languageFlag)
+                    
             }
-            
+            .padding(.trailing, -35)
             Spacer()
-            ZStack{
-                Capsule()
-                    .fill(Color.white)
-                    .frame(width: 80, height: 28)
-                    .shadow(color: Color.black.opacity(0.12), radius: 0.7, y: 2)
-                
-                HStack {
-                    Image("heart")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 16)
-                        .padding(.leading, -10)
-                    //aqui colocar as vidas que o user vai ganhar à medida q for finalizando os jogos
-                    Text("100")
-                        .font(.custom("Poppins-semibold", size: 14))
-                        .opacity(0.4)
-                        .foregroundColor(.black)
-                }
-            }
-            
-            Spacer()
-           
-            
-            FlagSelected(color: .blue, imageFlag: languageFlag)
-                
         }
         //.background(Color.red)
         .padding(.leading, 25)

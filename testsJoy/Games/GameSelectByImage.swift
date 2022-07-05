@@ -13,13 +13,10 @@ struct GameSelectByImage: View {
     
     //*** criar as variáveisp fazer as chamadas
     
-    @State var question : String
-    
-    @State var word : String
     
     var imagesTest: [ImageTest]
     
-    //@EnvironmentObject var jsonManager : JsonManager
+    static var vm = HomeVM()
     
     //var answer: Answer
     @State private var isSelected = false
@@ -27,55 +24,26 @@ struct GameSelectByImage: View {
     var unit : Unit
     var course : Course
     
+    @State var gamesManager : GamesManager
+    
     var body: some View {
        
         ZStack (alignment: .top) {
             Rectangle()
                 .foregroundColor(.white)
 
-            ZStack {
-                Rectangle()
-                    .fill(Color("\(unit.color)").opacity(0.8))
-                    .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 180, alignment: .top)
-                    .edgesIgnoringSafeArea(.all)
-                
-                VStack {
-                    
-                    
-                    HStack {
-                        Image(systemName: "chevron.backward")
-                            .font(.custom("Poppins-Bold", size: 25))
-                            .foregroundColor(Color.white.opacity(0.5))
-                            .padding(.leading, 20)
-                            .padding(.bottom, 55)
-                        TopRowBtns(logo: "", languageFlag: "1")
-                            .padding(.leading, -50)
-                            .padding(.top, 400)
-                    }
-                    Divider()
-                        .padding(.top, -200)
-                    
-                    HStack{
-                        
-                        Text("1/10")
-                            .foregroundColor(.white)
-                            .fontWeight(.bold)
-                            .padding(.trailing, 30)
-                        
-                        ProgressBar(progress: 30)
-                    }
-                    .padding(.top, -180)
-                        
-                }
-            }
+            GameView(unit: unit, course: course)
             .padding(.top, -145)
             
            
             VStack(alignment: .center, spacing: 20){
                 Spacer()
-                Text(question)
+                
+                
+                Text(gamesManager.questionsFile)
                     .font(.custom("Poppins-medium", size: 20))
                     .foregroundColor(Color.black.opacity(0.6))
+                
                 
                 Button(action: {
                     
@@ -90,7 +58,7 @@ struct GameSelectByImage: View {
                 })
             
             
-            Text(word)
+            Text("fff")
                 .font(.custom("Poppins-semibold", size: 25))
                 .foregroundColor(Color.black.opacity(0.8))
                 .underline()
@@ -118,12 +86,10 @@ struct GameSelectByImage: View {
 struct GameSelectByImage_Previews: PreviewProvider {
     static var vm = HomeVM()
     static var previews: some View {
-        GameSelectByImage(question: "What is the meaning?",
-                          word: "Water",
-                          imagesTest: exampleImages,
+        GameSelectByImage(imagesTest: exampleImages,
                           unit: vm.units[0],
-                          course: vm.units[0].courses[0])
-                            //.environmentObject(JsonManager())
+                          course: vm.units[0].courses[0],
+                          gamesManager: GamesManager(questionsFile: "dataGame1"))
             
     }
 }
