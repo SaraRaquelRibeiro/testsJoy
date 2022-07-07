@@ -86,7 +86,7 @@ let staticAllUnits : [Unit] = [unit1, unit2]
 
 
 //***** Daily challenges
-let dailyChallenge1 = DailyChallenge(id: UUID().uuidString, title: "Jully Challenge", subtitle: "Get 100 coins!", color: "blueGradient2", image: "NYC")
+let dailyChallenge1 = DailyChallenge(id: UUID().uuidString, title: "July Challenge", subtitle: "Get 100 coins!", color: "blueGradient2", image: "NYC")
 
 
 //*** PARA TESTAR AS IMAGES NO GameSelectByImage - apagar

@@ -40,7 +40,7 @@ struct SwipeCorrectWord: View {
             .foregroundColor(Color.black.opacity(0.8))
         
         
-        AnswerRowSquareGrid(imsgesTest: imagesTest)
+        //AnswerRowSquareGrid(imsgesTest: imagesTest)
             .padding(.bottom, 40)
        
         

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Lottie
 
 struct LevelsView: View {
     var unit : Unit
@@ -79,11 +80,11 @@ struct LevelsView: View {
             ScrollView(showsIndicators: false){
                 
                 ZStack{
-                    /*CategoryItem(course: course)
-                         .padding(.leading, 100)
-                         .padding(.top, 200)*/
-                    CharView(input: " Select the first Level ")
-                        .position(x: 130, y: 200)
+                   //***** words appear letra a letra
+                    //CharView(input: " Select the first Level ")
+                        //.position(x: 130, y: 200)
+                    
+                    LottieView(fileName: "papagaio")
                     
                     ForEach(course.levels){ level in
                             ItemsFromLevel(level: level)

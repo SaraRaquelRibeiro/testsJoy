@@ -9,9 +9,11 @@ import SwiftUI
 
 struct AnswerRowSquare: View {
     @State private var isSelected = false
+   
     
-    //TEST das imagens
-    var imageTest : ImageTest
+    var question : Question
+    
+    var allAnswers : Answer
     
     var body: some View {
         ZStack() {
@@ -25,15 +27,30 @@ struct AnswerRowSquare: View {
             RoundedRectangle(cornerRadius: 15)
                 .stroke(isSelected ? Color.blueGradient2 : .gray.opacity(0.2))
                 .frame(width: 115, height: 135)
-            Image(imageTest.name)
-                .resizable()
-                .frame(width: 105, height: 125)
-                .clipShape(RoundedRectangle(cornerRadius: 15))
+            ZStack {
+                Image(allAnswers.path)
+                    .resizable()
+                    .frame(width: 105, height: 125)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                
+                Text(allAnswers.text)
+                    .font(.custom("Poppins-semibold", size: 14))
+                    .foregroundColor(Color.black.opacity(0.5))
+                    .padding(.top, 110)
+                
+                if isSelected {
+                    Spacer()
+                    Image(systemName: allAnswers.isCorrectAnswer ? "checkmark.circle.fill" : "x.circle.fill")
+                        .foregroundColor(allAnswers.isCorrectAnswer ? Color.green : Color.red)
+                }
+            }
                 
         }
         .onTapGesture(perform: {
             //se o user ainda não selecionou uma answer
-           isSelected = true
+            isSelected = true
+            
+            
         })
         
         
@@ -42,6 +59,8 @@ struct AnswerRowSquare: View {
 
 struct AnswerRowSquare_Previews: PreviewProvider {
     static var previews: some View {
-        AnswerRowSquare(imageTest: exampleImages2)
+        AnswerRowSquare(
+                        question: Question.sampleQuestion,
+                        allAnswers: Answer.allAnswer[0])
     }
 }

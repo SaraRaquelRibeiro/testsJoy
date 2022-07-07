@@ -108,43 +108,7 @@ struct courseOneUnitOne: View {
                     })
                     
                 }
-                
-                
-                /*HStack{
-                    
-                    
-                    Button(action: {
-                       
-                       //testar screen the fail or win
-                        showSheet.toggle()
-                        
-                    }, label: {
-                       
-                        ButtonCourses(text: "testar",
-                                      textColor: triviaManager.answerSelected ? Color.white : Color.gray.opacity(0.7),
-                                      shadowColor: triviaManager.answerSelected ? Color.greenCorrectAnswerBackground : .gray.opacity(0.7),
-                                      background: triviaManager.answerSelected ? Color.greenGradient1.opacity(0.8)  : Color.gray.opacity(0.2))
-                    })
-                    //se a resposta ainda não foi selecionada o button is disabled
-                        .disabled(!triviaManager.answerSelected)
-                        .sheet(isPresented: $showSheet, content: {
-                            
-                            //WinScreenOne(answer: Answer(text: "", isCorrect: false), correctAnswer: "inserir resposta correcta")
-                            
-                            if answer.isCorrect {
-                                WinScreenOne(answer: Answer(text: "", isCorrect: false), correctAnswer: "inserir resposta correcta")
-                            }
-                            else{
-                               FailScreenOne(answer: Answer(text: "", isCorrect: false), correctAnswer: "inserir resposta correta")
-                                    .frame(width: 325, height: 550)
-                                    .clipShape(RoundedRectangle(cornerRadius: 20, style: .circular))
-                                    .clearModalBackground()
-                            }
-                            
-                            
-                        })
-                        .padding(.bottom, 90)
-                }*/
+            
                 
             }
             

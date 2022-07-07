@@ -54,22 +54,24 @@ struct GamesManager_Previews: PreviewProvider {
 
 
 //para ir buscar o trivia
-
-
-
-struct Answer : Decodable {
+struct Answer : Codable {
     var text : String
     var path : String
     var isCorrectAnswer : Bool
+    
+    static let allAnswer: [Answer] = Question.sampleQuestion.answers
 }
 
-struct Question : Decodable {
+struct Question : Codable {
     var type : String
     var question : String
     var soundImageName : String
     var sound : String
     var word : String
     var answers : [Answer]
+    
+    static let allQuestion: [Question] = loadJson(filename: "dataGame1")!
+    static let sampleQuestion: Question = allQuestion[0]
     
 }
 
@@ -97,4 +99,16 @@ func loadJson(filename fileName: String) -> [Question]? {
         }
     }
     return nil
+}
+
+//detetar se alguma answer foi selecionada
+func selectAnswer(answer: Answer){
+    
+    var answerSelected = true
+   
+    /*if answer.isCorrect {
+        //increment a score **** aqui vai poder meter-se as moedas
+        score += 1
+    }*/
+    
 }

@@ -1,38 +1,40 @@
 [
    {
       "type":"selectByImage",
+      "number":1,
       "question":"What is the meaning",
-      "soundImageName":"sound",
+      "soundImageName":"speaker.zzz.fill",
       "sound":"Team Lead",
       "word":"Water",
       "answers": [
           {
-              "text": "bird",
+              "text": "Bird",
               "path": "unit1clothes",
-              "isCorrectAnswer": false,
+              "isCorrectAnswer": true,
           },
           {
-              "text": "flower",
+              "text": "Flower",
               "path": "unit1fruits",
               "isCorrectAnswer": false,
           },
           {
-              "text": "water",
+              "text": "Water",
               "path": "unit1numbers",
-              "isCorrectAnswer": true,
+              "isCorrectAnswer": false,
           },
           {
-              "text": "hello",
+              "text": "Hello",
               "path": "unit1greetings",
-              "isCorrectAnswer": false,
+              "isCorrectAnswer": false
           }
       
       ]
    },
    {
       "type":"selectByImage",
+      "number":2,
       "question":"What is the meaning",
-      "soundImageName":"sound",
+      "soundImageName":"speaker.zzz.fill",
       "sound":"Team Lead",
       "word":"Yellow bridge",
       "answers": [
@@ -54,9 +56,10 @@
           {
               "text": "bridge",
               "path": "telephone",
-              "isCorrectAnswer": true,
+              "isCorrectAnswer": true
           }
       
       ]
    }
+   
 ]

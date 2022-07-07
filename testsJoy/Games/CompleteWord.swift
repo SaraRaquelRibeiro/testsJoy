@@ -48,7 +48,7 @@ struct CompleteWord: View {
                     })
                 }
                 
-                AnswerRowSquare(imageTest: imageTest)
+                //AnswerRowSquare(imageTest: imageTest)
                 
                 /*Text(word)
                     .font(.custom("Poppins-semibold", size: 25))

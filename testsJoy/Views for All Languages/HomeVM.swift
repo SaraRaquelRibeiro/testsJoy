@@ -29,13 +29,4 @@ class HomeVM : ObservableObject {
         units = staticAllUnits
     }
     
-    @Published var questions : [Question] = []
-    
-    var questionsDict : [String:[Question]] {
-        Dictionary(
-            grouping: questions,
-            by: {  $0.type  }
-        )
-    }
-    
 }
