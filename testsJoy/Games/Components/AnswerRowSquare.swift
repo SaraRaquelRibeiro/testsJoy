@@ -20,17 +20,17 @@ struct AnswerRowSquare: View {
             
             RoundedRectangle(cornerRadius: 15)
                 .fill(isSelected ? Color.blueGradient3.opacity(0.1) : Color(red: 255, green: 245, blue: 158))
-                .frame(width: 115, height: 135)
+                .frame(width: 130, height: 150)
                 .foregroundColor(Color.white)
                 .shadow(color: .gray.opacity(0.2), radius: 6, x: -2, y: 5)
             
             RoundedRectangle(cornerRadius: 15)
                 .stroke(isSelected ? Color.blueGradient2 : .gray.opacity(0.2))
-                .frame(width: 115, height: 135)
+                .frame(width: 130, height: 150)
             ZStack {
                 Image(allAnswers.path)
                     .resizable()
-                    .frame(width: 105, height: 125)
+                    .frame(width: 115, height: 138)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                 
                 Text(allAnswers.text)

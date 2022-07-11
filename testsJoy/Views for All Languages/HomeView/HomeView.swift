@@ -36,29 +36,14 @@ struct HomeView: View {
                 NavigationView{
                
                 VStack {
-                    
-                    
-                        
-                        //menu do topo
-                        /*topRowButtons()
-                            .padding(.top, 115)*/
                         TopRowBtns(logo: "owlLogo", languageFlag: "1")
                             .padding(.top, 260)
-                           
-                        
-                        //TopImageHomeView()
-                            //.edgesIgnoringSafeArea(.all)
-                            //.zIndex(-1)
-                    
-                        
                         VStack() {
-                            
-                            HStack{
-                                
-                                Challenges(challenge: dailyChallenge1)
-                            }
-                            .padding(.leading)
-                            
+                                HStack{
+                                    
+                                    Challenges(challenge: dailyChallenge1)
+                                }
+                                .padding(.leading)
                         }
                         //.edgesIgnoringSafeArea(.all)
                         //.zIndex(-1)
@@ -86,8 +71,6 @@ struct HomeView: View {
                         
                     }
                     .padding(.leading, -14)
-                    
-                    
                 }
             }
             .foregroundColor(.white)

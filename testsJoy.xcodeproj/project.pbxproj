@@ -36,6 +36,9 @@
 		0D37B2852859E3F30045F7F6 /* FailScreenOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37B2842859E3F30045F7F6 /* FailScreenOne.swift */; };
 		0D4272CF2860D69A00E87CE1 /* SquareBackgroundCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4272CE2860D69900E87CE1 /* SquareBackgroundCourses.swift */; };
 		0D621F6D2875F1B500C96F92 /* papagaio.json in Resources */ = {isa = PBXBuildFile; fileRef = 0D621F6C2875F1B500C96F92 /* papagaio.json */; };
+		0D621F71287C694A00C96F92 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D621F70287C694A00C96F92 /* MainView.swift */; };
+		0D621F74287C8D7300C96F92 /* CustomCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D621F73287C8D7300C96F92 /* CustomCorner.swift */; };
+		0D621F77287C8EFB00C96F92 /* OffsetModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D621F76287C8EFB00C96F92 /* OffsetModifiers.swift */; };
 		0D7D49D6285C7FD7005AA45E /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7D49D5285C7FD7005AA45E /* CategoryRow.swift */; };
 		0D7D49D8285C8331005AA45E /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7D49D7285C8331005AA45E /* CategoryItem.swift */; };
 		0D7D49DA285C862F005AA45E /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7D49D9285C862F005AA45E /* Unit.swift */; };
@@ -123,6 +126,9 @@
 		0D37B2842859E3F30045F7F6 /* FailScreenOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailScreenOne.swift; sourceTree = "<group>"; };
 		0D4272CE2860D69900E87CE1 /* SquareBackgroundCourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareBackgroundCourses.swift; sourceTree = "<group>"; };
 		0D621F6C2875F1B500C96F92 /* papagaio.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = papagaio.json; sourceTree = "<group>"; };
+		0D621F70287C694A00C96F92 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		0D621F73287C8D7300C96F92 /* CustomCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorner.swift; sourceTree = "<group>"; };
+		0D621F76287C8EFB00C96F92 /* OffsetModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetModifiers.swift; sourceTree = "<group>"; };
 		0D7D49D5285C7FD7005AA45E /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		0D7D49D7285C8331005AA45E /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
 		0D7D49D9285C862F005AA45E /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
@@ -257,6 +263,8 @@
 			isa = PBXGroup;
 			children = (
 				0DF96CD32833CB1600B744F6 /* HomeView.swift */,
+				0D621F70287C694A00C96F92 /* MainView.swift */,
+				0D621F75287C8EDF00C96F92 /* Modifiers */,
 				0D2144EF283D139D00DB512C /* TopImageHomeView.swift */,
 				0D2144F1283E591C00DB512C /* FlagSelected.swift */,
 			);
@@ -302,6 +310,23 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		0D621F72287C8D4C00C96F92 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				0D7FFE672812D89100FFFDB2 /* Onboarding.swift */,
+				0D621F73287C8D7300C96F92 /* CustomCorner.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		0D621F75287C8EDF00C96F92 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				0D621F76287C8EFB00C96F92 /* OffsetModifiers.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 		0D7FFE642812D50D00FFFDB2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,7 +334,7 @@
 				0D4272CC2860C5C100E87CE1 /* Buttons */,
 				0D4272CB2860C59600E87CE1 /* Colors */,
 				0D4272CA2860C58000E87CE1 /* Courses */,
-				0D7FFE672812D89100FFFDB2 /* Onboarding.swift */,
+				0D621F72287C8D4C00C96F92 /* Others */,
 				0DDAA6F928297AFE00BC110A /* GlobalHelpers.swift */,
 			);
 			path = Helpers;
@@ -605,8 +630,10 @@
 				0D2693B2281194AD00826898 /* SplashScreen.swift in Sources */,
 				0D1D91002850A2D0003391FF /* TriviaManager.swift in Sources */,
 				0D218FCB286B57C000851D7F /* AnswerCircleRightWrong.swift in Sources */,
+				0D621F77287C8EFB00C96F92 /* OffsetModifiers.swift in Sources */,
 				0DF96CCC282D71D200B744F6 /* SubscriptionModelThree.swift in Sources */,
 				0DF96CC5282D604900B744F6 /* CapsuleButtons.swift in Sources */,
+				0D621F71287C694A00C96F92 /* MainView.swift in Sources */,
 				0D7D49D6285C7FD7005AA45E /* CategoryRow.swift in Sources */,
 				0D37B2852859E3F30045F7F6 /* FailScreenOne.swift in Sources */,
 				0D09C3C628462BAF00E91DBC /* DailyChallenge.swift in Sources */,
@@ -616,6 +643,7 @@
 				0D1D90EF284F830A003391FF /* QuestionView.swift in Sources */,
 				0D97DE7828620C5800192CCF /* SwipeCorrectWord.swift in Sources */,
 				0DDAA6DE2822D1DC00BC110A /* GetStartedView.swift in Sources */,
+				0D621F74287C8D7300C96F92 /* CustomCorner.swift in Sources */,
 				0D97DE992864C5B100192CCF /* AnswerRowSquareGrid.swift in Sources */,
 				0D1D90FD2850A249003391FF /* AnswerTrivia.swift in Sources */,
 				0D4272CF2860D69A00E87CE1 /* SquareBackgroundCourses.swift in Sources */,

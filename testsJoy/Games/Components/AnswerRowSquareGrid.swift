@@ -21,6 +21,7 @@ struct AnswerRowSquareGrid: View {
         GridItem(.flexible())
     ]
     
+    
     var body: some View {
         //var test = question.answers
         
@@ -28,13 +29,11 @@ struct AnswerRowSquareGrid: View {
             //ForEach(0..<question.answers.count){ index in
             ForEach(0..<question.answers.count){ index in
                 
-                AnswerRowSquare(
-                                question: Question.sampleQuestion,
-                                allAnswers: Answer.allAnswer[index])
-                                .onTapGesture {
-                                        self.isChecked = true
-                                    }
-                
+                AnswerRowSquare(question: Question.sampleQuestion,
+                     allAnswers: Answer.allAnswer[index])
+                      .onTapGesture {
+                       self.isChecked = true
+                      }
             }
         }
         .padding(30)

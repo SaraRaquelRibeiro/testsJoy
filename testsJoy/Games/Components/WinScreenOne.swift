@@ -14,6 +14,8 @@ struct WinScreenOne: View {
     @EnvironmentObject var triviaManager : TriviaManager
     
     var positiveMessage = ["Excellent", "Awesome", "You're getting good", "You're brilliant", "Perfect", "Very Good", "Good"]
+    
+    var positiveImage = ["feather"]
     //meter aqui a correct answer caso o user tenha errado
     var correctAnswer : String
     
@@ -28,15 +30,21 @@ struct WinScreenOne: View {
             
             VStack {
                 Spacer()
-                LottieView(fileName: "checkmark").frame(width: 150, height: 150)
-                    .padding(.top, -40)
+                //LottieView(fileName: "checkmark").frame(width: 150, height: 150)
+                    //.padding(.top, -40)
+                Image(positiveImage.randomElement()!)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 50, height: 50)
+                
+                
                 Spacer()
                 VStack(alignment: .leading, spacing: 15){
                         
                     Text(positiveMessage.randomElement()!)
                             .font(.custom("Poppins-semibold", size: 18))
                             .foregroundColor(Color.greenGradient2)
-                            .padding(.bottom, 20)
+                            
                         
                                 
                             Text(correctAnswer)
@@ -45,7 +53,7 @@ struct WinScreenOne: View {
                         Spacer()
                     }
                 .padding(.leading, -150)
-                .padding(.top, -50)
+                .padding(.top)
             }
                 
                 

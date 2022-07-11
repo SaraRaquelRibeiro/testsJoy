@@ -38,103 +38,92 @@ struct GameSelectByImage: View {
     @State private var sheetMode : SheetMode = .quarter
     
     var body: some View {
-       
-        ZStack (alignment: .top) {
-            Rectangle()
-                .foregroundColor(.white)
+        VStack {
+            Color(.white)
+                .edgesIgnoringSafeArea(.all)
 
             GameView(unit: unit, course: course)
-            .padding(.top, 10)
-            
-           
-            VStack(alignment: .center, spacing: 20){
+                .padding(.top)
+  
+            ZStack(){
                 Spacer()
-                
-                Text(question.question)
-                    .font(.custom("Poppins-medium", size: 20))
+                VStack {
+                    Text(question.question)
+                        .font(.custom("Poppins-medium", size: 20))
                     .foregroundColor(Color.black.opacity(0.6))
-                
-                Button(action: {
                     
-                }, label: {
-                    Image(systemName: question.soundImageName)
-                        .resizable()
-                        .scaledToFit()
-                        .foregroundColor(Color.blueGradient2)
-                        .font(.caption)
-                        .frame(width: 42, height: 42)
-                        .shadow(color: .gray.opacity(0.4), radius: 1, x: -1, y: 3)
-                    
-                })
-            
-            
-                Text(question.word)
-                .font(.custom("Poppins-semibold", size: 25))
-                .foregroundColor(Color.black.opacity(0.8))
-                .underline()
-            
-            
-                AnswerRowSquareGrid(isChecked: $isChecked,
-                                    question: Question.sampleQuestion)
-                .padding(.bottom, 20)
-           
-                Button(action: {
-                    
-                    //testar screen the fail or win
-                     switch sheetMode {
-                     case .quarter:
-                         sheetMode = .half
-                     case .half:
-                         sheetMode = .quarter
-                   
-                     }
-                    
-                }, label: {
-                    
-                    ButtonCourses(text: "Verify",
-                                  textColor: Color.white,
-                                  shadowColor: Color.greenCorrectAnswerBackground,
-                                  background:  allAnswers.isCorrectAnswer ? Color.greenGradient1.opacity(0.8) : Color.blueLight)
-                        .padding(.bottom, 40)
-                    
-                })
-                    .onTapGesture(perform: {
+                    Button(action: {
                         
-                        isChecked = true
-                        
-                        
+                    }, label: {
+                        Image(systemName: question.soundImageName)
+                            .resizable()
+                            .scaledToFit()
+                            .foregroundColor(Color.blueGradient2)
+                            .font(.caption)
+                            .frame(width: 42, height: 42)
+                            .shadow(color: .gray.opacity(0.4), radius: 1, x: -1, y: 3)
                     })
                 
-                FlexibleSheet(sheetMode: $sheetMode, content: {
+                    Text(question.word)
+                    .font(.custom("Poppins-semibold", size: 25))
+                    .foregroundColor(Color.black.opacity(0.8))
+                    .underline()
+              
+                    AnswerRowSquareGrid(isChecked: $isChecked,
+                                        question: Question.sampleQuestion)
                     
-                    if allAnswers.isCorrectAnswer {
-                        VStack{
-                            
-                                WinScreenOne(answer: AnswerTrivia(text: "ffof", isCorrect: true), correctAnswer: "so nice")
-                           
-                            
-                        }
-                        .frame(maxWidth: .infinity, maxHeight: 300)
-                        .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+                    Button(action: {
+                        //testar screen the fail or win
+                         switch sheetMode {
+                         case .quarter:
+                             sheetMode = .half
+                         case .half:
+                             sheetMode = .quarter
+                         }
+                    }, label: {
+                        ButtonCourses(text: "Verify",
+                                      textColor: Color.white,
+                                      shadowColor: Color.greenCorrectAnswerBackground,
+                                      background:  allAnswers.isCorrectAnswer ? Color.greenGradient1.opacity(0.8) : Color.blueLight)
+                            .padding(.bottom, 40)
                         
-                    } else {
-                        VStack{
-                            //WinScreenOne(answer: Answer(text: "ffof", isCorrect: true), correctAnswer: "so nice")
-                            WinScreenOne(answer: AnswerTrivia(text: "ffof", isCorrect: false), correctAnswer: "")
-                           
+                    })
+                        .onTapGesture(perform: {
+                            isChecked = true
+                    })
+                }
+                .padding(.bottom, 110)
+                VStack {
+                 
+                    
+                    FlexibleSheet(sheetMode: $sheetMode, content: {
+                        
+                        if allAnswers.isCorrectAnswer {
+                            VStack{
+                                    WinScreenOne(answer: AnswerTrivia(text: "ffof", isCorrect: true), correctAnswer: "so nice")
+                               
+                            }
+                            .frame(maxWidth: .infinity, maxHeight: 300)
+                            .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
                             
+                        } else {
+                            VStack{
+                                //WinScreenOne(answer: Answer(text: "ffof", isCorrect: true), correctAnswer: "so nice")
+                                WinScreenOne(answer: AnswerTrivia(text: "ffof", isCorrect: false), correctAnswer: "")
+                            }
+                            .frame(maxWidth: .infinity, maxHeight: 300)
+                            .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
                         }
-                        .frame(maxWidth: .infinity, maxHeight: 300)
-                        .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-                    }
+                       
+                    })
                     
-                    
-                   
-                })
-            
+                }
+                .padding(.bottom, -300)
+                
+                
+        
             }
-            .padding(.top, 200)
-            
+            .padding(.top, -100)
         }
         .navigationBarTitle("")
         .navigationBarHidden(true)

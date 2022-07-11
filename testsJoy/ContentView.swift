@@ -16,8 +16,15 @@ struct ContentView: View {
     @State var selection = 0
     
     var body: some View {
+        
+        //teste para o Main View
+        GeometryReader{ proxy in
+            let topEdge = proxy.safeAreaInsets.top
+            MainView(topEdge: topEdge)
+                .ignoresSafeArea(.all, edges: .top)
+        }
                 
-            TabView(selection: $selection) {
+            /*TabView(selection: $selection) {
                                 HomeView().tabItem {
                                             if selection == 0 {
                                                 Image("tabViewHome_active")
@@ -115,7 +122,7 @@ struct ContentView: View {
                     UITabBar.appearance().scrollEdgeAppearance = tabBarAppearence
                 }
                 .navigationBarTitle("")
-                .navigationBarHidden(true)
+                .navigationBarHidden(true)*/
                 
     }
 }
