@@ -78,7 +78,7 @@ struct TopRowBtns: View {
         //.background(Color.red)
         .padding(.leading, 25)
         .padding(.trailing, 25)
-        .padding(.top, -260)
+        //.padding(.top, -260)
         
     }
 }

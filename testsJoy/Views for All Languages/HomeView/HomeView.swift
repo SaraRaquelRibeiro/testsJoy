@@ -36,18 +36,22 @@ struct HomeView: View {
                 NavigationView{
                
                 VStack {
+                    VStack {
                         TopRowBtns(logo: "owlLogo", languageFlag: "1")
-                            .padding(.top, 260)
+                            .padding(.top, -10)
+                        
                         VStack() {
                                 HStack{
                                     
-                                    Challenges(challenge: dailyChallenge1)
+                                    //Challenges(challenge: dailyChallenge1)
                                 }
                                 .padding(.leading)
                         }
                         //.edgesIgnoringSafeArea(.all)
                         //.zIndex(-1)
-                        .padding(.top, -170)
+                        .padding(.top, 40)
+                    }
+                        
                     
                         List{
                             ForEach(vm.units, id:\.id){ uni in

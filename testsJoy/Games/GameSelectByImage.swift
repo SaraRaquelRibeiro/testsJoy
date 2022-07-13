@@ -8,54 +8,24 @@
 import SwiftUI
 
 
-//******* jogo em que aparecem 4 imagens para selecionar a correcta
 struct GameSelectByImage: View {
-    
-    //*** criar as variáveisp fazer as chamadas
-    
-    
-    var imagesTest: [ImageTest]
-    
-    static var vm = HomeVM()
-    
-    //var answer: Answer
+
     @State private var isSelected = false
-    
-    //binding de teste se aquela pergunta foi selecionada
-    @State var isChecked = false
-    
-    var unit : Unit
-    var course : Course
-    
-    @State var gamesManager : GamesManager
-    
-    var question : Question
-    
-    var allAnswers : Answer
-    
+    @ObservedObject var gamesManager : GamesManager
     @State var showSheet: Bool = false
-    
     @State private var sheetMode : SheetMode = .quarter
     
     var body: some View {
-        VStack {
-            Color(.white)
-                .edgesIgnoringSafeArea(.all)
-
-            GameView(unit: unit, course: course)
-                .padding(.top)
-  
-            ZStack(){
-                Spacer()
+        
+            
                 VStack {
-                    Text(question.question)
+                    Text(gamesManager.currentQuestion!.question)
                         .font(.custom("Poppins-medium", size: 20))
                     .foregroundColor(Color.black.opacity(0.6))
                     
                     Button(action: {
-                        
                     }, label: {
-                        Image(systemName: question.soundImageName)
+                        Image(systemName: gamesManager.currentQuestion!.soundImageName)
                             .resizable()
                             .scaledToFit()
                             .foregroundColor(Color.blueGradient2)
@@ -64,80 +34,26 @@ struct GameSelectByImage: View {
                             .shadow(color: .gray.opacity(0.4), radius: 1, x: -1, y: 3)
                     })
                 
-                    Text(question.word)
+                    Text(gamesManager.currentQuestion!.word)
                     .font(.custom("Poppins-semibold", size: 25))
                     .foregroundColor(Color.black.opacity(0.8))
                     .underline()
               
-                    AnswerRowSquareGrid(isChecked: $isChecked,
-                                        question: Question.sampleQuestion)
+                    AnswerRowSquareGrid(
+                        gamesManager: gamesManager,
+                        question: gamesManager.currentQuestion!)
                     
-                    Button(action: {
-                        //testar screen the fail or win
-                         switch sheetMode {
-                         case .quarter:
-                             sheetMode = .half
-                         case .half:
-                             sheetMode = .quarter
-                         }
-                    }, label: {
-                        ButtonCourses(text: "Verify",
-                                      textColor: Color.white,
-                                      shadowColor: Color.greenCorrectAnswerBackground,
-                                      background:  allAnswers.isCorrectAnswer ? Color.greenGradient1.opacity(0.8) : Color.blueLight)
-                            .padding(.bottom, 40)
                         
-                    })
-                        .onTapGesture(perform: {
-                            isChecked = true
-                    })
                 }
-                .padding(.bottom, 110)
-                VStack {
-                 
-                    
-                    FlexibleSheet(sheetMode: $sheetMode, content: {
-                        
-                        if allAnswers.isCorrectAnswer {
-                            VStack{
-                                    WinScreenOne(answer: AnswerTrivia(text: "ffof", isCorrect: true), correctAnswer: "so nice")
-                               
-                            }
-                            .frame(maxWidth: .infinity, maxHeight: 300)
-                            .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-                            
-                        } else {
-                            VStack{
-                                //WinScreenOne(answer: Answer(text: "ffof", isCorrect: true), correctAnswer: "so nice")
-                                WinScreenOne(answer: AnswerTrivia(text: "ffof", isCorrect: false), correctAnswer: "")
-                            }
-                            .frame(maxWidth: .infinity, maxHeight: 300)
-                            .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-                        }
-                       
-                    })
-                    
-                }
-                .padding(.bottom, -300)
-                
-                
-        
-            }
-            .padding(.top, -100)
-        }
-        .navigationBarTitle("")
-        .navigationBarHidden(true)
+                .padding(.bottom)
     }
 }
 
 struct GameSelectByImage_Previews: PreviewProvider {
-    static var vm = HomeVM()
+    static var gamesManager = GamesManager(questionsFile: "dataGame1")
     static var previews: some View {
-        GameSelectByImage(imagesTest: exampleImages,
-                          unit: vm.units[0],
-                          course: vm.units[0].courses[0],
-                          gamesManager: GamesManager(questionsFile: "dataGame1"), question: Question.sampleQuestion,
-                          allAnswers: Answer.allAnswer[0])
+        GameSelectByImage(
+                          gamesManager: GamesManager(questionsFile: "dataGame1"))
             
     }
 }

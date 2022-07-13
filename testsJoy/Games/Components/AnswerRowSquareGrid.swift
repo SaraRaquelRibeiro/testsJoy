@@ -8,32 +8,22 @@
 import SwiftUI
 
 struct AnswerRowSquareGrid: View {
-    //@State private var isSelected = false
-    
-    @Binding var isChecked: Bool
-    
+    @ObservedObject var gamesManager : GamesManager
     var question : Question
-    
-    var allAnswers : [Answer] = Answer.allAnswer
     
     let columns = [
         GridItem(.flexible()),
         GridItem(.flexible())
     ]
     
-    
     var body: some View {
-        //var test = question.answers
-        
         LazyVGrid(columns: columns, spacing: 30) {
-            //ForEach(0..<question.answers.count){ index in
             ForEach(0..<question.answers.count){ index in
                 
-                AnswerRowSquare(question: Question.sampleQuestion,
-                     allAnswers: Answer.allAnswer[index])
-                      .onTapGesture {
-                       self.isChecked = true
-                      }
+                AnswerRowSquare(
+                    gamesManager: gamesManager,
+                    answer: question.answers[index])
+                      
             }
         }
         .padding(30)
@@ -42,9 +32,10 @@ struct AnswerRowSquareGrid: View {
 
 struct AnswerRowSquareGrid_Previews: PreviewProvider {
     static var previews: some View {
-        AnswerRowSquareGrid(isChecked: .constant(false),
-                            question: Question.sampleQuestion,
-                            allAnswers: Answer.allAnswer)
+        let gamesManager = GamesManager(questionsFile: "dataGame1")
+        AnswerRowSquareGrid(
+            gamesManager: gamesManager,
+            question: gamesManager.questions[0])
     }
 }
 

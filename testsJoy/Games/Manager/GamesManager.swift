@@ -7,59 +7,51 @@
 
 import SwiftUI
 
-struct GamesManager: View {
+class GamesManager: ObservableObject {
     
-    var questionsFile : String
-    var questions : [Question]
-    
+    @Published var questionsFile : String
+    @Published var questions : [Question]
+    @Published var selectedAnswer: Answer?
+    @Published var currentQuestion : Question?
+    @Published var index = 0
+    @Published var progress : CGFloat = 0.0
     
     init(questionsFile: String) {
         self.questionsFile = questionsFile
+        self.selectedAnswer = nil
         
         if let loadQuestions = loadJson(filename: questionsFile){
             self.questions = loadQuestions
+            self.currentQuestion = self.questions[0]
         } else {
             print("error loading question")
             self.questions = []
+            self.currentQuestion = nil
         }
     }
     
-    var body: some View {
-        VStack{
-        ForEach(questions){ question in
-            Text(question.word)
-            /*ForEach(question.answers) { answer in
-                Text(answer.text)
-            }*/
+    func goToNextQuestion () {
+        if index + 1 < questions.count{
+            index += 1
+            
+            setQuestion()
         }
-            /*ForEach(questions){ question in
-                if question.type == "selectByImage" {
-                    GameSelectByImage(question: "dd",
-                                      word: "ss",
-                                      imagesTest: exampleImages,
-                                      unit: unit1,
-                                      course: course1Unit1)
-                }
-            }*/
+    }
+
+    func setQuestion () { //chamadam em 2 sitios, na func goToNextQuestion
+        selectedAnswer = nil
+        progress = CGFloat(Double(index + 1) / Double(questions.count) * 350)
+        
+        if index < questions.count {
+            currentQuestion = questions[index]
         }
     }
 }
-
-struct GamesManager_Previews: PreviewProvider {
-    static var previews: some View {
-        GamesManager(questionsFile: "dataGame1")
-    }
-}
-
-
-
 //para ir buscar o trivia
 struct Answer : Codable {
     var text : String
     var path : String
     var isCorrectAnswer : Bool
-    
-    static let allAnswer: [Answer] = Question.sampleQuestion.answers
 }
 
 struct Question : Codable {
@@ -69,10 +61,7 @@ struct Question : Codable {
     var sound : String
     var word : String
     var answers : [Answer]
-    
-    static let allQuestion: [Question] = loadJson(filename: "dataGame1")!
-    static let sampleQuestion: Question = allQuestion[0]
-    
+   
 }
 
 extension Question : Identifiable {
@@ -101,14 +90,8 @@ func loadJson(filename fileName: String) -> [Question]? {
     return nil
 }
 
-//detetar se alguma answer foi selecionada
 func selectAnswer(answer: Answer){
     
-    var answerSelected = true
-   
-    /*if answer.isCorrect {
-        //increment a score **** aqui vai poder meter-se as moedas
-        score += 1
-    }*/
+    
     
 }

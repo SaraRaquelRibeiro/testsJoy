@@ -1,7 +1,6 @@
 [
    {
       "type":"selectByImage",
-      "number":1,
       "question":"What is the meaning",
       "soundImageName":"speaker.zzz.fill",
       "sound":"Team Lead",
@@ -32,7 +31,6 @@
    },
    {
       "type":"selectByImage",
-      "number":2,
       "question":"What is the meaning",
       "soundImageName":"speaker.zzz.fill",
       "sound":"Team Lead",
@@ -59,6 +57,25 @@
               "isCorrectAnswer": true
           }
       
+      ]
+   },
+   {
+      "type":"rightOrWrong",
+      "question":"Is this the correct word?",
+      "soundImageName":"speaker.zzz.fill",
+      "sound":"Team Lead",
+      "word":"Yellow bridge",
+      "answers": [
+          {
+              "text": "true",
+              "path": "hand.thumbsdown.fill",
+              "isCorrectAnswer": false,
+          },
+          {
+              "text": "false",
+              "path": "hand.thumbsup.fill",
+              "isCorrectAnswer": true,
+          }
       ]
    }
    

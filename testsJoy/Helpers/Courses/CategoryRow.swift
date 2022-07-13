@@ -60,8 +60,10 @@ struct CategoryRow: View {
                 HStack(alignment: .top, spacing: 5){
                     ForEach(unit.courses){ course in
                         NavigationLink {
-                            
-                            GamesManager(questionsFile: "dataGame1")
+                            GamesView(questionsFile: "dataGame1",
+                                      unit: unit,
+                                      course: course)
+                            //GamesManager(questionsFile: "dataGame1")
                                 /*LevelsView(unit: vm.units[0],
                                            course: vm.units[0].courses[0],
                                            level: vm.units[0].courses[0].levels[0])*/

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct Challenges: View {
     var challenge: DailyChallenge
+    //var topedge : CGFloat
+    //@Binding var offset : CGFloat
     var body: some View {
         ZStack (alignment: .center){
             ZStack{
@@ -48,8 +50,3 @@ struct Challenges: View {
     }
 }
 
-struct Challenges_Previews: PreviewProvider {
-    static var previews: some View {
-        Challenges(challenge: dailyChallenge1)
-    }
-}

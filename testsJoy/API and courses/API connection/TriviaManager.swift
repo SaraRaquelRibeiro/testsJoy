@@ -91,7 +91,7 @@ class TriviaManager : ObservableObject {
         }
     }
     
-    //detetar se é a answer correcta e se sim passar p true
+    //detetar se é uma answer foi selecionada
     func selectAnswer(answer: AnswerTrivia){
         //set answerselected to true - o user já selecionou uma answer
         answerSelected = true

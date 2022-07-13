@@ -9,11 +9,9 @@ import SwiftUI
 
 struct AnswerRowSquare: View {
     @State private var isSelected = false
-   
+    @ObservedObject var gamesManager : GamesManager
     
-    var question : Question
-    
-    var allAnswers : Answer
+    var answer : Answer
     
     var body: some View {
         ZStack() {
@@ -28,20 +26,20 @@ struct AnswerRowSquare: View {
                 .stroke(isSelected ? Color.blueGradient2 : .gray.opacity(0.2))
                 .frame(width: 130, height: 150)
             ZStack {
-                Image(allAnswers.path)
+                Image(answer.path)
                     .resizable()
                     .frame(width: 115, height: 138)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                 
-                Text(allAnswers.text)
+                Text(answer.text)
                     .font(.custom("Poppins-semibold", size: 14))
                     .foregroundColor(Color.black.opacity(0.5))
                     .padding(.top, 110)
                 
                 if isSelected {
                     Spacer()
-                    Image(systemName: allAnswers.isCorrectAnswer ? "checkmark.circle.fill" : "x.circle.fill")
-                        .foregroundColor(allAnswers.isCorrectAnswer ? Color.green : Color.red)
+                    Image(systemName: answer.isCorrectAnswer ? "checkmark.circle.fill" : "x.circle.fill")
+                        .foregroundColor(answer.isCorrectAnswer ? Color.green : Color.red)
                 }
             }
                 
@@ -49,6 +47,7 @@ struct AnswerRowSquare: View {
         .onTapGesture(perform: {
             //se o user ainda não selecionou uma answer
             isSelected = true
+            gamesManager.selectedAnswer = answer
             
             
         })
@@ -59,8 +58,9 @@ struct AnswerRowSquare: View {
 
 struct AnswerRowSquare_Previews: PreviewProvider {
     static var previews: some View {
+        let gamesManager = GamesManager(questionsFile: "dataGame1")
         AnswerRowSquare(
-                        question: Question.sampleQuestion,
-                        allAnswers: Answer.allAnswer[0])
+            gamesManager: gamesManager,
+            answer: gamesManager.questions[0].answers[0])
     }
 }
