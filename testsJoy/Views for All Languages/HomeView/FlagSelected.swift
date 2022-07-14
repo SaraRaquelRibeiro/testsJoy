@@ -27,9 +27,9 @@ struct FlagSelected: View {
             .resizable()
             .clipShape(Circle())
             .aspectRatio(contentMode: .fit)
-            .frame(width: 30, height: 30)
+            .frame(width: 35, height: 35)
             .multilineTextAlignment(.center)
-            .shadow(color: Color.black.opacity(0.5), radius: 2, x: 0, y: 2)
+            //.shadow(color: Color.black.opacity(0.5), radius: 0.3, x: 0, y: 2)
             //.overlay(Circle().stroke(color, lineWidth: 1))
             .padding()
     }

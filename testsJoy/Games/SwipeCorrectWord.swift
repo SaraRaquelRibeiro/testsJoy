@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SwipeCorrectWord: View {
-    var imagesTest: [ImageTest]
     var body: some View {
         //QUESTION
         ZStack {
@@ -57,6 +56,6 @@ struct SwipeCorrectWord: View {
 
 struct SwipeCorrectWord_Previews: PreviewProvider {
     static var previews: some View {
-        SwipeCorrectWord(imagesTest: exampleImages)
+        SwipeCorrectWord()
     }
 }

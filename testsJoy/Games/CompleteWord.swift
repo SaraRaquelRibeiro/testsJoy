@@ -8,15 +8,9 @@
 import SwiftUI
 
 struct CompleteWord: View {
-    //*** criar as variáveisp fazer as chamadas
-    
     @State var question : String
-    
     @State var word1 : String
     @State var word2 : String
-    
-    var imageTest : ImageTest
-    
     var body: some View {
         ZStack{
             //menu do topo
@@ -101,7 +95,6 @@ struct CompleteWord_Previews: PreviewProvider {
     static var previews: some View {
         CompleteWord(question: "Complete the Word",
                      word1: "its",
-                     word2: "fru",
-                     imageTest: exampleImages1)
+                     word2: "fru")
     }
 }

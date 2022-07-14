@@ -43,7 +43,7 @@ struct HomeView: View {
                         VStack() {
                                 HStack{
                                     
-                                    //Challenges(challenge: dailyChallenge1)
+                                    Challenges(challenge: dailyChallenge1)
                                 }
                                 .padding(.leading)
                         }

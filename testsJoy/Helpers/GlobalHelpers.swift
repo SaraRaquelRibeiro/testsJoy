@@ -81,22 +81,13 @@ let levelsFromCoursesUnit1 : [Level] = [level1, level2, level3, level4]
 //*******UNITS
 let unit1 : Unit = Unit(id: UUID().uuidString, name: "Unit 1", courses: coursesFromUnit1, description: "Learn 100 more used words to use when Travelling", badgeName: "awardUnit1", color: "blueGradient2", lock: "lock1")
 let unit2 : Unit = Unit(id: UUID().uuidString, name: "Unit 2", courses: coursesFromUnit2, description: "200 more used words to use with your new friends", badgeName: "awardUnit2", color: "pinkGradient1", lock: "lock")
+let unit3 : Unit = Unit(id: UUID().uuidString, name: "Unit 3", courses: coursesFromUnit2, description: "200 more used words to use with your new friends", badgeName: "awardUnit2", color: "pinkGradient1", lock: "lock")
 
-let staticAllUnits : [Unit] = [unit1, unit2]
+let staticAllUnits : [Unit] = [unit1, unit2, unit3]
 
 
 //***** Daily challenges
 let dailyChallenge1 = DailyChallenge(id: UUID().uuidString, title: "July Challenge", subtitle: "Get 100 coins!", color: "blueGradient2", image: "NYC")
 
-
-//*** PARA TESTAR AS IMAGES NO GameSelectByImage - apagar
-
-let exampleImages1 = ImageTest(id: UUID().uuidString, name: "unit1fruits")
-let exampleImages2 = ImageTest(id: UUID().uuidString, name: "unit1greetings")
-let exampleImages3 = ImageTest(id: UUID().uuidString, name: "unit1numbers")
-let exampleImages4 = ImageTest(id: UUID().uuidString, name: "unit1clothes")
-var exampleImages: [ImageTest] {
-    return [exampleImages1, exampleImages2, exampleImages3, exampleImages4]
-}
 
 

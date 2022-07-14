@@ -16,7 +16,7 @@ struct CategoryItem: View {
             Image(course.image)
                 .resizable()
                 .frame(width: 90, height: 110)
-                .clipShape(RoundedRectangle(cornerRadius: 18))
+                .clipShape(RoundedRectangle(cornerRadius: 10))
                 .shadow(color: Color.black.opacity(0.4), radius: 4, x: 2,y: 3)
                 /*.overlay(
                     RoundedRectangle(cornerRadius: 20)

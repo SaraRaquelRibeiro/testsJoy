@@ -90,12 +90,12 @@ struct CategoryRow: View {
                                     ZStack {
                                         Circle()
                                             .fill(Color.blueGradient4)
-                                            .frame(width: 31, height: 31)
+                                            .frame(width: 29, height: 29)
                                             
                                         
                                         Image(systemName: "lock.fill")
                                             .font(.system(size: 16, weight: .black))
-                                            .shadow(color: .gray, radius: 3, x: 2, y: 2)
+                                            .shadow(color: .gray.opacity(0.7), radius: 1, x: 2, y: 2)
                                             .foregroundColor(.white)
                                     }
                                     .padding(.top, 70)

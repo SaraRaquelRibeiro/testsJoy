@@ -36,6 +36,7 @@
 		0D37B2852859E3F30045F7F6 /* FailScreenOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37B2842859E3F30045F7F6 /* FailScreenOne.swift */; };
 		0D4272CF2860D69A00E87CE1 /* SquareBackgroundCourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4272CE2860D69900E87CE1 /* SquareBackgroundCourses.swift */; };
 		0D4356A6287D954600D9E233 /* GamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4356A5287D954600D9E233 /* GamesView.swift */; };
+		0D4356B328805D8600D9E233 /* ChallengesViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4356B228805D8600D9E233 /* ChallengesViewTest.swift */; };
 		0D621F6D2875F1B500C96F92 /* papagaio.json in Resources */ = {isa = PBXBuildFile; fileRef = 0D621F6C2875F1B500C96F92 /* papagaio.json */; };
 		0D621F71287C694A00C96F92 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D621F70287C694A00C96F92 /* MainView.swift */; };
 		0D621F74287C8D7300C96F92 /* CustomCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D621F73287C8D7300C96F92 /* CustomCorner.swift */; };
@@ -55,7 +56,6 @@
 		0D97DE842863360F00192CCF /* TopRowBtns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D97DE832863360F00192CCF /* TopRowBtns.swift */; };
 		0D97DE942864843A00192CCF /* CharView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D97DE932864843900192CCF /* CharView.swift */; };
 		0D97DE992864C5B100192CCF /* AnswerRowSquareGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D97DE982864C5B000192CCF /* AnswerRowSquareGrid.swift */; };
-		0D97DE9B2864C61C00192CCF /* ImageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D97DE9A2864C61C00192CCF /* ImageTest.swift */; };
 		0DB0854D282BED3800DD5E70 /* ContentViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB0854C282BED3800DD5E70 /* ContentViewTest.swift */; };
 		0DB08550282C05C700DD5E70 /* ChooseLanguageWithButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB0854F282C05C700DD5E70 /* ChooseLanguageWithButtonView.swift */; };
 		0DB08552282C1D3800DD5E70 /* ButtonLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB08551282C1D3800DD5E70 /* ButtonLanguage.swift */; };
@@ -127,6 +127,7 @@
 		0D37B2842859E3F30045F7F6 /* FailScreenOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailScreenOne.swift; sourceTree = "<group>"; };
 		0D4272CE2860D69900E87CE1 /* SquareBackgroundCourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareBackgroundCourses.swift; sourceTree = "<group>"; };
 		0D4356A5287D954600D9E233 /* GamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesView.swift; sourceTree = "<group>"; };
+		0D4356B228805D8600D9E233 /* ChallengesViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesViewTest.swift; sourceTree = "<group>"; };
 		0D621F6C2875F1B500C96F92 /* papagaio.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = papagaio.json; sourceTree = "<group>"; };
 		0D621F70287C694A00C96F92 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		0D621F73287C8D7300C96F92 /* CustomCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorner.swift; sourceTree = "<group>"; };
@@ -146,7 +147,6 @@
 		0D97DE832863360F00192CCF /* TopRowBtns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRowBtns.swift; sourceTree = "<group>"; };
 		0D97DE932864843900192CCF /* CharView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharView.swift; sourceTree = "<group>"; };
 		0D97DE982864C5B000192CCF /* AnswerRowSquareGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRowSquareGrid.swift; sourceTree = "<group>"; };
-		0D97DE9A2864C61C00192CCF /* ImageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTest.swift; sourceTree = "<group>"; };
 		0DB0854C282BED3800DD5E70 /* ContentViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTest.swift; sourceTree = "<group>"; };
 		0DB0854F282C05C700DD5E70 /* ChooseLanguageWithButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLanguageWithButtonView.swift; sourceTree = "<group>"; };
 		0DB08551282C1D3800DD5E70 /* ButtonLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLanguage.swift; sourceTree = "<group>"; };
@@ -326,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				0D621F76287C8EFB00C96F92 /* OffsetModifiers.swift */,
+				0D4356B228805D8600D9E233 /* ChallengesViewTest.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -384,7 +385,6 @@
 			isa = PBXGroup;
 			children = (
 				0DB0854C282BED3800DD5E70 /* ContentViewTest.swift */,
-				0D97DE9A2864C61C00192CCF /* ImageTest.swift */,
 				0D97DE932864843900192CCF /* CharView.swift */,
 			);
 			path = "Not in use";
@@ -632,6 +632,7 @@
 				0D7D49D8285C8331005AA45E /* CategoryItem.swift in Sources */,
 				0D2693B2281194AD00826898 /* SplashScreen.swift in Sources */,
 				0D1D91002850A2D0003391FF /* TriviaManager.swift in Sources */,
+				0D4356B328805D8600D9E233 /* ChallengesViewTest.swift in Sources */,
 				0D218FCB286B57C000851D7F /* AnswerCircleRightWrong.swift in Sources */,
 				0D621F77287C8EFB00C96F92 /* OffsetModifiers.swift in Sources */,
 				0DF96CCC282D71D200B744F6 /* SubscriptionModelThree.swift in Sources */,
@@ -656,7 +657,6 @@
 				0D7FFE662812D53800FFFDB2 /* Colors.swift in Sources */,
 				0DB0854D282BED3800DD5E70 /* ContentViewTest.swift in Sources */,
 				0D1E04F928746D3A00E114EB /* ProgressView.swift in Sources */,
-				0D97DE9B2864C61C00192CCF /* ImageTest.swift in Sources */,
 				0D97DE7E28620C9D00192CCF /* CompleteWord.swift in Sources */,
 				0DDAA6F52825804D00BC110A /* Languages.swift in Sources */,
 				0D97DE742862058100192CCF /* GameSelectByImage.swift in Sources */,

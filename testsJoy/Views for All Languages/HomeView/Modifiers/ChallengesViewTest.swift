@@ -1,14 +1,16 @@
 //
-//  Challenges.swift
+//  ChallengesViewTest.swift
 //  testsJoy
 //
-//  Created by Sara Ribeiro on 04/07/2022.
+//  Created by Sara Ribeiro on 14/07/2022.
 //
 
 import SwiftUI
 
-struct Challenges: View {
+struct ChallengesViewTest: View {
     var challenge: DailyChallenge
+    var topEdge : CGFloat
+    @Binding var offset : CGFloat
     var body: some View {
         ZStack (alignment: .center){
             ZStack{
@@ -45,12 +47,6 @@ struct Challenges: View {
                 .padding(.leading, -170)
           
         }
-    }
-}
-
-struct Challenges_Previews: PreviewProvider {
-    static var previews: some View {
-        Challenges(challenge: dailyChallenge1)
     }
 }
 
