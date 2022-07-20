@@ -61,9 +61,10 @@ struct FailScreenOne: View {
                 .padding(.bottom, 80)
             
             //meti isto
-                .onTapGesture(perform: {
+                /*.onTapGesture(perform: {
                     AnswerRowSquare(gamesManager: gamesManager, answer: gamesManager.questions[0].answers[0]).$isSelected = false
-                })
+                    
+                })*/
                  
             
         }
