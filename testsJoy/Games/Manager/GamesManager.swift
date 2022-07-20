@@ -15,14 +15,14 @@ class GamesManager: ObservableObject {
     @Published var currentQuestion : Question?
     @Published var index = 0
     @Published var progress : CGFloat = 0.0
-    
     init(questionsFile: String) {
         self.questionsFile = questionsFile
         self.selectedAnswer = nil
         
         if let loadQuestions = loadJson(filename: questionsFile){
             self.questions = loadQuestions
-            self.currentQuestion = self.questions[0]
+            //self.currentQuestion = self.questions[0]
+            self.currentQuestion = self.questions[index]
         } else {
             print("error loading question")
             self.questions = []
@@ -38,7 +38,7 @@ class GamesManager: ObservableObject {
         }
     }
 
-    func setQuestion () { //chamadam em 2 sitios, na func goToNextQuestion
+    func setQuestion () { 
         selectedAnswer = nil
         progress = CGFloat(Double(index + 1) / Double(questions.count) * 350)
         
@@ -49,12 +49,14 @@ class GamesManager: ObservableObject {
 }
 //para ir buscar o trivia
 struct Answer : Codable {
+    //var id = UUID()
     var text : String
     var path : String
     var isCorrectAnswer : Bool
 }
 
 struct Question : Codable {
+    //var id = UUID()
     var type : String
     var question : String
     var soundImageName : String

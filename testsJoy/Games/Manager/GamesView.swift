@@ -33,49 +33,84 @@ struct GamesView: View {
                     RightOrWrong(gamesManager: gamesManager)
                 }
             }
-            if gamesManager.selectedAnswer != nil {
-                Button(action: {
-                    //testar screen the fail or win
-                     switch sheetMode {
-                     case .quarter:
-                         sheetMode = .half
-                     case .half:
-                         sheetMode = .quarter
-                     }
-                }, label: {
-                    ButtonCourses(text: "Verify",
-                                  textColor: Color.white,
-                                  shadowColor: Color.greenCorrectAnswerBackground,
-                                  background: Color.greenGradient1.opacity(0.8))
-                })
-            } else {
-                ButtonCourses(text: "Verify",
-                              textColor: Color.white,
-                              shadowColor: Color.gray,
-                              background: Color.gray.opacity(0.8))
-            }
-            
-            FlexibleSheet(sheetMode: $sheetMode, content: {
-                if let selectedAnswer = gamesManager.selectedAnswer {
-                    if selectedAnswer.isCorrectAnswer {
-                        VStack{
-                                WinScreenOne(answer: AnswerTrivia(text: "ffof", isCorrect: true), correctAnswer: "so nice")
-                           
-                        }
-                        .frame(maxWidth: .infinity, maxHeight: 300)
-                        .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+          
+                if gamesManager.selectedAnswer != nil {
+                    
+                    ZStack{
+                        Button(action: {
+                            //testar screen the fail or win
+                             switch sheetMode {
+                             case .quarter:
+                                 sheetMode = .half
+                             case .half:
+                                 sheetMode = .quarter
+                             }
+                        }, label: {
+                            ButtonCourses(text: "Verify",
+                                          textColor: Color.white,
+                                          shadowColor: Color.greenCorrectAnswerBackground,
+                                          background: Color.greenGradient1.opacity(0.8))
+                        })
+                            
                         
-                    } else {
-                        VStack{
-                            //WinScreenOne(answer: Answer(text: "ffof", isCorrect: true), correctAnswer: "so nice")
-                            WinScreenOne(answer: AnswerTrivia(text: "ffof", isCorrect: false), correctAnswer: "")
-                        }
-                        .frame(maxWidth: .infinity, maxHeight: 300)
-                        .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+                        FlexibleSheet(sheetMode: $sheetMode, content: {
+                            if let selectedAnswer = gamesManager.selectedAnswer{
+                            if selectedAnswer.isCorrectAnswer {
+                                    VStack{
+                                        WinScreenOne(gamesManager: gamesManager)
+                                        
+                                       
+                                    }
+                                    .frame(maxWidth: .infinity, maxHeight: 300)
+                                    .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+                                   
+                                    
+                                } else {
+                                    VStack{
+                                        FailScreenOne(gamesManager: gamesManager)
+                                    }
+                                    .frame(maxWidth: .infinity, maxHeight: 300)
+                                    .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+                                }
+                            }
+                            
+                        })
+                            
+                            .padding(.bottom)
                     }
+                    
+                    
+                   
+                } else {
+                    ButtonCourses(text: "Verify",
+                                  textColor: Color.gray.opacity(0.7),
+                                  shadowColor: Color.gray.opacity(0.7),
+                                  background: Color.gray.opacity(0.2))
                 }
-            })
-                .padding(.bottom, -300)
+                
+                /*FlexibleSheet(sheetMode: $sheetMode, content: {
+                    if let selectedAnswer = gamesManager.selectedAnswer{
+                    if selectedAnswer.isCorrectAnswer {
+                            VStack{
+                                    WinScreenOne()
+                               
+                            }
+                            .frame(maxWidth: .infinity, maxHeight: 300)
+                            .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+                            
+                        } else {
+                            VStack{
+                                WinScreenOne()
+                            }
+                            .frame(maxWidth: .infinity, maxHeight: 300)
+                            .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+                        }
+                    }
+                    
+                })
+                    .padding(.bottom, -300)*/
+            
+
         }
         .navigationBarTitle("")
         .navigationBarHidden(true)

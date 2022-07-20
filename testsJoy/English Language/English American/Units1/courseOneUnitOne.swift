@@ -85,7 +85,7 @@ struct courseOneUnitOne: View {
                         if answer.isCorrect {
                             VStack{
                                 
-                                    WinScreenOne(answer: AnswerTrivia(text: "ffof", isCorrect: true), correctAnswer: "so nice")
+                                    /*WinScreenOne(answer: AnswerTrivia(text: "ffof", isCorrect: true), correctAnswer: "so nice")*/
                                
                                 
                             }
@@ -95,7 +95,7 @@ struct courseOneUnitOne: View {
                         } else {
                             VStack{
                                 //WinScreenOne(answer: Answer(text: "ffof", isCorrect: true), correctAnswer: "so nice")
-                                WinScreenOne(answer: AnswerTrivia(text: "ffof", isCorrect: false), correctAnswer: "")
+                                /*WinScreenOne(answer: AnswerTrivia(text: "ffof", isCorrect: false), correctAnswer: "")*/
                                
                                 
                             }

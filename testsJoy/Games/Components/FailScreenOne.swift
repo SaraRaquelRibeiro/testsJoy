@@ -8,29 +8,23 @@
 import SwiftUI
 
 struct FailScreenOne: View {
-    
-    var answer: AnswerTrivia
-    
-    //meter aqui a correct answer caso o user tenha errado
-    var correctAnswer : String
-    
-    @EnvironmentObject var triviaManager : TriviaManager
-    
-    //criar um array de pequenas imagens para aparecerem aleatoriamente
-    
-  
-    
+    @ObservedObject  var gamesManager : GamesManager
+    @Binding var isSelected : Bool
+    var failImage = ["drop-down"]
     var body: some View {
         ZStack (alignment: .top){
             Color.pinkIncorrectAnswerBackground
                 .edgesIgnoringSafeArea(.all)
             
             
-            VStack {
-                //Spacer()
-                LottieView(fileName: "fail").frame(width: 150, height: 150)
-                    .padding(.top, -40)
-                
+            VStack (alignment: .center){
+                Image(failImage.randomElement()!)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 50, height: 50)
+                    .padding(.top)
+               
+                    
                 VStack(alignment: .leading, spacing: 10){
                         
                         Text("Incorrect")
@@ -38,27 +32,25 @@ struct FailScreenOne: View {
                             .foregroundColor(Color.pinkIncorrectAnswerText)
                             .padding(.bottom, 5)
                         
-                            Text("Correct Answer:")
-                                .font(.custom("Poppins-regular", size: 14))
+                    HStack {
+                        Text("Correct Answer:")
+                                    .font(.custom("Poppins-regular", size: 14))
                                 .foregroundColor(Color.pinkIncorrectAnswerText)
-                                
-                            Text(correctAnswer)
-                                .font(.custom("Poppins-medium", size: 16))
-                                .foregroundColor(Color.pinkIncorrectAnswerText)
+                        
+                        Text("bbb")
+                            .font(.custom("Poppins-medium", size: 16))
+                            .foregroundColor(Color.pinkIncorrectAnswerText)
+                    }
                         Spacer()
                     }
-                .padding(.leading, -150)
-                .padding(.top, -50)
+                .padding(.leading, -130)
                 
             }
+            .padding()
                 
             Button(action: {
                 
-                triviaManager.goToNextQuestion()
-                //***quando clico check quero verificar se a answer está correta ou não e aí salto para o ecrã do win or fail
-                
-                
-                
+                gamesManager.goToNextQuestion()
             }, label: {
                 ButtonCourses(text: "Next",
                               textColor: Color.pinkIncorrectAnswerText,
@@ -67,6 +59,11 @@ struct FailScreenOne: View {
             })
                 .frame(maxHeight: .infinity, alignment: .bottom)
                 .padding(.bottom, 80)
+            
+            //meti isto
+                .onTapGesture(perform: {
+                    AnswerRowSquare(gamesManager: gamesManager, answer: gamesManager.questions[0].answers[0]).$isSelected = false
+                })
                  
             
         }
@@ -75,8 +72,8 @@ struct FailScreenOne: View {
 }
 
 struct FailScreenOne_Previews: PreviewProvider {
+    static var gamesManager : GamesManager = GamesManager(questionsFile: "dataGame1")
     static var previews: some View {
-        FailScreenOne(answer: AnswerTrivia(text: "", isCorrect: true),
-                      correctAnswer: "")
+        FailScreenOne(gamesManager: gamesManager)
     }
 }

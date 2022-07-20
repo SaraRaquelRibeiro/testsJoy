@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-
-
 struct GameSelectByImage: View {
 
     @State private var isSelected = false

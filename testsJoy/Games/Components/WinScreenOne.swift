@@ -8,19 +8,10 @@
 import SwiftUI
 
 struct WinScreenOne: View {
-    
-    var answer: AnswerTrivia
-    
-    @EnvironmentObject var triviaManager : TriviaManager
+    @ObservedObject var gamesManager : GamesManager
     
     var positiveMessage = ["Excellent", "Awesome", "You're getting good", "You're brilliant", "Perfect", "Very Good", "Good"]
-    
     var positiveImage = ["feather"]
-    //meter aqui a correct answer caso o user tenha errado
-    var correctAnswer : String
-    
-    //@EnvironmentObject var triviaManager : TriviaManager
-    //@Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         ZStack (alignment: .top){
@@ -45,23 +36,14 @@ struct WinScreenOne: View {
                             .font(.custom("Poppins-semibold", size: 18))
                             .foregroundColor(Color.greenGradient2)
                             
-                        
-                                
-                            Text(correctAnswer)
-                                .font(.custom("Poppins-medium", size: 14))
-                                .foregroundColor(Color.greenGradient2)
                         Spacer()
                     }
                 .padding(.leading, -150)
                 .padding(.top)
             }
                 
-                
             Button(action: {
-                triviaManager.goToNextQuestion()
-                //***quando clico check quero verificar se a answer está correta ou não e aí salto para o ecrã do win or fail
-                
-                
+                gamesManager.goToNextQuestion()
             }, label: {
                 ButtonCourses(text: "Next",
                               textColor: Color.greenGradient2,
@@ -70,13 +52,13 @@ struct WinScreenOne: View {
             })
                  .frame(maxHeight: .infinity, alignment: .bottom)
                  .padding(.bottom, 80)
-            
         }
     }
 }
 
 struct WinScreenOne_Previews: PreviewProvider {
+    static var gamesManager : GamesManager = GamesManager(questionsFile: "dataFile1")
     static var previews: some View {
-        WinScreenOne(answer: AnswerTrivia(text: "", isCorrect: true), correctAnswer: "")
+        WinScreenOne(gamesManager: gamesManager)
     }
 }

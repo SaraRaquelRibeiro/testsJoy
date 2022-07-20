@@ -10,7 +10,6 @@ import SwiftUI
 struct AnswerRowSquare: View {
     @State private var isSelected = false
     @ObservedObject var gamesManager : GamesManager
-    
     var answer : Answer
     
     var body: some View {
@@ -48,8 +47,6 @@ struct AnswerRowSquare: View {
             //se o user ainda não selecionou uma answer
             isSelected = true
             gamesManager.selectedAnswer = answer
-            
-            
         })
         
         
