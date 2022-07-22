@@ -48,7 +48,7 @@ class GamesManager: ObservableObject {
     }
 }
 //para ir buscar o trivia
-struct Answer : Codable {
+struct Answer : Codable, Hashable {
     //var id = UUID()
     var text : String
     var path : String

@@ -33,6 +33,7 @@ struct GamesView: View {
                     RightOrWrong(gamesManager: gamesManager)
                 }
             }
+            .padding(.top, -270)
           
                 if gamesManager.selectedAnswer != nil {
                     
@@ -68,6 +69,7 @@ struct GamesView: View {
                                 } else {
                                     VStack{
                                         FailScreenOne(gamesManager: gamesManager)
+                                            
                                     }
                                     .frame(maxWidth: .infinity, maxHeight: 300)
                                     .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))

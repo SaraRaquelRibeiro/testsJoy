@@ -9,24 +9,41 @@ import SwiftUI
 
 struct AnswerRowSquareGrid: View {
     @ObservedObject var gamesManager : GamesManager
+    //var answer : Answer
+    @State var isSelected = false
+    @State var selectedItem: String? = nil
     var question : Question
-    
     let columns = [
         GridItem(.flexible()),
         GridItem(.flexible())
     ]
-    
     var body: some View {
-        LazyVGrid(columns: columns, spacing: 30) {
-            ForEach(0..<question.answers.count){ index in
+        NavigationView {
+           
+           
+                /*LazyVGrid(columns: columns, spacing: 30) {
+                    ForEach(0..<question.answers.count){ index in
+                        
+                        AnswerRowSquare(
+                            gamesManager: gamesManager,
+                            answer: question.answers[index])
+                    }
+                }
+                .padding(30)*/
                 
-                AnswerRowSquare(
-                    gamesManager: gamesManager,
-                    answer: question.answers[index])
-                      
-            }
+                LazyVGrid(columns: columns, spacing: 30) {
+                    ForEach(question.answers, id: \.self){ item in
+                        SquareTest(gamesManager: gamesManager,
+                                   answer: item,
+                                   selectedItem: $selectedItem)
+                    }
+                }
+                
+          
+            
         }
-        .padding(30)
+        
+        
     }
 }
 

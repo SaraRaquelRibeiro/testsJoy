@@ -9,7 +9,6 @@ import SwiftUI
 
 struct FailScreenOne: View {
     @ObservedObject  var gamesManager : GamesManager
-    @Binding var isSelected : Bool
     var failImage = ["drop-down"]
     var body: some View {
         ZStack (alignment: .top){
@@ -59,14 +58,7 @@ struct FailScreenOne: View {
             })
                 .frame(maxHeight: .infinity, alignment: .bottom)
                 .padding(.bottom, 80)
-            
-            //meti isto
-                /*.onTapGesture(perform: {
-                    AnswerRowSquare(gamesManager: gamesManager, answer: gamesManager.questions[0].answers[0]).$isSelected = false
-                    
-                })*/
-                 
-            
+                //.disabled(gamesManager.selectedAnswer == nil)
         }
         .animation(.none)
     }

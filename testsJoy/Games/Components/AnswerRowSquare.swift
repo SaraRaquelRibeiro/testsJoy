@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct AnswerRowSquare: View {
-    @State private var isSelected = false
+    @State var isSelected = false
+    //@Binding var isSelected : Bool
     @ObservedObject var gamesManager : GamesManager
     var answer : Answer
-    
+   
     var body: some View {
         ZStack() {
             
@@ -20,6 +21,7 @@ struct AnswerRowSquare: View {
                 .frame(width: 130, height: 150)
                 .foregroundColor(Color.white)
                 .shadow(color: .gray.opacity(0.2), radius: 6, x: -2, y: 5)
+                
             
             RoundedRectangle(cornerRadius: 15)
                 .stroke(isSelected ? Color.blueGradient2 : .gray.opacity(0.2))
@@ -47,9 +49,8 @@ struct AnswerRowSquare: View {
             //se o user ainda não selecionou uma answer
             isSelected = true
             gamesManager.selectedAnswer = answer
+              
         })
-        
-        
     }
 }
 

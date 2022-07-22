@@ -17,29 +17,34 @@ struct GameSelectByImage: View {
         
             
                 VStack {
-                    Text(gamesManager.currentQuestion!.question)
-                        .font(.custom("Poppins-medium", size: 20))
-                    .foregroundColor(Color.black.opacity(0.6))
+                    VStack {
+                        Text(gamesManager.currentQuestion!.question)
+                            .font(.custom("Poppins-medium", size: 20))
+                        .foregroundColor(Color.black.opacity(0.6))
+                        
+                        Button(action: {
+                        }, label: {
+                            Image(systemName: gamesManager.currentQuestion!.soundImageName)
+                                .resizable()
+                                .scaledToFit()
+                                .foregroundColor(Color.blueGradient2)
+                                .font(.caption)
+                                .frame(width: 42, height: 42)
+                                .shadow(color: .gray.opacity(0.4), radius: 1, x: -1, y: 3)
+                        })
                     
-                    Button(action: {
-                    }, label: {
-                        Image(systemName: gamesManager.currentQuestion!.soundImageName)
-                            .resizable()
-                            .scaledToFit()
-                            .foregroundColor(Color.blueGradient2)
-                            .font(.caption)
-                            .frame(width: 42, height: 42)
-                            .shadow(color: .gray.opacity(0.4), radius: 1, x: -1, y: 3)
-                    })
-                
-                    Text(gamesManager.currentQuestion!.word)
-                    .font(.custom("Poppins-semibold", size: 25))
-                    .foregroundColor(Color.black.opacity(0.8))
-                    .underline()
+                        Text(gamesManager.currentQuestion!.word)
+                        .font(.custom("Poppins-semibold", size: 25))
+                        .foregroundColor(Color.black.opacity(0.8))
+                        .underline()
+                    }
+                    .padding(.top, 50)
+                    Spacer()
               
                     AnswerRowSquareGrid(
                         gamesManager: gamesManager,
                         question: gamesManager.currentQuestion!)
+                        .padding(.top)
                     
                         
                 }
